@@ -16,12 +16,34 @@ export default function CalculatorAdminPage() {
   const [newBrandCoeff, setNewBrandCoeff] = useState('1.0');
   const [showAddBrand, setShowAddBrand] = useState(false);
 
+  // Model specific pricing override helper
+  const [editingModel, setEditingModel] = useState(null); // { brand, index, name, prices: {} }
+
   const fetchConfig = async () => {
     try {
       const res = await fetch('/api/admin/calculator');
       if (!res.ok) throw new Error('Hesaplayıcı verisi yüklenemedi.');
       const data = await res.json();
-      setBrands(data.brands || {});
+      
+      const normalizedBrands = {};
+      for (const [brand, info] of Object.entries(data.brands || {})) {
+        normalizedBrands[brand] = {
+          basePriceCoeff: info.basePriceCoeff,
+          models: (info.models || []).map(m => {
+            if (typeof m === 'object' && m !== null) {
+              return {
+                name: m.name || '',
+                prices: m.prices || {}
+              };
+            }
+            return {
+              name: String(m),
+              prices: {}
+            };
+          })
+        };
+      }
+      setBrands(normalizedBrands);
       setLevels(data.levels || []);
     } catch (err) {
       setError(err.message);
@@ -47,7 +69,10 @@ export default function CalculatorAdminPage() {
   const handleModelsChange = (brand, index, val) => {
     setBrands(prev => {
       const updatedModels = [...prev[brand].models];
-      updatedModels[index] = val;
+      updatedModels[index] = {
+        ...updatedModels[index],
+        name: val
+      };
       return {
         ...prev,
         [brand]: {
@@ -63,7 +88,7 @@ export default function CalculatorAdminPage() {
       ...prev,
       [brand]: {
         ...prev[brand],
-        models: [...prev[brand].models, '']
+        models: [...prev[brand].models, { name: '', prices: {} }]
       }
     }));
   };
@@ -119,6 +144,17 @@ export default function CalculatorAdminPage() {
   };
 
   // Levels handlers
+  const handleLevelLabelChange = (index, val) => {
+    setLevels(prev => {
+      const copy = [...prev];
+      copy[index] = {
+        ...copy[index],
+        label: val
+      };
+      return copy;
+    });
+  };
+
   const handleBasePriceChange = (index, val) => {
     setLevels(prev => {
       const copy = [...prev];
@@ -145,12 +181,28 @@ export default function CalculatorAdminPage() {
     setError('');
     setSuccess('');
     
-    // Clean up empty models
+    // Clean up empty models and format them properly
     const cleanedBrands = {};
     for (const [brand, info] of Object.entries(brands)) {
       cleanedBrands[brand] = {
         basePriceCoeff: Number(info.basePriceCoeff),
-        models: info.models.map(m => m.trim()).filter(Boolean)
+        models: info.models
+          .map(m => {
+            const name = String(m.name || '').trim();
+            const prices = {};
+            if (m.prices && typeof m.prices === 'object') {
+              for (const [k, v] of Object.entries(m.prices)) {
+                if (v !== undefined && v !== null && v !== '') {
+                  const num = Number(v);
+                  if (!isNaN(num) && num > 0) {
+                    prices[k] = Math.round(num);
+                  }
+                }
+              }
+            }
+            return { name, prices };
+          })
+          .filter(m => m.name)
       };
     }
 
@@ -171,6 +223,25 @@ export default function CalculatorAdminPage() {
     } catch (err) {
       setError(err.message);
     }
+  };
+
+  // Save specific model pricing overrides locally in state
+  const handleSaveModelPrices = (brand, index, updatedPrices) => {
+    setBrands(prev => {
+      const updatedModels = [...prev[brand].models];
+      updatedModels[index] = {
+        ...updatedModels[index],
+        prices: updatedPrices
+      };
+      return {
+        ...prev,
+        [brand]: {
+          ...prev[brand],
+          models: updatedModels
+        }
+      };
+    });
+    setEditingModel(null);
   };
 
   if (loading) {
@@ -248,25 +319,39 @@ export default function CalculatorAdminPage() {
                 <div className="models-section">
                   <label style={{ fontSize: '0.8rem', color: '#94A3B8', fontWeight: 600, display: 'block', marginBottom: '8px' }}>Modeller</label>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    {info.models.map((model, idx) => (
-                      <div key={idx} style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                        <input 
-                          type="text" 
-                          className="admin-input"
-                          value={model}
-                          onChange={(e) => handleModelsChange(brand, idx, e.target.value)}
-                          placeholder="Model adı..."
-                          style={{ flexGrow: 1 }}
-                        />
-                        <button 
-                          type="button" 
-                          onClick={() => handleRemoveModel(brand, idx)}
-                          style={{ background: 'none', border: 'none', color: '#EF4444', cursor: 'pointer', padding: '4px' }}
-                        >
-                          ✕
-                        </button>
-                      </div>
-                    ))}
+                    {info.models.map((model, idx) => {
+                      const modelObj = typeof model === 'object' && model !== null ? model : { name: String(model), prices: {} };
+                      const hasOverrides = modelObj.prices && Object.keys(modelObj.prices).filter(k => modelObj.prices[k] !== undefined && modelObj.prices[k] !== null && modelObj.prices[k] !== '').length > 0;
+                      return (
+                        <div key={idx} style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                          <input 
+                            type="text" 
+                            className="admin-input"
+                            value={modelObj.name || ''}
+                            onChange={(e) => handleModelsChange(brand, idx, e.target.value)}
+                            placeholder="Model adı..."
+                            style={{ flexGrow: 1 }}
+                          />
+                          {modelObj.name && (
+                            <button
+                              type="button"
+                              className={`admin-btn ${hasOverrides ? 'admin-btn-primary' : 'admin-btn-secondary'}`}
+                              style={{ padding: '6px 10px', fontSize: '0.72rem', whiteSpace: 'nowrap', minHeight: '34px', display: 'flex', alignItems: 'center', gap: '4px' }}
+                              onClick={() => setEditingModel({ brand, index: idx, name: modelObj.name, prices: { ...modelObj.prices } })}
+                            >
+                              🏷️ {hasOverrides ? 'Özel Fiyat' : 'Fiyat Tanımla'}
+                            </button>
+                          )}
+                          <button 
+                            type="button" 
+                            onClick={() => handleRemoveModel(brand, idx)}
+                            style={{ background: 'none', border: 'none', color: '#EF4444', cursor: 'pointer', padding: '4px' }}
+                          >
+                            ✕
+                          </button>
+                        </div>
+                      );
+                    })}
                   </div>
                   <button className="admin-btn admin-btn-secondary" style={{ width: '100%', justifyContent: 'center', fontSize: '0.78rem', padding: '6px 12px', marginTop: '12px' }} onClick={() => handleAddModel(brand)}>
                     + Model Ekle
@@ -285,7 +370,17 @@ export default function CalculatorAdminPage() {
             <div className="admin-card" key={lvl.key}>
               <h3 style={{ color: '#FFF', fontSize: '1.15rem', marginBottom: '16px' }}>{lvl.label}</h3>
 
-              <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px', marginBottom: '16px' }}>
+              <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+                <div className="form-item">
+                  <label style={{ fontSize: '0.85rem', color: '#94A3B8', fontWeight: 600 }}>Paket Adı</label>
+                  <input 
+                    type="text" 
+                    className="admin-input"
+                    value={lvl.label}
+                    onChange={(e) => handleLevelLabelChange(index, e.target.value)}
+                    required
+                  />
+                </div>
                 <div className="form-item">
                   <label style={{ fontSize: '0.85rem', color: '#94A3B8', fontWeight: 600 }}>Taban Paket Fiyatı (TL)</label>
                   <input 
@@ -353,6 +448,68 @@ export default function CalculatorAdminPage() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* Model Specific Prices Modal */}
+      {editingModel && (
+        <div className="admin-modal-overlay" onClick={() => setEditingModel(null)}>
+          <div className="admin-modal-card" onClick={(e) => e.stopPropagation()} style={{ textAlign: 'left', maxWidth: '450px' }}>
+            <h3 style={{ margin: '0 0 4px 0', color: '#FFF' }}>{editingModel.name} için Özel Fiyat Tanımla</h3>
+            <p style={{ margin: '0 0 20px 0', color: '#94A3B8', fontSize: '0.82rem' }}>
+              {editingModel.brand} katsayısı ({brands[editingModel.brand]?.basePriceCoeff || 1.0}) yerine kullanılacak sabit TL fiyatlarını giriniz.
+              Boş bırakılan paketler marka katsayısı ile hesaplanır.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {levels.map((lvl) => {
+                const baseVal = lvl.priceBase;
+                const coeff = brands[editingModel.brand]?.basePriceCoeff || 1.0;
+                const standardPrice = Math.round((baseVal * coeff) / 50) * 50;
+
+                return (
+                  <div key={lvl.key} style={{ display: 'grid', gridTemplateColumns: '1fr 120px', gap: '16px', alignItems: 'center' }}>
+                    <div>
+                      <div style={{ fontWeight: 600, color: '#FFF', fontSize: '0.88rem' }}>{lvl.label.split('(')[0]}</div>
+                      <div style={{ fontSize: '0.75rem', color: '#94A3B8' }}>Varsayılan: {standardPrice} TL</div>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <input
+                        type="number"
+                        placeholder="Standart"
+                        className="admin-input"
+                        style={{ textAlign: 'right', padding: '6px' }}
+                        value={editingModel.prices[lvl.key] !== undefined && editingModel.prices[lvl.key] !== null ? editingModel.prices[lvl.key] : ''}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          setEditingModel(prev => ({
+                            ...prev,
+                            prices: {
+                              ...prev.prices,
+                              [lvl.key]: val !== '' ? Number(val) : ''
+                            }
+                          }));
+                        }}
+                      />
+                      <span style={{ fontSize: '0.85rem', color: '#94A3B8' }}>TL</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end', marginTop: '24px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '16px' }}>
+              <button 
+                type="button" 
+                className="admin-btn admin-btn-primary"
+                onClick={() => handleSaveModelPrices(editingModel.brand, editingModel.index, editingModel.prices)}
+              >
+                Uygula
+              </button>
+              <button type="button" className="admin-btn admin-btn-secondary" onClick={() => setEditingModel(null)}>
+                İptal
+              </button>
+            </div>
           </div>
         </div>
       )}

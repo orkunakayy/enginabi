@@ -61,8 +61,25 @@ export async function PUT(request) {
       if (!Array.isArray(info.models)) {
         return NextResponse.json({ error: `${brand} markası için model listesi geçersiz.` }, { status: 400 });
       }
-      // Sanitize model strings
-      brands[brand].models = info.models.map(m => String(m).trim()).filter(Boolean);
+      // Sanitize models (objects with name and prices overrides)
+      brands[brand].models = info.models.map(m => {
+        if (typeof m === 'object' && m !== null) {
+          const name = String(m.name || '').trim();
+          const prices = {};
+          if (m.prices && typeof m.prices === 'object') {
+            for (const [key, val] of Object.entries(m.prices)) {
+              if (val !== undefined && val !== null && val !== '') {
+                const num = Number(val);
+                if (!isNaN(num) && num > 0) {
+                  prices[key] = Math.round(num);
+                }
+              }
+            }
+          }
+          return { name, prices };
+        }
+        return { name: String(m).trim(), prices: {} };
+      }).filter(m => m.name);
     }
 
     for (const lvl of levels) {

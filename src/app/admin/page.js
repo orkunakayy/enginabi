@@ -33,6 +33,28 @@ export default function AdminDashboardPage() {
   const [ctaStyleReverse, setCtaStyleReverse] = useState(false);
   const [serviceItems, setServiceItems] = useState([{ title: '', desc: '' }]);
 
+  // New service modules state
+  const [showCalculator, setShowCalculator] = useState(false);
+
+  const [showBrandsCarousel, setShowBrandsCarousel] = useState(false);
+  const [brandsCarouselTitle, setBrandsCarouselTitle] = useState('Bakımlarda Sadece Dünyanın En İyi Parça ve Yağ Markalarını Kullanıyoruz.');
+  const [brandsCarouselList, setBrandsCarouselList] = useState('Motul, Putoline, Liqui Moly, NGK, Bando, RK Zincir, Honda, Yamaha');
+
+  const [showPreventionSection, setShowPreventionSection] = useState(false);
+  const [preventionTitle, setPreventionTitle] = useState('Bu Bakımı Zamanında Yaptırmazsanız Ne Olur?');
+  const [preventionPositiveTitle, setPreventionPositiveTitle] = useState('Zamanında Bakım');
+  const [preventionPositiveItems, setPreventionPositiveItems] = useState([{ text: '' }]);
+  const [preventionNegativeTitle, setPreventionNegativeTitle] = useState('İhmal Edilirse');
+  const [preventionNegativeItems, setPreventionNegativeItems] = useState([{ text: '' }]);
+
+  const [showReviewsSection, setShowReviewsSection] = useState(false);
+  const [reviewsTitle, setReviewsTitle] = useState('Müşteri Yorumları');
+  const [reviews, setReviews] = useState([{ author: '', comment: '', rating: 5 }]);
+
+  const [showFaqSection, setShowFaqSection] = useState(false);
+  const [faqTitle, setFaqTitle] = useState('Sıkça Sorulan Sorular');
+  const [faqs, setFaqs] = useState([{ question: '', answer: '' }]);
+
   const fetchStats = async () => {
     try {
       const res = await fetch('/api/admin/overview');
@@ -86,6 +108,25 @@ export default function AdminDashboardPage() {
     setCta2Href('https://wa.me/905331301448');
     setCtaStyleReverse(false);
     setServiceItems([{ title: '', desc: '' }]);
+    
+    // New feature defaults
+    setShowCalculator(false);
+    setShowBrandsCarousel(false);
+    setBrandsCarouselTitle('Bakımlarda Sadece Dünyanın En İyi Parça ve Yağ Markalarını Kullanıyoruz.');
+    setBrandsCarouselList('Motul, Putoline, Liqui Moly, NGK, Bando, RK Zincir, Honda, Yamaha');
+    setShowPreventionSection(false);
+    setPreventionTitle('Bu Bakımı Zamanında Yaptırmazsanız Ne Olur?');
+    setPreventionPositiveTitle('Zamanında Bakım');
+    setPreventionPositiveItems([{ text: 'Yakıt tasarrufu' }, { text: 'Maksimum performans' }, { text: 'Sıfır yolda kalma riski' }]);
+    setPreventionNegativeTitle('İhmal Edilirse');
+    setPreventionNegativeItems([{ text: 'Varyatör kayışı kopması (büyük masraf)' }, { text: 'Motorun yatak sarması' }, { text: 'Çekişten düşme ve yüksek yakıt tüketimi' }]);
+    setShowReviewsSection(false);
+    setReviewsTitle('Müşteri Yorumları');
+    setReviews([{ author: '', comment: '', rating: 5 }]);
+    setShowFaqSection(false);
+    setFaqTitle('Sıkça Sorulan Sorular');
+    setFaqs([{ question: '', answer: '' }]);
+
     setFormError('');
     setIsFormOpen(true);
   };
@@ -109,6 +150,25 @@ export default function AdminDashboardPage() {
     setCta2Href(service.cta2Href || 'https://wa.me/905331301448');
     setCtaStyleReverse(!!service.ctaStyleReverse);
     setServiceItems(service.items && service.items.length > 0 ? service.items : [{ title: '', desc: '' }]);
+    
+    // Load new feature states
+    setShowCalculator(!!service.showCalculator);
+    setShowBrandsCarousel(!!service.showBrandsCarousel);
+    setBrandsCarouselTitle(service.brandsCarouselTitle || 'Bakımlarda Sadece Dünyanın En İyi Parça ve Yağ Markalarını Kullanıyoruz.');
+    setBrandsCarouselList((service.brandsCarouselList || ['Motul', 'Putoline', 'Liqui Moly', 'NGK', 'Bando', 'RK Zincir', 'Honda', 'Yamaha']).join(', '));
+    setShowPreventionSection(!!service.showPreventionSection);
+    setPreventionTitle(service.preventionTitle || 'Bu Bakımı Zamanında Yaptırmazsanız Ne Olur?');
+    setPreventionPositiveTitle(service.preventionPositiveTitle || 'Zamanında Bakım');
+    setPreventionPositiveItems(service.preventionPositiveItems && service.preventionPositiveItems.length > 0 ? service.preventionPositiveItems.map(i => ({ text: i })) : [{ text: 'Yakıt tasarrufu' }, { text: 'Maksimum performans' }, { text: 'Sıfır yolda kalma riski' }]);
+    setPreventionNegativeTitle(service.preventionNegativeTitle || 'İhmal Edilirse');
+    setPreventionNegativeItems(service.preventionNegativeItems && service.preventionNegativeItems.length > 0 ? service.preventionNegativeItems.map(i => ({ text: i })) : [{ text: 'Varyatör kayışı kopması (büyük masraf)' }, { text: 'Motorun yatak sarması' }, { text: 'Çekişten düşme ve yüksek yakıt tüketimi' }]);
+    setShowReviewsSection(!!service.showReviewsSection);
+    setReviewsTitle(service.reviewsTitle || 'Müşteri Yorumları');
+    setReviews(service.reviews && service.reviews.length > 0 ? service.reviews : [{ author: '', comment: '', rating: 5 }]);
+    setShowFaqSection(!!service.showFaqSection);
+    setFaqTitle(service.faqTitle || 'Sıkça Sorulan Sorular');
+    setFaqs(service.faqs && service.faqs.length > 0 ? service.faqs : [{ question: '', answer: '' }]);
+
     setFormError('');
     setIsFormOpen(true);
   };
@@ -142,7 +202,25 @@ export default function AdminDashboardPage() {
       cta2Text,
       cta2Href,
       ctaStyleReverse,
-      items: serviceItems.filter(item => item.title.trim().length > 0)
+      items: serviceItems.filter(item => item.title.trim().length > 0),
+      
+      // Send new dynamic fields in payload
+      showCalculator,
+      showBrandsCarousel,
+      brandsCarouselTitle,
+      brandsCarouselList: brandsCarouselList.split(',').map(b => b.trim()).filter(Boolean),
+      showPreventionSection,
+      preventionTitle,
+      preventionPositiveTitle,
+      preventionPositiveItems: preventionPositiveItems.map(i => i.text.trim()).filter(Boolean),
+      preventionNegativeTitle,
+      preventionNegativeItems: preventionNegativeItems.map(i => i.text.trim()).filter(Boolean),
+      showReviewsSection,
+      reviewsTitle,
+      reviews: reviews.filter(r => r.author.trim() && r.comment.trim()),
+      showFaqSection,
+      faqTitle,
+      faqs: faqs.filter(f => f.question.trim() && f.answer.trim())
     };
 
     try {
@@ -591,6 +669,240 @@ export default function AdminDashboardPage() {
                   />
                   Birincil ve ikincil buton stillerini yer değiştir (Reverse Style)
                 </label>
+              </div>
+
+              <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.08)', margin: '24px 0' }} />
+              <h3 style={{ color: '#007AFF', fontSize: '1rem', margin: '0 0 16px 0' }}>Gelişmiş Hizmet Modülleri</h3>
+
+              {/* 1. CALCULATOR TOGGLE */}
+              <div style={{ marginBottom: '20px', background: 'rgba(255,255,255,0.01)', padding: '12px', border: '1px solid rgba(255,255,255,0.04)', borderRadius: '8px' }}>
+                <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', cursor: 'pointer', color: '#FFF', fontSize: '0.9rem', fontWeight: 600 }}>
+                  <input 
+                    type="checkbox" 
+                    checked={showCalculator} 
+                    onChange={(e) => setShowCalculator(e.target.checked)} 
+                    style={{ width: '16px', height: '16px', accentColor: '#007AFF' }}
+                  />
+                  🧮 Fiyat Hesaplama Modülünü Göster
+                </label>
+                <p style={{ margin: '4px 0 0 24px', color: '#94A3B8', fontSize: '0.78rem' }}>Müşterilerin sayfa içerisinde doğrudan bakım fiyatı hesaplayabileceği etkileşimli kutuyu ekler.</p>
+              </div>
+
+              {/* 2. BRANDS CAROUSEL */}
+              <div style={{ marginBottom: '20px', background: 'rgba(255,255,255,0.01)', padding: '12px', border: '1px solid rgba(255,255,255,0.04)', borderRadius: '8px' }}>
+                <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', cursor: 'pointer', color: '#FFF', fontSize: '0.9rem', fontWeight: 600, marginBottom: '8px' }}>
+                  <input 
+                    type="checkbox" 
+                    checked={showBrandsCarousel} 
+                    onChange={(e) => setShowBrandsCarousel(e.target.checked)} 
+                    style={{ width: '16px', height: '16px', accentColor: '#007AFF' }}
+                  />
+                  🎠 Yağ & Parça Markaları Bandı (Carousel)
+                </label>
+                {showBrandsCarousel && (
+                  <div style={{ marginLeft: '24px', display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '10px' }}>
+                    <div>
+                      <label className="form-label" style={{ fontSize: '0.8rem' }}>Bölüm Başlığı</label>
+                      <input type="text" className="form-input" value={brandsCarouselTitle} onChange={(e) => setBrandsCarouselTitle(e.target.value)} />
+                    </div>
+                    <div>
+                      <label className="form-label" style={{ fontSize: '0.8rem' }}>Markalar (Virgülle Ayırın)</label>
+                      <input type="text" className="form-input" value={brandsCarouselList} onChange={(e) => setBrandsCarouselList(e.target.value)} />
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* 3. PREVENTION SECTION */}
+              <div style={{ marginBottom: '20px', background: 'rgba(255,255,255,0.01)', padding: '12px', border: '1px solid rgba(255,255,255,0.04)', borderRadius: '8px' }}>
+                <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', cursor: 'pointer', color: '#FFF', fontSize: '0.9rem', fontWeight: 600, marginBottom: '8px' }}>
+                  <input 
+                    type="checkbox" 
+                    checked={showPreventionSection} 
+                    onChange={(e) => setShowPreventionSection(e.target.checked)} 
+                    style={{ width: '16px', height: '16px', accentColor: '#007AFF' }}
+                  />
+                  ⚠️ "Bu Bakımı Yaptırmazsanız Ne Olur?" (Risk/Karşılaştırma)
+                </label>
+                {showPreventionSection && (
+                  <div style={{ marginLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '10px' }}>
+                    <div>
+                      <label className="form-label" style={{ fontSize: '0.8rem' }}>Bölüm Ana Başlığı</label>
+                      <input type="text" className="form-input" value={preventionTitle} onChange={(e) => setPreventionTitle(e.target.value)} />
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                      <div>
+                        <label className="form-label" style={{ fontSize: '0.8rem', color: '#10B981' }}>Olumlu Başlık (Zamanında Yapılırsa)</label>
+                        <input type="text" className="form-input" value={preventionPositiveTitle} onChange={(e) => setPreventionPositiveTitle(e.target.value)} />
+                        
+                        <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                          {preventionPositiveItems.map((item, idx) => (
+                            <div key={idx} style={{ display: 'flex', gap: '6px' }}>
+                              <input 
+                                type="text" 
+                                className="form-input" 
+                                value={item.text} 
+                                onChange={(e) => {
+                                  const updated = [...preventionPositiveItems];
+                                  updated[idx].text = e.target.value;
+                                  setPreventionPositiveItems(updated);
+                                }}
+                                placeholder="Örn: Yakıt tasarrufu"
+                              />
+                              <button type="button" className="admin-btn" style={{ padding: '2px 8px' }} onClick={() => setPreventionPositiveItems(preventionPositiveItems.filter((_, i) => i !== idx))}>✕</button>
+                            </div>
+                          ))}
+                          <button type="button" className="admin-btn admin-btn-secondary" style={{ fontSize: '0.75rem', padding: '4px' }} onClick={() => setPreventionPositiveItems([...preventionPositiveItems, { text: '' }])}>+ Madde Ekle</button>
+                        </div>
+                      </div>
+                      <div>
+                        <label className="form-label" style={{ fontSize: '0.8rem', color: '#EF4444' }}>Olumsuz Başlık (İhmal Edilirse)</label>
+                        <input type="text" className="form-input" value={preventionNegativeTitle} onChange={(e) => setPreventionNegativeTitle(e.target.value)} />
+                        
+                        <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                          {preventionNegativeItems.map((item, idx) => (
+                            <div key={idx} style={{ display: 'flex', gap: '6px' }}>
+                              <input 
+                                type="text" 
+                                className="form-input" 
+                                value={item.text} 
+                                onChange={(e) => {
+                                  const updated = [...preventionNegativeItems];
+                                  updated[idx].text = e.target.value;
+                                  setPreventionNegativeItems(updated);
+                                }}
+                                placeholder="Örn: Kayış kopar"
+                              />
+                              <button type="button" className="admin-btn" style={{ padding: '2px 8px' }} onClick={() => setPreventionNegativeItems(preventionNegativeItems.filter((_, i) => i !== idx))}>✕</button>
+                            </div>
+                          ))}
+                          <button type="button" className="admin-btn admin-btn-secondary" style={{ fontSize: '0.75rem', padding: '4px' }} onClick={() => setPreventionNegativeItems([...preventionNegativeItems, { text: '' }])}>+ Madde Ekle</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* 4. REVIEWS SECTION */}
+              <div style={{ marginBottom: '20px', background: 'rgba(255,255,255,0.01)', padding: '12px', border: '1px solid rgba(255,255,255,0.04)', borderRadius: '8px' }}>
+                <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', cursor: 'pointer', color: '#FFF', fontSize: '0.9rem', fontWeight: 600, marginBottom: '8px' }}>
+                  <input 
+                    type="checkbox" 
+                    checked={showReviewsSection} 
+                    onChange={(e) => setShowReviewsSection(e.target.checked)} 
+                    style={{ width: '16px', height: '16px', accentColor: '#007AFF' }}
+                  />
+                  💬 Müşteri Yorumları (Social Proof)
+                </label>
+                {showReviewsSection && (
+                  <div style={{ marginLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '10px' }}>
+                    <div>
+                      <label className="form-label" style={{ fontSize: '0.8rem' }}>Bölüm Başlığı</label>
+                      <input type="text" className="form-input" value={reviewsTitle} onChange={(e) => setReviewsTitle(e.target.value)} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {reviews.map((r, idx) => (
+                        <div key={idx} style={{ background: 'rgba(255,255,255,0.02)', padding: '10px', border: '1px solid rgba(255,255,255,0.04)', borderRadius: '6px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                          <div style={{ display: 'grid', gridTemplateColumns: '1fr 100px', gap: '10px' }}>
+                            <input 
+                              type="text" 
+                              className="form-input" 
+                              value={r.author} 
+                              onChange={(e) => {
+                                const updated = [...reviews];
+                                updated[idx].author = e.target.value;
+                                setReviews(updated);
+                              }}
+                              placeholder="Yorum Yapan Kişi (Örn: Ahmet Y.)"
+                            />
+                            <select 
+                              className="form-input"
+                              value={r.rating}
+                              onChange={(e) => {
+                                const updated = [...reviews];
+                                updated[idx].rating = Number(e.target.value);
+                                setReviews(updated);
+                              }}
+                            >
+                              <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                              <option value="4">⭐⭐⭐⭐ (4)</option>
+                              <option value="3">⭐⭐⭐ (3)</option>
+                            </select>
+                          </div>
+                          <textarea 
+                            className="form-input"
+                            style={{ height: '50px', resize: 'vertical' }}
+                            value={r.comment}
+                            onChange={(e) => {
+                              const updated = [...reviews];
+                              updated[idx].comment = e.target.value;
+                              setReviews(updated);
+                            }}
+                            placeholder="Yorum Metni..."
+                          />
+                          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                            <button type="button" className="admin-btn" style={{ padding: '2px 8px', background: 'rgba(239,68,68,0.1)', color: '#EF4444' }} onClick={() => setReviews(reviews.filter((_, i) => i !== idx))}>Yorumu Sil</button>
+                          </div>
+                        </div>
+                      ))}
+                      <button type="button" className="admin-btn admin-btn-secondary" style={{ fontSize: '0.8rem', padding: '6px' }} onClick={() => setReviews([...reviews, { author: '', comment: '', rating: 5 }])}>+ Yeni Yorum Ekle</button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* 5. FAQ SECTION */}
+              <div style={{ marginBottom: '20px', background: 'rgba(255,255,255,0.01)', padding: '12px', border: '1px solid rgba(255,255,255,0.04)', borderRadius: '8px' }}>
+                <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', cursor: 'pointer', color: '#FFF', fontSize: '0.9rem', fontWeight: 600, marginBottom: '8px' }}>
+                  <input 
+                    type="checkbox" 
+                    checked={showFaqSection} 
+                    onChange={(e) => setShowFaqSection(e.target.checked)} 
+                    style={{ width: '16px', height: '16px', accentColor: '#007AFF' }}
+                  />
+                  ❓ Sıkça Sorulan Sorular (F.A.Q.) Accordion
+                </label>
+                {showFaqSection && (
+                  <div style={{ marginLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '10px' }}>
+                    <div>
+                      <label className="form-label" style={{ fontSize: '0.8rem' }}>SSS Bölüm Başlığı</label>
+                      <input type="text" className="form-input" value={faqTitle} onChange={(e) => setFaqTitle(e.target.value)} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {faqs.map((f, idx) => (
+                        <div key={idx} style={{ background: 'rgba(255,255,255,0.02)', padding: '10px', border: '1px solid rgba(255,255,255,0.04)', borderRadius: '6px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                          <input 
+                            type="text" 
+                            className="form-input" 
+                            value={f.question} 
+                            onChange={(e) => {
+                              const updated = [...faqs];
+                              updated[idx].question = e.target.value;
+                              setFaqs(updated);
+                            }}
+                            placeholder="Soru (Örn: Ağır bakım ne kadar sürer?)"
+                          />
+                          <textarea 
+                            className="form-input"
+                            style={{ height: '50px', resize: 'vertical' }}
+                            value={f.answer}
+                            onChange={(e) => {
+                              const updated = [...faqs];
+                              updated[idx].answer = e.target.value;
+                              setFaqs(updated);
+                            }}
+                            placeholder="Cevap..."
+                          />
+                          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                            <button type="button" className="admin-btn" style={{ padding: '2px 8px', background: 'rgba(239,68,68,0.1)', color: '#EF4444' }} onClick={() => setFaqs(faqs.filter((_, i) => i !== idx))}>Soruyu Sil</button>
+                          </div>
+                        </div>
+                      ))}
+                      <button type="button" className="admin-btn admin-btn-secondary" style={{ fontSize: '0.8rem', padding: '6px' }} onClick={() => setFaqs([...faqs, { question: '', answer: '' }])}>+ Soru Ekle</button>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '16px' }}>

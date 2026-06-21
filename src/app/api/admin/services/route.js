@@ -64,7 +64,36 @@ export async function POST(request) {
       cta1Href: sanitizeInput(service.cta1Href || '/iletisim'),
       cta2Text: sanitizeInput(service.cta2Text || 'WhatsApp Bilgi'),
       cta2Href: sanitizeInput(service.cta2Href || 'https://wa.me/905331301448'),
-      ctaStyleReverse: !!service.ctaStyleReverse
+      ctaStyleReverse: !!service.ctaStyleReverse,
+      
+      // New features schema
+      showCalculator: !!service.showCalculator,
+      
+      showBrandsCarousel: !!service.showBrandsCarousel,
+      brandsCarouselTitle: sanitizeInput(service.brandsCarouselTitle || "Bakımlarda Sadece Dünyanın En İyi Parça ve Yağ Markalarını Kullanıyoruz."),
+      brandsCarouselList: (service.brandsCarouselList || []).map(b => sanitizeInput(b).trim()).filter(Boolean),
+      
+      showPreventionSection: !!service.showPreventionSection,
+      preventionTitle: sanitizeInput(service.preventionTitle || "Bu Bakımı Zamanında Yaptırmazsanız Ne Olur?"),
+      preventionPositiveTitle: sanitizeInput(service.preventionPositiveTitle || "Zamanında Bakım"),
+      preventionPositiveItems: (service.preventionPositiveItems || []).map(i => sanitizeInput(i).trim()).filter(Boolean),
+      preventionNegativeTitle: sanitizeInput(service.preventionNegativeTitle || "İhmal Edilirse"),
+      preventionNegativeItems: (service.preventionNegativeItems || []).map(i => sanitizeInput(i).trim()).filter(Boolean),
+      
+      showReviewsSection: !!service.showReviewsSection,
+      reviewsTitle: sanitizeInput(service.reviewsTitle || "Müşteri Yorumları"),
+      reviews: (service.reviews || []).map(r => ({
+        author: sanitizeInput(r.author || ''),
+        comment: sanitizeInput(r.comment || ''),
+        rating: Math.min(5, Math.max(1, Number(r.rating || 5)))
+      })).filter(r => r.author && r.comment),
+      
+      showFaqSection: !!service.showFaqSection,
+      faqTitle: sanitizeInput(service.faqTitle || "Sıkça Sorulan Sorular"),
+      faqs: (service.faqs || []).map(f => ({
+        question: sanitizeInput(f.question || ''),
+        answer: sanitizeInput(f.answer || '')
+      })).filter(f => f.question && f.answer)
     };
 
     if (existingIndex > -1) {
