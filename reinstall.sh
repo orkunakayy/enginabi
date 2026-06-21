@@ -29,6 +29,7 @@ if [ "$HAS_DB_BACKUP" = true ]; then
     echo "♻️ Canlı veri tabanı yedekten geri yükleniyor..."
     mkdir -p src/data
     cp /tmp/emira_motors_db_live.json src/data/db.json
+    chmod 666 src/data/db.json
     rm /tmp/emira_motors_db_live.json
 fi
 
