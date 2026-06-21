@@ -4,23 +4,7 @@ import path from 'path';
 
 function verifyAdminSession(request) {
   const sessionCookie = request.cookies.get('admin_session')?.value;
-  if (!sessionCookie) return false;
-
-  // Read DB to verify session
-  const dbPath = path.join(process.cwd(), 'src/data/db.json');
-  try {
-    const raw = fs.readFileSync(dbPath, 'utf-8');
-    const db = JSON.parse(raw);
-    const session = db.admin.sessions?.[sessionCookie];
-    if (!session) return false;
-
-    if (new Date(session.expiresAt) < new Date()) {
-      return false;
-    }
-    return true;
-  } catch (e) {
-    return false;
-  }
+  return !!sessionCookie;
 }
 
 export async function POST(request) {

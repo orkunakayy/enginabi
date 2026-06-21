@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
 import { readDB, writeDB } from '../../../../lib/db';
+import { verifySession } from '../../../../lib/auth';
 
 export async function POST(request) {
   const sessionCookie = request.cookies.get('admin_session')?.value;
@@ -9,16 +10,10 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Yetkisiz erişim.' }, { status: 401 });
   }
 
-  const db = readDB();
-  const session = db.admin.sessions?.[sessionCookie];
+  const session = await verifySession(sessionCookie);
 
   if (!session) {
     return NextResponse.json({ error: 'Yetkisiz erişim.' }, { status: 401 });
-  }
-
-  // Check expiration
-  if (new Date(session.expiresAt) < new Date()) {
-    return NextResponse.json({ error: 'Oturum süresi dolmuş.' }, { status: 401 });
   }
 
   let body;
@@ -38,6 +33,8 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Yeni şifre en az 8 karakter olmalıdır.' }, { status: 400 });
   }
 
+  const db = readDB();
+
   // Validate current password
   const isCurrentPasswordValid = bcrypt.compareSync(currentPassword, db.admin.passwordHash);
   if (!isCurrentPasswordValid) {
@@ -50,11 +47,6 @@ export async function POST(request) {
 
   db.admin.passwordHash = hash;
   db.admin.mustChangePassword = false;
-  
-  // Optional: clear all other active sessions except the current one
-  db.admin.sessions = {
-    [sessionCookie]: session
-  };
 
   writeDB(db);
 
