@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import crypto from 'crypto';
 import bcrypt from 'bcryptjs';
 import { readDB, writeDB } from '../../../../lib/db';
+import { signSession } from '../../../../lib/auth';
 
 // Simple in-memory login rate limiter
 const failedLogins = new Map(); // ip -> { count, resetTime }
@@ -63,18 +64,12 @@ export async function POST(request) {
     // Clear rate limits on success
     failedLogins.delete(ip);
 
-    // Generate cryptographically random session token
-    const token = crypto.randomBytes(32).toString('hex');
-    const expiry = new Date(now + 24 * 60 * 60 * 1000); // 24 hours
-
-    // Save session in DB
-    if (!db.admin.sessions) {
-      db.admin.sessions = {};
-    }
-    db.admin.sessions[token] = {
-      expiresAt: expiry.toISOString()
-    };
-    writeDB(db);
+    // Generate stateless token with 24 hours expiry
+    const expiryTime = now + 24 * 60 * 60 * 1000;
+    const token = await signSession({
+      username: db.admin.username,
+      expiresAt: expiryTime
+    });
 
     const response = NextResponse.json({ 
       success: true, 
@@ -93,6 +88,6 @@ export async function POST(request) {
     return response;
   } catch (err) {
     console.error("Critical Login Error:", err);
-    return NextResponse.json({ error: 'Sunucuda giriş işlemi gerçekleştirilirken bir hata oluştu. Veritabanı yazma izinlerini kontrol edin.' }, { status: 500 });
+    return NextResponse.json({ error: 'Sunucuda giriş işlemi gerçekleştirilirken bir hata oluştu.' }, { status: 500 });
   }
 }

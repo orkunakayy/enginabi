@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import { readDB, writeDB } from '../../../../lib/db';
+import { readDB } from '../../../../lib/db';
+import { verifySession } from '../../../../lib/auth';
 
 export async function GET(request) {
   const cookieHeader = request.headers.get('cookie') || '';
@@ -13,20 +14,11 @@ export async function GET(request) {
     return NextResponse.json({ valid: false }, { status: 401 });
   }
 
-  const db = readDB();
-  const session = db.admin.sessions?.[token];
-
+  const session = await verifySession(token);
   if (!session) {
     return NextResponse.json({ valid: false }, { status: 401 });
   }
 
-  const expiresAt = new Date(session.expiresAt);
-  if (expiresAt < new Date()) {
-    // Session expired, remove it
-    delete db.admin.sessions[token];
-    writeDB(db);
-    return NextResponse.json({ valid: false }, { status: 401 });
-  }
-
+  const db = readDB();
   return NextResponse.json({ valid: true, mustChangePassword: db.admin.mustChangePassword });
 }

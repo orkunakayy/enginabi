@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { verifySession } from './lib/auth';
 
 export async function middleware(request) {
   const url = request.nextUrl.clone();
@@ -13,27 +14,11 @@ export async function middleware(request) {
       return NextResponse.redirect(url);
     }
 
-    try {
-      // Fetch status from the verification endpoint
-      const verifyRes = await fetch(new URL('/api/admin/verify', request.url), {
-        headers: {
-          Cookie: `admin_session=${sessionCookie}`
-        },
-        // Avoid caching the verification request
-        cache: 'no-store'
-      });
-
-      if (verifyRes.status !== 200) {
-        // Tampered or expired token
-        const response = NextResponse.redirect(new URL('/admin/login', request.url));
-        response.cookies.delete('admin_session');
-        return response;
-      }
-    } catch (err) {
-      console.error("Middleware verification fetch error:", err);
-      // In case of error, redirect to login for safety
-      url.pathname = '/admin/login';
-      return NextResponse.redirect(url);
+    const session = await verifySession(sessionCookie);
+    if (!session) {
+      const response = NextResponse.redirect(new URL('/admin/login', request.url));
+      response.cookies.delete('admin_session');
+      return response;
     }
   }
 
@@ -50,19 +35,9 @@ export async function middleware(request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    try {
-      const verifyRes = await fetch(new URL('/api/admin/verify', request.url), {
-        headers: {
-          Cookie: `admin_session=${sessionCookie}`
-        },
-        cache: 'no-store'
-      });
-
-      if (verifyRes.status !== 200) {
-        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-      }
-    } catch (err) {
-      return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    const session = await verifySession(sessionCookie);
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
   }
 
