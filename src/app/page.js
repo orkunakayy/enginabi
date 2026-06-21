@@ -196,21 +196,15 @@ export default function Home() {
 
   // Touch Swipe Support for Mobile
   const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
-
   const minSwipeDistance = 50;
 
   const onTouchStart = (e) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
+    setTouchStart(e.touches[0].clientX);
   };
 
-  const onTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
+  const onTouchEnd = (e) => {
+    if (!touchStart) return;
+    const touchEnd = e.changedTouches[0].clientX;
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
@@ -219,6 +213,7 @@ export default function Home() {
     } else if (isRightSwipe) {
       handlePrevSlide();
     }
+    setTouchStart(null);
   };
 
   const handleSubmit = async (e) => {
@@ -255,7 +250,6 @@ export default function Home() {
       <section 
         className="hero-slider-container"
         onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
         <div 

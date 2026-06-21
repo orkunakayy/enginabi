@@ -431,7 +431,10 @@ button, input, select, textarea {
 }
 
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -471,6 +474,8 @@ button, input, select, textarea {
   fill: var(--color-secondary);
   margin-bottom: var(--space-md);
   transition: transform var(--transition-normal);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card:hover .card-icon {
