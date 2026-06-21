@@ -157,7 +157,7 @@ export default function AboutPageClient() {
       <section className="section-padding" style={{ borderTop: '1px solid var(--border-color)', background: 'linear-gradient(180deg, #16181E 0%, #090A0D 100%)' }}>
         <div className="container">
           <div className="text-center mb-xl">
-            <span className="about-badge mb-sm" style={{ display: 'inline-block' }}>
+            <span className="slide-badge mb-sm" style={{ display: 'inline-block' }}>
               🎥 YouTube Topluluğumuz
             </span>
             <h2 style={{ fontSize: '2.25rem', color: '#FFF' }}>10.000+ Motorcuyla Birlikteyiz</h2>
