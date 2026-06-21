@@ -14,6 +14,7 @@ export default function GalleryClient() {
     workshop_images: []
   });
   const [loading, setLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState('Tüm İşler');
   const [activeVideo, setActiveVideo] = useState(null);
   const [activeLightboxImg, setActiveLightboxImg] = useState(null); // Holds { beforeImage, afterImage, title, beforeLabel, afterLabel } or { image, title }
 
@@ -51,6 +52,47 @@ export default function GalleryClient() {
     setActiveVideo(null);
   };
 
+  const getItemCategory = (item) => {
+    const title = (item.title || '').toLowerCase();
+    if (
+      title.includes('revizyon') || 
+      title.includes('restorasyon') || 
+      title.includes('sıfır motor') || 
+      title.includes('toplama') ||
+      title.includes('yenileme') ||
+      title.includes('yeniden hayat')
+    ) return 'Komple Revizyon';
+    if (
+      title.includes('kaynak') || 
+      title.includes('hasar') || 
+      title.includes('kaza') || 
+      title.includes('düzeltme') || 
+      title.includes('şasi') ||
+      title.includes('mesnet') ||
+      title.includes('çarpan') ||
+      title.includes('kırık')
+    ) return 'Hasar Onarım';
+    return 'Detaylı Bakım';
+  };
+
+  const filteredBeforeAfter = galleryData.before_after.filter(
+    item => selectedCategory === 'Tüm İşler' || getItemCategory(item) === selectedCategory
+  );
+  
+  const filteredWorkshopImages = galleryData.workshop_images.filter(
+    item => selectedCategory === 'Tüm İşler' || getItemCategory(item) === selectedCategory
+  );
+  
+  const filteredReels = galleryData.reels.filter(
+    item => selectedCategory === 'Tüm İşler' || getItemCategory(item) === selectedCategory
+  );
+  
+  const filteredHorizontalVideos = galleryData.horizontal_videos.filter(
+    item => selectedCategory === 'Tüm İşler' || getItemCategory(item) === selectedCategory
+  );
+
+  const totalItems = filteredBeforeAfter.length + filteredWorkshopImages.length + filteredReels.length + filteredHorizontalVideos.length;
+
   return (
     <>
       <Suspense fallback={null}>
@@ -69,204 +111,277 @@ export default function GalleryClient() {
         </div>
       </section>
 
-      {/* INTERACTIVE BEFORE/AFTER SLIDER - PLACED FIRST AS REQUESTED */}
-      <section className="section-padding" style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-color)' }}>
+      {/* CATEGORY FILTERS */}
+      <section style={{ background: 'var(--bg-dark)', padding: '24px 0 0 0' }}>
         <div className="container">
-          <div className="text-center mb-xl">
-            <h2 style={{ fontSize: '2rem' }}>Öncesi / Sonrası Karşılaştırmaları</h2>
-            <p className="text-muted mt-sm">Mavi sürgüyü sağa sola sürükleyerek Engin Usta'nın usta işçiliğini görebilirsiniz. Büyütmek için kartın altındaki butona tıklayın.</p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 'var(--space-lg)' }}>
-            {galleryData.before_after.map((slider) => (
-              <div key={slider.id} style={{ display: 'flex', flexDirection: 'column', gap: '10px', background: 'var(--bg-dark)', padding: 'var(--space-md)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
-                <h3 style={{ fontSize: '0.95rem', fontFamily: 'var(--font-headings)', color: 'var(--color-secondary)', margin: 0, height: '2.5rem', display: 'flex', alignItems: 'center', lineHeight: '1.4' }}>
-                  {slider.title}
-                </h3>
-                <BeforeAfterSlider 
-                  beforeImage={slider.beforeImage}
-                  afterImage={slider.afterImage}
-                  beforeLabel={slider.beforeLabel || "Öncesi"}
-                  afterLabel={slider.afterLabel || "Sonrası"}
-                />
-                <button 
-                  onClick={() => setActiveLightboxImg({
-                    beforeImage: slider.beforeImage,
-                    afterImage: slider.afterImage,
-                    title: slider.title,
-                    beforeLabel: slider.beforeLabel,
-                    afterLabel: slider.afterLabel
-                  })}
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            gap: '10px', 
+            flexWrap: 'wrap',
+            paddingBottom: '24px',
+            borderBottom: '1px solid var(--border-color)'
+          }}>
+            {['Tüm İşler', 'Komple Revizyon', 'Hasar Onarım', 'Detaylı Bakım'].map((category) => {
+              const isActive = selectedCategory === category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
                   style={{
-                    marginTop: '8px',
-                    padding: '8px 12px',
-                    background: 'rgba(0, 102, 255, 0.15)',
-                    border: '1px solid rgba(0, 102, 255, 0.3)',
-                    color: 'var(--color-secondary)',
-                    borderRadius: 'var(--radius-sm)',
-                    fontSize: '0.8rem',
-                    fontWeight: '700',
+                    padding: '8px 18px',
+                    borderRadius: '50px',
+                    fontSize: '0.9rem',
+                    fontWeight: '600',
+                    border: '1px solid',
+                    borderColor: isActive ? 'var(--color-secondary)' : 'var(--border-color)',
+                    background: isActive ? 'rgba(0, 229, 255, 0.1)' : 'var(--bg-card)',
+                    color: isActive ? 'var(--color-secondary)' : 'var(--text-secondary)',
                     cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '6px',
-                    transition: 'all var(--transition-fast)'
+                    transition: 'all 0.2s ease',
+                    boxShadow: isActive ? '0 0 15px rgba(0, 229, 255, 0.15)' : 'none'
                   }}
-                  className="zoom-btn"
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.borderColor = 'var(--border-hover)';
+                      e.currentTarget.style.color = 'var(--text-primary)';
+                      e.currentTarget.style.background = 'var(--bg-card-hover)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.borderColor = 'var(--border-color)';
+                      e.currentTarget.style.color = 'var(--text-secondary)';
+                      e.currentTarget.style.background = 'var(--bg-card)';
+                    }
+                  }}
                 >
-                  🔍 Detaylı Görselleri Büyüt
+                  {category}
                 </button>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
+
+      {/* FALLBACK FOR EMPTY CATEGORY */}
+      {totalItems === 0 && !loading && (
+        <div style={{ textAlign: 'center', padding: '80px 0', color: 'var(--text-secondary)' }}>
+          <svg style={{ width: '48px', height: '48px', fill: 'var(--text-secondary)', marginBottom: '16px' }} viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          <h3 style={{ color: '#FFF', fontSize: '1.2rem', marginBottom: '8px' }}>Görsel Bulunmamaktadır</h3>
+          <p style={{ fontSize: '0.9rem', maxWidth: '400px', margin: '0 auto' }}>Seçtiğiniz "{selectedCategory}" kategorisine uygun çalışma kaydı bulunmamaktadır.</p>
+        </div>
+      )}
+
+      {/* INTERACTIVE BEFORE/AFTER SLIDER */}
+      {filteredBeforeAfter.length > 0 && (
+        <section className="section-padding" style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-color)' }}>
+          <div className="container">
+            <div className="text-center mb-xl">
+              <h2 style={{ fontSize: '2rem' }}>Öncesi / Sonrası Karşılaştırmaları</h2>
+              <p className="text-muted mt-sm">Mavi sürgüyü sağa sola sürükleyerek Engin Usta'nın usta işçiliğini görebilirsiniz. Büyütmek için kartın altındaki butona tıklayın.</p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 'var(--space-lg)' }}>
+              {filteredBeforeAfter.map((slider) => (
+                <div key={slider.id} style={{ display: 'flex', flexDirection: 'column', gap: '10px', background: 'var(--bg-dark)', padding: 'var(--space-md)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+                  <h3 style={{ fontSize: '0.95rem', fontFamily: 'var(--font-headings)', color: 'var(--color-secondary)', margin: 0, height: '2.5rem', display: 'flex', alignItems: 'center', lineHeight: '1.4' }}>
+                    {slider.title}
+                  </h3>
+                  <BeforeAfterSlider 
+                    beforeImage={slider.beforeImage}
+                    afterImage={slider.afterImage}
+                    beforeLabel={slider.beforeLabel || "Öncesi"}
+                    afterLabel={slider.afterLabel || "Sonrası"}
+                  />
+                  <button 
+                    onClick={() => setActiveLightboxImg({
+                      beforeImage: slider.beforeImage,
+                      afterImage: slider.afterImage,
+                      title: slider.title,
+                      beforeLabel: slider.beforeLabel,
+                      afterLabel: slider.afterLabel
+                    })}
+                    style={{
+                      marginTop: '8px',
+                      padding: '8px 12px',
+                      background: 'rgba(0, 102, 255, 0.15)',
+                      border: '1px solid rgba(0, 102, 255, 0.3)',
+                      color: 'var(--color-secondary)',
+                      borderRadius: 'var(--radius-sm)',
+                      fontSize: '0.8rem',
+                      fontWeight: '700',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '6px',
+                      transition: 'all var(--transition-fast)'
+                    }}
+                    className="zoom-btn"
+                  >
+                    🔍 Detaylı Görselleri Büyüt
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* PHOTO GRID */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center mb-xl">
-            <h2 style={{ fontSize: '2rem' }}>Atölye Görselleri</h2>
-            <p className="text-muted mt-sm">Dükkanımızdan ve devam eden onarımlardan anlık kareler. Büyütmek için fotoğrafların üzerine tıklayabilirsiniz.</p>
-          </div>
+      {filteredWorkshopImages.length > 0 && (
+        <section className="section-padding">
+          <div className="container">
+            <div className="text-center mb-xl">
+              <h2 style={{ fontSize: '2rem' }}>Atölye Görselleri</h2>
+              <p className="text-muted mt-sm">Dükkanımızdan ve devam eden onarımlardan anlık kareler. Büyütmek için fotoğrafların üzerine tıklayabilirsiniz.</p>
+            </div>
 
-          <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
-            {galleryData.workshop_images.map((item) => (
-              <div 
-                key={item.id} 
-                className="gallery-item"
-                onClick={() => setActiveLightboxImg({ image: item.image, title: item.title })}
-              >
-                <div className="gallery-img-wrapper">
-                  <img className="gallery-img" src={item.image} alt={item.title} />
+            <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
+              {filteredWorkshopImages.map((item) => (
+                <div 
+                  key={item.id} 
+                  className="gallery-item"
+                  onClick={() => setActiveLightboxImg({ image: item.image, title: item.title })}
+                >
+                  <div className="gallery-img-wrapper">
+                    <img className="gallery-img" src={item.image} alt={item.title} />
+                  </div>
+                  <div className="gallery-overlay">
+                    <div className="gallery-title">{item.title}</div>
+                  </div>
                 </div>
-                <div className="gallery-overlay">
-                  <div className="gallery-title">{item.title}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div className="text-center mt-xl">
-            <p className="text-muted" style={{ fontSize: '0.9rem' }}>* Bu galeri dükkanımızda yapılan gerçek çalışmaları yansıtır. Atölyemizde çektiğimiz yeni fotoğrafları yakında eklemeye devam edeceğiz.</p>
+            <div className="text-center mt-xl">
+              <p className="text-muted" style={{ fontSize: '0.9rem' }}>* Bu galeri dükkanımızda yapılan gerçek çalışmaları yansıtır. Atölyemizde çektiğimiz yeni fotoğrafları yakında eklemeye devam edeceğiz.</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* REELS / SHORTS VIDEO GALLERY */}
-      <section className="section-padding" style={{ borderBottom: '1px solid var(--border-color)' }}>
-        <div className="container">
-          <div className="text-center mb-xl">
-            <h2 style={{ fontSize: '2rem' }}>Dükkandan Canlı Kesitler (Reels / Shorts)</h2>
-            <p className="text-muted mt-sm">Atölyemizde devam eden tamirleri ve usta işçiliğini kısa dikey videolarla izleyin.</p>
-          </div>
+      {(loading || filteredReels.length > 0) && (
+        <section className="section-padding" style={{ borderBottom: '1px solid var(--border-color)' }}>
+          <div className="container">
+            <div className="text-center mb-xl">
+              <h2 style={{ fontSize: '2rem' }}>Dükkandan Canlı Kesitler (Reels / Shorts)</h2>
+              <p className="text-muted mt-sm">Atölyemizde devam eden tamirleri ve usta işçiliğini kısa dikey videolarla izleyin.</p>
+            </div>
 
-          <div className="reels-grid-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 'var(--space-lg)', justifyItems: 'center', width: '100%' }}>
-            {loading ? (
-              <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Videolar yükleniyor...</div>
-            ) : galleryData.reels.length === 0 ? (
-              <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Dikey video bulunmuyor.</div>
-            ) : galleryData.reels.map((reel) => (
-              <div 
-                key={reel.id} 
-                onClick={() => openVideo(reel)}
-                style={{ 
-                  position: 'relative', 
-                  width: '100%',
-                  maxWidth: '240px', 
-                  height: '420px', 
-                  borderRadius: 'var(--radius-md)', 
-                  overflow: 'hidden', 
-                  border: '1px solid var(--border-color)', 
-                  cursor: 'pointer', 
-                  boxShadow: 'var(--shadow-md)',
-                  transition: 'transform var(--transition-fast), border-color var(--transition-fast)'
-                }}
-                className="reels-card"
-              >
-                <img 
-                  src={reel.thumbnail || `https://img.youtube.com/vi/${reel.youtubeId}/mqdefault.jpg`} 
-                  alt={reel.title} 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-                
-                <div style={{ 
-                  position: 'absolute', 
-                  top: 0, 
-                  left: 0, 
-                  width: '100%', 
-                  height: '100%', 
-                  background: 'linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(13,14,18,0.95) 100%)',
-                  zIndex: 1
-                }} />
-
-                <div style={{ position: 'absolute', top: '12px', right: '12px', background: 'rgba(0, 0, 0, 0.6)', backdropFilter: 'blur(4px)', padding: '2px 8px', borderRadius: 'var(--radius-sm)', fontSize: '0.75rem', color: '#FFF', zIndex: 2 }}>
-                  {reel.duration}
-                </div>
-
-                <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(0, 102, 255, 0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 20px rgba(0, 102, 255, 0.5)', zIndex: 2 }}>
-                  <svg style={{ width: '24px', height: '24px', fill: '#FFF', marginLeft: '3px' }} viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-
-                <div style={{ position: 'absolute', bottom: '12px', left: '12px', right: '12px', zIndex: 2 }}>
-                  <h3 style={{ fontSize: '0.85rem', color: '#FFF', lineHeight: '1.4', fontWeight: '700', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                    {reel.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HORIZONTAL VIDEOS GALLERY */}
-      <section className="section-padding" style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-color)' }}>
-        <div className="container">
-          <div className="text-center mb-xl">
-            <h2 style={{ fontSize: '2rem' }}>Detaylı İnceleme Videolarımız (Yatay)</h2>
-            <p className="text-muted mt-sm">Komple motor revizyonları ve detaylı mekanik tamir videolarımızı geniş ekranda izleyin.</p>
-          </div>
-
-          <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
-            {loading ? (
-              <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Videolar yükleniyor...</div>
-            ) : galleryData.horizontal_videos.length === 0 ? (
-              <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Yatay video bulunmuyor.</div>
-            ) : galleryData.horizontal_videos.map((video) => (
-              <div 
-                key={video.id}
-                onClick={() => openVideo(video)}
-                className="card"
-                style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
-              >
-                <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', background: '#000' }}>
+            <div className="reels-grid-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 'var(--space-lg)', justifyItems: 'center', width: '100%' }}>
+              {loading ? (
+                <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Videolar yükleniyor...</div>
+              ) : filteredReels.length === 0 ? (
+                <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Dikey video bulunmuyor.</div>
+              ) : filteredReels.map((reel) => (
+                <div 
+                  key={reel.id} 
+                  onClick={() => openVideo(reel)}
+                  style={{ 
+                    position: 'relative', 
+                    width: '100%',
+                    maxWidth: '240px', 
+                    height: '420px', 
+                    borderRadius: 'var(--radius-md)', 
+                    overflow: 'hidden', 
+                    border: '1px solid var(--border-color)', 
+                    cursor: 'pointer', 
+                    boxShadow: 'var(--shadow-md)',
+                    transition: 'transform var(--transition-fast), border-color var(--transition-fast)'
+                  }}
+                  className="reels-card"
+                >
                   <img 
-                    src={video.thumbnail || `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`} 
-                    alt={video.title} 
+                    src={reel.thumbnail || `https://img.youtube.com/vi/${reel.youtubeId}/mqdefault.jpg`} 
+                    alt={reel.title} 
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
-                  <div style={{ position: 'absolute', bottom: '8px', right: '8px', background: 'rgba(0, 0, 0, 0.7)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.75rem', color: '#FFF', fontWeight: 'bold' }}>
-                    {video.duration}
+                  
+                  <div style={{ 
+                    position: 'absolute', 
+                    top: 0, 
+                    left: 0, 
+                    width: '100%', 
+                    height: '100%', 
+                    background: 'linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(13,14,18,0.95) 100%)',
+                    zIndex: 1
+                  }} />
+
+                  <div style={{ position: 'absolute', top: '12px', right: '12px', background: 'rgba(0, 0, 0, 0.6)', backdropFilter: 'blur(4px)', padding: '2px 8px', borderRadius: 'var(--radius-sm)', fontSize: '0.75rem', color: '#FFF', zIndex: 2 }}>
+                    {reel.duration}
                   </div>
-                  <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(0, 102, 255, 0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.3)' }}>
-                    <svg style={{ width: '20px', height: '20px', fill: '#FFF', marginLeft: '3px' }} viewBox="0 0 24 24">
+
+                  <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(0, 102, 255, 0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 20px rgba(0, 102, 255, 0.5)', zIndex: 2 }}>
+                    <svg style={{ width: '24px', height: '24px', fill: '#FFF', marginLeft: '3px' }} viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                   </div>
+
+                  <div style={{ position: 'absolute', bottom: '12px', left: '12px', right: '12px', zIndex: 2 }}>
+                    <h3 style={{ fontSize: '0.85rem', color: '#FFF', lineHeight: '1.4', fontWeight: '700', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      {reel.title}
+                    </h3>
+                  </div>
                 </div>
-                <div style={{ padding: 'var(--space-md)', flexGrow: 1, display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)' }}>
-                  <h3 style={{ fontSize: '0.95rem', fontWeight: '700', color: '#FFF', lineHeight: '1.4', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                    {video.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {/* HORIZONTAL VIDEOS GALLERY */}
+      {(loading || filteredHorizontalVideos.length > 0) && (
+        <section className="section-padding" style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border-color)' }}>
+          <div className="container">
+            <div className="text-center mb-xl">
+              <h2 style={{ fontSize: '2rem' }}>Detaylı İnceleme Videolarımız (Yatay)</h2>
+              <p className="text-muted mt-sm">Komple motor revizyonları ve detaylı mekanik tamir videolarımızı geniş ekranda izleyin.</p>
+            </div>
+
+            <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
+              {loading ? (
+                <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Videolar yükleniyor...</div>
+              ) : filteredHorizontalVideos.length === 0 ? (
+                <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Yatay video bulunmuyor.</div>
+              ) : filteredHorizontalVideos.map((video) => (
+                <div 
+                  key={video.id}
+                  onClick={() => openVideo(video)}
+                  className="card"
+                  style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
+                >
+                  <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', background: '#000' }}>
+                    <img 
+                      src={video.thumbnail || `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`} 
+                      alt={video.title} 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                    <div style={{ position: 'absolute', bottom: '8px', right: '8px', background: 'rgba(0, 0, 0, 0.7)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.75rem', color: '#FFF', fontWeight: 'bold' }}>
+                      {video.duration}
+                    </div>
+                    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(0, 102, 255, 0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.3)' }}>
+                      <svg style={{ width: '20px', height: '20px', fill: '#FFF', marginLeft: '3px' }} viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ padding: 'var(--space-md)', flexGrow: 1, display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)' }}>
+                    <h3 style={{ fontSize: '0.95rem', fontWeight: '700', color: '#FFF', lineHeight: '1.4', margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      {video.title}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* LIGHTBOX MODAL */}
       {activeLightboxImg && (

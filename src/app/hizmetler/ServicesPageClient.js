@@ -32,6 +32,7 @@ export default function ServicesPageClient() {
   const { get, loading } = useLiveContent();
   const [servicesList, setServicesList] = useState([]);
   const [brandsList, setBrandsList] = useState([]);
+  const [brandQuery, setBrandQuery] = useState('');
 
   useEffect(() => {
     if (!loading) {
@@ -39,6 +40,8 @@ export default function ServicesPageClient() {
       setBrandsList(get('services.brands', []));
     }
   }, [loading]);
+
+  const filteredBrands = brandsList.filter(b => b.toLowerCase().includes(brandQuery.toLowerCase()));
 
   const handleAddService = () => {
     const slug = prompt("Yeni hizmet için URL uzantısı (Slug) girin: (Örn: lastik-parlatma)");
@@ -99,12 +102,15 @@ export default function ServicesPageClient() {
     window.dispatchEvent(new CustomEvent('live-edit-dirty'));
   };
 
-  const handleDeleteBrand = (idx) => {
-    const updated = brandsList.filter((_, i) => i !== idx);
-    setBrandsList(updated);
-    window.liveEditChanges = window.liveEditChanges || {};
-    window.liveEditChanges['services.brands'] = updated;
-    window.dispatchEvent(new CustomEvent('live-edit-dirty'));
+  const handleDeleteBrand = (brandName) => {
+    const originalIdx = brandsList.indexOf(brandName);
+    if (originalIdx !== -1) {
+      const updated = brandsList.filter((_, i) => i !== originalIdx);
+      setBrandsList(updated);
+      window.liveEditChanges = window.liveEditChanges || {};
+      window.liveEditChanges['services.brands'] = updated;
+      window.dispatchEvent(new CustomEvent('live-edit-dirty'));
+    }
   };
 
   return (
@@ -129,10 +135,10 @@ export default function ServicesPageClient() {
       {/* DETAILED SERVICES LISTING */}
       <section className="section-padding">
         <div className="container">
-          <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))' }}>
+          <div className="centered-flex-grid">
             {servicesList.map((service, idx) => (
               <div key={idx} style={{ position: 'relative' }}>
-                <Link href={`/hizmetler/${service.slug}`} className="card">
+                <Link href={`/hizmetler/${service.slug}`} className="card" style={{ height: '100%' }}>
                   {getServiceIcon(service.icon)}
                   <LiveEditable path={`services.items.${idx}.title`} tagName="h3" className="card-title">
                     {service.title}
@@ -171,14 +177,25 @@ export default function ServicesPageClient() {
             </LiveEditable>
           </div>
 
+          {/* Brand Search Bar */}
+          <div style={{ maxWidth: '400px', margin: '0 auto 32px auto', position: 'relative' }}>
+            <input 
+              type="text" 
+              className="brand-search-input" 
+              placeholder="Marka Ara... (Örn: Vespa, Honda)" 
+              value={brandQuery}
+              onChange={(e) => setBrandQuery(e.target.value)}
+            />
+          </div>
+
           <div className="brand-grid">
-            {brandsList.map((brand, idx) => (
-              <div key={idx} className="brand-logo-item" style={{ position: 'relative' }}>
-                <LiveEditable path={`services.brands.${idx}`} tagName="span">
+            {filteredBrands.map((brand) => (
+              <div key={brand} className="brand-logo-item" style={{ position: 'relative' }}>
+                <LiveEditable path={`services.brands.${brandsList.indexOf(brand)}`} tagName="span">
                   {brand}
                 </LiveEditable>
                 <LiveListControls 
-                  onDelete={() => handleDeleteBrand(idx)} 
+                  onDelete={() => handleDeleteBrand(brand)} 
                   style={{ position: 'absolute', right: '-4px', top: '-4px', scale: '0.85', zIndex: 10 }}
                 />
               </div>
@@ -190,6 +207,119 @@ export default function ServicesPageClient() {
           </div>
         </div>
       </section>
+
+      {/* PRE-FOOTER CTA BANNER */}
+      <section className="section-padding" style={{ borderTop: '1px solid var(--border-color)', background: 'linear-gradient(135deg, #16181E 0%, #090A0D 100%)' }}>
+        <div className="container text-center" style={{ maxWidth: '800px' }}>
+          <h2 style={{ fontSize: '2.25rem', color: '#FFF', fontWeight: 900, marginBottom: 'var(--space-md)' }}>
+            Motosikletinizin Bakım Zamanı Geldi mi?
+          </h2>
+          <p className="text-muted mt-sm" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '28px' }}>
+            Hemen randevunuzu oluşturun, Engin Usta ve ekibiyle motorunuzu fabrika standartlarına döndürelim.
+          </p>
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/iletisim" className="cta-btn cta-btn-primary">Randevu Al</Link>
+            <a href="https://wa.me/905331301448" target="_blank" rel="noopener noreferrer" className="cta-btn cta-btn-secondary">WhatsApp Sor</a>
+          </div>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .centered-flex-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: var(--space-lg);
+        }
+
+        .centered-flex-grid > div {
+          width: 100%;
+        }
+
+        @media (min-width: 768px) {
+          .centered-flex-grid > div {
+            width: calc(50% - 12px);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .centered-flex-grid > div {
+            width: calc(33.333% - 16px);
+          }
+        }
+
+        :global(.centered-flex-grid .card) {
+          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        }
+
+        :global(.centered-flex-grid .card:hover) {
+          transform: translateY(-6px) !important;
+          border-color: var(--color-primary) !important;
+          box-shadow: 0 12px 24px rgba(0, 122, 255, 0.18) !important;
+        }
+
+        .brand-search-input {
+          width: 100%;
+          padding: 12px 16px;
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid var(--border-color);
+          border-radius: var(--radius-md);
+          color: #FFF;
+          font-size: 0.95rem;
+          outline: none;
+          transition: all 0.2s ease;
+          box-sizing: border-box;
+        }
+
+        .brand-search-input:focus {
+          border-color: var(--color-primary);
+          box-shadow: 0 0 10px rgba(0, 122, 255, 0.15);
+          background: rgba(255, 255, 255, 0.05);
+        }
+
+        .cta-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 48px;
+          padding: 0 28px;
+          border-radius: var(--radius-md);
+          font-weight: 700;
+          font-size: 0.95rem;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          box-sizing: border-box;
+          cursor: pointer;
+        }
+
+        .cta-btn-primary {
+          background: var(--color-primary);
+          color: #FFF;
+          border: 1px solid transparent;
+        }
+
+        .cta-btn-primary:hover {
+          background: #0056B3;
+          box-shadow: 0 0 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .cta-btn-secondary {
+          background: transparent;
+          border: 1px solid var(--color-primary);
+          color: #FFF;
+        }
+
+        .cta-btn-secondary:hover {
+          background: rgba(0, 122, 255, 0.1);
+          color: var(--color-secondary);
+        }
+
+        @media (max-width: 576px) {
+          .cta-btn {
+            width: 100%;
+          }
+        }
+      `}</style>
     </>
   );
 }

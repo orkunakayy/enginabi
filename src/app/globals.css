@@ -1667,3 +1667,16 @@ textarea.form-control {
     padding: var(--space-xl) 0 !important;
   }
 }
+
+/* Responsive visibility utilities */
+.show-mobile {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .show-mobile {
+    display: block !important;
+  }
+  .show-mobile-flex {
+    display: flex !important;
+  }
+}

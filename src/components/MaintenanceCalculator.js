@@ -150,38 +150,63 @@ export default function MaintenanceCalculator() {
               {minPrice} TL - {maxPrice} TL
             </span>
           </div>
+
+          <div className="show-mobile" style={{ marginBottom: 'var(--space-md)', textAlign: 'right' }}>
+            <a 
+              href="#calculator-scope"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('calculator-scope')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              style={{ 
+                color: 'var(--color-secondary)', 
+                fontSize: '0.85rem', 
+                textDecoration: 'underline', 
+                display: 'inline-flex', 
+                alignItems: 'center', 
+                gap: '4px',
+                fontWeight: '500'
+              }}
+            >
+              Bu fiyata neler dahil? Kapsamı Gör
+              <svg style={{ width: '16px', height: '16px', fill: 'currentColor' }} viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
+            </a>
+          </div>
+
           <p className="text-muted" style={{ fontSize: '0.8rem', marginBottom: 'var(--space-lg)' }}>
             * Verilen fiyat aralığı orijinal/yüksek kaliteli yan sanayi sarf malzemeleri ve standart işçilik bedellerini kapsar. Ekstra mekanik arızalar veya parça ihtiyaçları bu fiyata dahil değildir.
           </p>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)' }}>
+          <Link 
+            href="/iletisim"
+            onClick={() => handleGAEvent('appointment')}
+            className="btn btn-accent" 
+            style={{ width: '100%', justifyContent: 'center', fontWeight: '600' }}
+          >
+            Bakım Randevusu Oluştur
+          </Link>
           <a 
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleGAEvent('whatsapp')}
-            className="btn btn-accent" 
+            className="btn btn-secondary" 
             style={{ width: '100%', justifyContent: 'center' }}
           >
-            <svg viewBox="0 0 24 24" style={{ width: '20px', height: '20px', fill: 'currentColor', marginRight: '8px' }}>
+            <svg viewBox="0 0 24 24" style={{ width: '20px', height: '20px', fill: 'currentColor', marginRight: '8px', color: '#25D366' }}>
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.12 8.12 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.45 0-2.86-.38-4.12-1.11l-.3-.18-3.07.81.82-3.01-.2-.31a8.188 8.188 0 0 1-1.25-4.34c0-4.54 3.7-8.24 8.24-8.24h-.11z"/>
             </svg>
             WhatsApp ile Teklif Al
           </a>
-          <Link 
-            href="/iletisim"
-            onClick={() => handleGAEvent('appointment')}
-            className="btn btn-secondary" 
-            style={{ width: '100%', justifyContent: 'center' }}
-          >
-            Bakım Randevusu Oluştur
-          </Link>
         </div>
       </div>
 
       {/* Results Checklist Card */}
-      <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-lg)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-md)' }}>
+      <div id="calculator-scope" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-lg)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-md)', scrollMarginTop: '20px' }}>
         <h3 style={{ fontSize: '1.4rem', marginBottom: 'var(--space-lg)', color: 'var(--color-secondary)' }}>Bakım Kapsamı Listesi</h3>
         <p className="text-muted mb-lg" style={{ fontSize: '0.95rem' }}>
           {selectedBrand} {selectedModel} için {selectedMileageData.label} kapsamında kontrol edilecek ve değişecek ana kalemler:
@@ -198,11 +223,51 @@ export default function MaintenanceCalculator() {
           ))}
         </ul>
 
-        <div style={{ marginTop: 'var(--space-xl)', padding: 'var(--space-md)', background: 'rgba(0, 102, 255, 0.05)', borderLeft: '3px solid var(--color-primary)', borderRadius: 'var(--radius-sm)' }}>
-          <strong style={{ color: '#FFF', display: 'block', marginBottom: '4px', fontSize: '0.9rem' }}>Neden Engin Usta Güvencesi?</strong>
-          <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-            Bakım sonrasında değişen tüm eski yedek parçalar size gösterilir. Tüm işlemler dijital CRM servis geçmişinize işlenir, motorunuzun kilometresi bazında sonraki bakımları takip edilir.
-          </span>
+        <div style={{ 
+          marginTop: 'var(--space-xl)', 
+          padding: 'var(--space-lg)', 
+          background: 'rgba(0, 102, 255, 0.03)', 
+          border: '1px solid rgba(0, 102, 255, 0.15)', 
+          borderRadius: 'var(--radius-md)' 
+        }}>
+          <strong style={{ 
+            color: '#FFF', 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: '8px', 
+            marginBottom: 'var(--space-md)', 
+            fontSize: '1rem' 
+          }}>
+            <svg style={{ width: '20px', height: '20px', fill: 'var(--color-primary)' }} viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            Neden Engin Usta Güvencesi?
+          </strong>
+          <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', padding: 0, margin: 0, listStyle: 'none' }}>
+            {[
+              "Bakım sonrasında değişen tüm eski yedek parçalar size gösterilir.",
+              "Tüm işlemler dijital CRM servis geçmişinize işlenir.",
+              "Motorunuzun kilometresi bazında sonraki bakımları takip edilir."
+            ].map((text, idx) => (
+              <li key={idx} style={{ display: 'flex', alignItems: 'start', gap: '10px' }}>
+                <span style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  background: 'rgba(0, 102, 255, 0.15)', 
+                  color: 'var(--color-primary)', 
+                  borderRadius: '50%', 
+                  width: '18px', 
+                  height: '18px', 
+                  fontSize: '0.75rem',
+                  fontWeight: 'bold',
+                  flexShrink: 0,
+                  marginTop: '2px'
+                }}>✓</span>
+                <span style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>{text}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

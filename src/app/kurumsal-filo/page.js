@@ -161,38 +161,99 @@ export default function FleetPage() {
             <h3 style={{ marginBottom: 'var(--space-sm)', fontSize: '1.5rem' }}>Filo Rapor Örneği</h3>
             <p className="text-muted mb-lg" style={{ fontSize: '0.9rem' }}>Hangi plakalı motora ne harcama yapıldığını detaylarıyla listeleyin.</p>
             
-            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.85rem' }}>
-              <thead>
-                <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--color-secondary)' }}>
-                  <th style={{ padding: '8px 0' }}>Plaka</th>
-                  <th style={{ padding: '8px 0' }}>İşlem</th>
-                  <th style={{ padding: '8px 0' }}>Tarih</th>
-                  <th style={{ padding: '8px 0', textAlign: 'right' }}>Masraf</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                  <td style={{ padding: '10px 0' }}>34 MTR 21</td>
-                  <td>Periyodik (Varyatör)</td>
-                  <td>12.06.2026</td>
-                  <td style={{ textAlign: 'right', fontWeight: 700 }}>2.400 TL</td>
-                </tr>
-                <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                  <td style={{ padding: '10px 0' }}>34 ABC 450</td>
-                  <td>Ağır Bakım + Debriyaj</td>
-                  <td>08.06.2026</td>
-                  <td style={{ textAlign: 'right', fontWeight: 700 }}>6.250 TL</td>
-                </tr>
-                <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                  <td style={{ padding: '10px 0' }}>34 XYZ 92</td>
-                  <td>Ön Amortisör Keçesi</td>
-                  <td>02.06.2026</td>
-                  <td style={{ textAlign: 'right', fontWeight: 700 }}>1.850 TL</td>
-                </tr>
-              </tbody>
-            </table>
+            <div style={{ overflowX: 'auto', width: '100%', WebkitOverflowScrolling: 'touch', marginBottom: 'var(--space-md)' }}>
+              <table style={{ width: '100%', minWidth: '450px', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.85rem' }}>
+                <thead>
+                  <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--color-secondary)' }}>
+                    <th style={{ padding: '8px 0' }}>Plaka</th>
+                    <th style={{ padding: '8px 0' }}>İşlem</th>
+                    <th style={{ padding: '8px 0' }}>Tarih</th>
+                    <th style={{ padding: '8px 0', textAlign: 'right' }}>Masraf</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ padding: '10px 0' }}>34 MTR 21</td>
+                    <td style={{ padding: '10px 0' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <svg style={{ width: '14px', height: '14px', fill: 'var(--color-secondary)', opacity: 0.8 }} viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                        </svg>
+                        Periyodik (Varyatör)
+                      </div>
+                    </td>
+                    <td style={{ padding: '10px 0' }}>12.06.2026</td>
+                    <td style={{ textAlign: 'right', fontWeight: 700 }}>2.400 TL</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ padding: '10px 0' }}>34 ABC 450</td>
+                    <td style={{ padding: '10px 0' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <svg style={{ width: '14px', height: '14px', fill: 'var(--color-secondary)', opacity: 0.8 }} viewBox="0 0 24 24">
+                          <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.3 4.3C.2 6.7.6 9.7 2.6 11.7c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.7-2.7c.4-.4.4-1.1 0-1.6z"/>
+                        </svg>
+                        Ağır Bakım + Debriyaj
+                      </div>
+                    </td>
+                    <td style={{ padding: '10px 0' }}>08.06.2026</td>
+                    <td style={{ textAlign: 'right', fontWeight: 700 }}>6.250 TL</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ padding: '10px 0' }}>34 XYZ 92</td>
+                    <td style={{ padding: '10px 0' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <svg style={{ width: '14px', height: '14px', fill: 'var(--color-secondary)', opacity: 0.8 }} viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/>
+                        </svg>
+                        Ön Amortisör Keçesi
+                      </div>
+                    </td>
+                    <td style={{ padding: '10px 0' }}>02.06.2026</td>
+                    <td style={{ textAlign: 'right', fontWeight: 700 }}>1.850 TL</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             
             <a href="http://crm.emiramotors.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm mt-lg" style={{ width: '100%' }}>Tüm Plaka Raporlarını Göster</a>
+          </div>
+        </div>
+      </section>
+
+      {/* B2B TRUSTED BY / LOGOS SECTION */}
+      <section className="section-padding" style={{ background: '#0D0E12', borderBottom: '1px solid var(--border-color)', padding: 'var(--space-lg) 0' }}>
+        <div className="container">
+          <div className="text-center mb-md">
+            <h4 style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.2em', fontWeight: '700' }}>Hizmet Verdiğimiz Kurye & Dağıtım Filoları</h4>
+          </div>
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            gap: 'var(--space-2xl)', 
+            flexWrap: 'wrap',
+            opacity: 0.55
+          }}>
+            {[
+              { name: "Trendyol Go", icon: "🛵" },
+              { name: "Getir", icon: "⚡" },
+              { name: "Yemeksepeti", icon: "🍕" },
+              { name: "Vigop", icon: "📦" },
+              { name: "Packet Taxi", icon: "🚕" }
+            ].map((brand, idx) => (
+              <div key={idx} style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '8px', 
+                fontSize: '1.25rem', 
+                fontWeight: 800, 
+                color: '#FFF', 
+                userSelect: 'none'
+              }}>
+                <span style={{ fontSize: '1.5rem' }}>{brand.icon}</span>
+                <span style={{ fontFamily: 'var(--font-headings)' }}>{brand.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

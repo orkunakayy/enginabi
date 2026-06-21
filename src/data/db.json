@@ -37,6 +37,16 @@
       "message": "etetetet",
       "status": "tamamlandi",
       "createdAt": "2026-06-21T16:59:05.019Z"
+    },
+    {
+      "id": "2ab5941f-8757-4968-8fc7-f46e57f8cec2",
+      "clientName": "test",
+      "phone": "5555",
+      "email": "",
+      "requestType": "BAKIM TALEBİ",
+      "message": "Blog sayfasından hızlı servis kaydı: Vespa GTS 300 Hararet Sorunu ve Soğutma Sıvısı Değişimi",
+      "status": "beklemede",
+      "createdAt": "2026-06-21T18:15:33.524Z"
     }
   ],
   "blog": {

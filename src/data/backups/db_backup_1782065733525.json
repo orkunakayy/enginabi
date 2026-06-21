@@ -19,11 +19,11 @@
       "7f3348b4531c5ec54a04e348c47626880adf64f6481872f9681b77f3af4e5150": {
         "expiresAt": "2026-06-22T13:22:10.318Z"
       },
-      "a15c1568e8e2ccb92649a367a84fbfa2451c4047be17581fbedad3478d225d40": {
-        "expiresAt": "2026-06-22T13:40:33.184Z"
-      },
       "0bc38e943a4e86fed559e0873c40b694e3b5a20325f6e3fae5814672ff3b9950": {
         "expiresAt": "2026-06-22T16:47:36.603Z"
+      },
+      "58e975d01400b9edf328778f5300e53d3a2cd7886edf0dcf88349bd5e790ccf9": {
+        "expiresAt": "2026-06-22T17:14:38.215Z"
       }
     }
   },
@@ -35,7 +35,7 @@
       "email": "test@gmail.com",
       "requestType": "BAKIM TALEBİ",
       "message": "etetetet",
-      "status": "beklemede",
+      "status": "tamamlandi",
       "createdAt": "2026-06-21T16:59:05.019Z"
     }
   ],
@@ -824,7 +824,40 @@
           "cta1Href": "/iletisim",
           "cta2Text": "Engin Usta'ya Sor",
           "cta2Href": "https://wa.me/905331301448",
-          "ctaStyleReverse": false
+          "ctaStyleReverse": false,
+          "showCalculator": true,
+          "showBrandsCarousel": true,
+          "brandsCarouselTitle": "Bakımlarda Sadece Dünyanın En İyi Parça ve Yağ Markalarını Kullanıyoruz.",
+          "brandsCarouselList": [
+            "Motul",
+            "Putoline",
+            "Liqui Moly",
+            "NGK",
+            "Bando",
+            "RK Zincir",
+            "Honda",
+            "Yamaha"
+          ],
+          "showPreventionSection": true,
+          "preventionTitle": "Bu Bakımı Zamanında Yaptırmazsanız Ne Olur?",
+          "preventionPositiveTitle": "Zamanında Bakım",
+          "preventionPositiveItems": [
+            "Yakıt tasarrufu",
+            "Maksimum performans",
+            "Sıfır yolda kalma riski"
+          ],
+          "preventionNegativeTitle": "İhmal Edilirse",
+          "preventionNegativeItems": [
+            "Varyatör kayışı kopması (büyük masraf)",
+            "Motorun yatak sarması",
+            "Çekişten düşme ve yüksek yakıt tüketimi"
+          ],
+          "showReviewsSection": true,
+          "reviewsTitle": "Müşteri Yorumları",
+          "reviews": [],
+          "showFaqSection": true,
+          "faqTitle": "Sıkça Sorulan Sorular",
+          "faqs": []
         },
         {
           "slug": "agir-bakim",
