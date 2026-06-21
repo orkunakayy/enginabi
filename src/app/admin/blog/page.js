@@ -209,15 +209,23 @@ function BlogAdminContent() {
   // Editor Helpers
   const execCmd = (command, value = null) => {
     if (activeTab !== 'visual') return;
-    document.execCommand(command, false, value);
-    if (editorRef.current) {
-      setFormData(prev => ({ ...prev, contentHtml: editorRef.current.innerHTML }));
+    try {
+      document.execCommand(command, false, value);
+      if (editorRef.current) {
+        setFormData(prev => ({ ...prev, contentHtml: editorRef.current.innerHTML }));
+      }
+    } catch (err) {
+      console.error("Editor command failed:", err);
     }
   };
 
   const addLink = () => {
-    const url = prompt('Bağlantı adresi girin (URL):', 'https://');
-    if (url) execCmd('createLink', url);
+    try {
+      const url = prompt('Bağlantı adresi girin (URL):', 'https://');
+      if (url) execCmd('createLink', url);
+    } catch (err) {
+      console.error("Add link failed:", err);
+    }
   };
 
   const handleTabChange = (tab) => {
@@ -229,14 +237,18 @@ function BlogAdminContent() {
   };
 
   const insertTemplate = (html) => {
-    if (activeTab === 'visual') {
-      if (editorRef.current) {
-        editorRef.current.focus();
-        document.execCommand('insertHTML', false, html);
-        setFormData(prev => ({ ...prev, contentHtml: editorRef.current.innerHTML }));
+    try {
+      if (activeTab === 'visual') {
+        if (editorRef.current) {
+          editorRef.current.focus();
+          document.execCommand('insertHTML', false, html);
+          setFormData(prev => ({ ...prev, contentHtml: editorRef.current.innerHTML }));
+        }
+      } else {
+        setFormData(prev => ({ ...prev, contentHtml: prev.contentHtml + '\n' + html }));
       }
-    } else {
-      setFormData(prev => ({ ...prev, contentHtml: prev.contentHtml + '\n' + html }));
+    } catch (err) {
+      console.error("Insert template failed:", err);
     }
   };
 
@@ -410,20 +422,20 @@ function BlogAdminContent() {
                 <div className="wysiwyg-wrapper">
                   {/* Styling Actions Toolbar */}
                   <div className="editor-toolbar">
-                    <button type="button" onClick={() => execCmd('bold')} title="Kalın (Bold)"><b>B</b></button>
-                    <button type="button" onClick={() => execCmd('italic')} title="İtalik (Italic)"><i>I</i></button>
-                    <button type="button" onClick={() => execCmd('underline')} title="Altı Çizili (Underline)"><u>U</u></button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('bold'); }} title="Kalın (Bold)"><b>B</b></button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('italic'); }} title="İtalik (Italic)"><i>I</i></button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('underline'); }} title="Altı Çizili (Underline)"><u>U</u></button>
                     <div className="toolbar-separator"></div>
-                    <button type="button" onClick={() => execCmd('formatBlock', '<h2>')} title="Alt Başlık (H2)">H2</button>
-                    <button type="button" onClick={() => execCmd('formatBlock', '<h3>')} title="Küçük Başlık (H3)">H3</button>
-                    <button type="button" onClick={() => execCmd('formatBlock', '<p>')} title="Paragraf">P</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('formatBlock', 'H2'); }} title="Alt Başlık (H2)">H2</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('formatBlock', 'H3'); }} title="Küçük Başlık (H3)">H3</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('formatBlock', 'P'); }} title="Paragraf">P</button>
                     <div className="toolbar-separator"></div>
-                    <button type="button" onClick={() => execCmd('insertUnorderedList')} title="Madde İşaretli Liste">• Liste</button>
-                    <button type="button" onClick={() => execCmd('insertOrderedList')} title="Numaralı Liste">1. Liste</button>
-                    <button type="button" onClick={() => execCmd('formatBlock', '<blockquote>')} title="Alıntı (Blockquote)">“ Alıntı</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('insertUnorderedList'); }} title="Madde İşaretli Liste">• Liste</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('insertOrderedList'); }} title="Numaralı Liste">1. Liste</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('formatBlock', 'BLOCKQUOTE'); }} title="Alıntı (Blockquote)">“ Alıntı</button>
                     <div className="toolbar-separator"></div>
-                    <button type="button" onClick={addLink} title="Bağlantı Ekle (Link)">🔗 Link</button>
-                    <button type="button" onClick={() => execCmd('unlink')} title="Bağlantıyı Kaldır">✕</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); addLink(); }} title="Bağlantı Ekle (Link)">🔗 Link</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCmd('unlink'); }} title="Bağlantıyı Kaldır">✕</button>
                   </div>
 
                   {/* Quick block inserters */}
@@ -432,28 +444,28 @@ function BlogAdminContent() {
                     <button 
                       type="button" 
                       className="btn-insert-block"
-                      onClick={() => insertTemplate('<p class="text-muted mb-md">Açıklama paragrafını buraya yazın...</p>\n')}
+                      onMouseDown={(e) => { e.preventDefault(); insertTemplate('<p class="text-muted mb-md">Açıklama paragrafını buraya yazın...</p>\n'); }}
                     >
                       + Paragraf
                     </button>
                     <button 
                       type="button" 
                       className="btn-insert-block"
-                      onClick={() => insertTemplate('<h2 style="font-size: 1.5rem; color: #FFF; margin: var(--space-lg) 0 var(--space-sm)">Alt Başlık</h2>\n')}
+                      onMouseDown={(e) => { e.preventDefault(); insertTemplate('<h2 style="font-size: 1.5rem; color: #FFF; margin: var(--space-lg) 0 var(--space-sm)">Alt Başlık</h2>\n'); }}
                     >
                       + Alt Başlık (H2)
                     </button>
                     <button 
                       type="button" 
                       className="btn-insert-block"
-                      onClick={() => insertTemplate('<ul style="display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-md); list-style: disc; padding-left: 20px; color: var(--text-secondary)">\n  <li>Madde 1</li>\n  <li>Madde 2</li>\n</ul>\n')}
+                      onMouseDown={(e) => { e.preventDefault(); insertTemplate('<ul style="display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-md); list-style: disc; padding-left: 20px; color: var(--text-secondary)">\n  <li>Madde 1</li>\n  <li>Madde 2</li>\n</ul>\n'); }}
                     >
                       + Liste Bloğu
                     </button>
                     <button 
                       type="button" 
                       className="btn-insert-block"
-                      onClick={() => insertTemplate('<div style="background: rgba(0,122,255,0.05); border-left: 4px solid #007AFF; padding: 16px; margin: 24px 0; border-radius: 0 8px 8px 0;"><h4 style="color:#FFF; margin:0 0 8px 0; font-weight:700;">🛠️ Usta Tavsiyesi</h4><p class="text-muted" style="margin:0;">Tavsiye detaylarını buraya yazın...</p></div>\n')}
+                      onMouseDown={(e) => { e.preventDefault(); insertTemplate('<div style="background: rgba(0,122,255,0.05); border-left: 4px solid #007AFF; padding: 16px; margin: 24px 0; border-radius: 0 8px 8px 0;"><h4 style="color:#FFF; margin:0 0 8px 0; font-weight:700;">🛠️ Usta Tavsiyesi</h4><p class="text-muted" style="margin:0;">Tavsiye detaylarını buraya yazın...</p></div>\n'); }}
                     >
                       + Usta Tavsiyesi
                     </button>
