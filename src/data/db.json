@@ -18,6 +18,9 @@
       },
       "7f3348b4531c5ec54a04e348c47626880adf64f6481872f9681b77f3af4e5150": {
         "expiresAt": "2026-06-22T13:22:10.318Z"
+      },
+      "a15c1568e8e2ccb92649a367a84fbfa2451c4047be17581fbedad3478d225d40": {
+        "expiresAt": "2026-06-22T13:40:33.184Z"
       }
     }
   },
@@ -531,7 +534,7 @@
       "story": {
         "badgeText": "15+ Yıllık Tecrübe",
         "title": "Dükkanımızın Hikayesi",
-        "p1": "Emira Motors, kurucumuz Engin Usta'nın motosiklet mekaniği alanındaki çekirdekten yetişme tecrübesiyle kurulmuştur. İlk yıllarda yoğun çalışma temposuna sahip kuryeler ve motorcular için yerinde servis modeli ile yola çıkmış olsak da, günümüz ihtiyaçları doğrultusunda hizmet kalitemizi artırmak için tam donanımlı dükkan modelimize geçiş yaptık.",
+        "p1": "Emira Motors, kurucumuz Engin İlki nin motosiklet mekaniği alanındaki çekirdekten yetişme tecrübesiyle kurulmuştur. İlk yıllarda yoğun çalışma temposuna sahip kuryeler ve motorcular için yerinde servis modeli ile yola çıkmış olsak da, günümüz ihtiyaçları doğrultusunda hizmet kalitemizi artırmak için tam donanımlı dükkan modelimize geçiş yaptık.",
         "p2": "Artık Beylikdüzü'ndeki atölyemizde, en karmaşık elektrik arıza teşhis cihazlarından hassas jant pres makinelerine kadar tüm teknik ekipmanı barındırarak, motosikletinizi fabrika standartlarında onarıyoruz. Getirdiğiniz her motorun bakım geçmişini dijital CRM panelimizde saklayarak size kurumsal bir güvence sunuyoruz.",
         "f1": "Şeffaf Hizmet Anlayışı",
         "f2": "Orijinal Yedek Parça",
@@ -545,19 +548,18 @@
         "desc": "Motosikletinizi güvenle teslim edebileceğiniz, her biri kendi alanında uzman ustalarımız.",
         "members": [
           {
+            "id": "1782049312212",
             "name": "Engin Usta",
             "role": "Kurucu & Baş Mekanisyen",
-            "desc": "15 yılı aşkın süredir motor sektöründe. Özellikle Honda, Yamaha ve TR Vespa modellerinin mekanik motor revizyonlarında uzmandır."
+            "desc": "15 yılı aşkın süredir motor sektöründe. Özellikle Honda, Yamaha ve TR Vespa modellerinin mekanik motor revizyonlarında uzmandır.",
+            "img": "https://static.vecteezy.com/system/resources/thumbnails/074/237/071/small/smiling-motorcycle-mechanic-performing-maintenance-on-chain-drive-in-auto-repair-shop-photo.jpg"
           },
           {
-            "name": "Yusuf Usta",
-            "role": "Elektrik & Diagnostik Uzmanı",
-            "desc": "Çözülemeyen elektrik tesisat arızaları, beyin (ECU) okuma ve statör/konjektör ölçümlerinde dükkanımızın dijital teşhis uzmanıdır."
-          },
-          {
-            "name": "Sinan Usta",
-            "role": "Şasi & Metal Kaynak Uzmanı",
-            "desc": "Argon (TIG) alüminyum kaynağı, gazaltı şasi düzeltmeleri, koruma/çanta demiri güçlendirme ve hidrolik pres jant doğrultma ustasıdır."
+            "id": "1782049339506",
+            "name": "TEST",
+            "role": "TEST",
+            "desc": "TEST",
+            "img": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=150"
           }
         ]
       }
@@ -2204,5 +2206,28 @@
       "title": "Ön Çatal Keçe & Amortisör Yağ Yenilemesi",
       "image": "https://images.unsplash.com/photo-1615887023516-9b6bcd559e87?auto=format&fit=crop&q=80&w=800"
     }
+  ],
+  "integrations": {
+    "googleAnalyticsId": "",
+    "googleSearchConsoleId": "",
+    "bingWebmasterId": "",
+    "clarityId": "",
+    "facebookPixelId": "",
+    "customHeaderScripts": "",
+    "customFooterScripts": ""
+  },
+  "blogCategories": [
+    "Periyodik Bakım",
+    "Vespa Bakımı",
+    "Honda Arızaları",
+    "Yamaha Bakımı",
+    "Genel Tavsiyeler"
+  ],
+  "blogBrands": [
+    "Genel",
+    "Vespa",
+    "Honda",
+    "Yamaha",
+    "SYM"
   ]
 }

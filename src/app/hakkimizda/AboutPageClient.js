@@ -8,29 +8,31 @@ import { Suspense } from 'react';
 export default function AboutPageClient() {
   const { get } = useLiveContent();
 
-  const members = [
+  const defaultMembers = [
     {
-      key: '0',
+      id: '1',
       img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300',
-      defaultName: "Engin Usta",
-      defaultRole: "Kurucu & Baş Mekanisyen",
-      defaultDesc: "15 yılı aşkın süredir motor sektöründe. Özellikle Honda, Yamaha ve İtalyan Vespa modellerinin mekanik motor revizyonlarında uzmandır."
+      name: "Engin Usta",
+      role: "Kurucu & Baş Mekanisyen",
+      desc: "15 yılı aşkın süredir motor sektöründe. Özellikle Honda, Yamaha ve İtalyan Vespa modellerinin mekanik motor revizyonlarında uzmandır."
     },
     {
-      key: '1',
+      id: '2',
       img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300',
-      defaultName: "Yusuf Usta",
-      defaultRole: "Elektrik & Diagnostik Uzmanı",
-      defaultDesc: "Çözülemeyen elektrik tesisat arızaları, beyin (ECU) okuma ve statör/konjektör ölçümlerinde dükkanımızın dijital teşhis uzmanıdır."
+      name: "Yusuf Usta",
+      role: "Elektrik & Diagnostik Uzmanı",
+      desc: "Çözülemeyen elektrik tesisat arızaları, beyin (ECU) okuma ve statör/konjektör ölçümlerinde dükkanımızın dijital teşhis uzmanıdır."
     },
     {
-      key: '2',
+      id: '3',
       img: 'https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=300',
-      defaultName: "Sinan Usta",
-      defaultRole: "Şasi & Metal Kaynak Uzmanı",
-      defaultDesc: "Argon (TIG) alüminyum kaynağı, gazaltı şasi düzeltmeleri, koruma/çanta demiri güçlendirme ve hidrolik pres jant doğrultma ustasıdır."
+      name: "Sinan Usta",
+      role: "Şasi & Metal Kaynak Uzmanı",
+      desc: "Argon (TIG) alüminyum kaynağı, gazaltı şasi düzeltmeleri, koruma/çanta demiri güçlendirme ve hidrolik pres jant doğrultma ustasıdır."
     }
   ];
+
+  const teamMembers = get('about.team.members', defaultMembers);
 
   return (
     <>
@@ -115,20 +117,20 @@ export default function AboutPageClient() {
           </div>
 
           <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-lg)' }}>
-            {members.map((member, idx) => (
-              <div key={member.key} className="card" style={{ background: 'var(--bg-dark)', border: '1px solid var(--border-color)', textAlign: 'center', padding: 'var(--space-xl)', cursor: 'default' }}>
+            {teamMembers.map((member, idx) => (
+              <div key={member.id || idx} className="card" style={{ background: 'var(--bg-dark)', border: '1px solid var(--border-color)', textAlign: 'center', padding: 'var(--space-xl)', cursor: 'default' }}>
                 <div style={{ width: '120px', height: '120px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto var(--space-md)', border: '2px solid var(--color-primary)' }}>
-                  <img src={member.img} alt={get(`about.team.members.${idx}.name`, member.defaultName)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={member.img} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
-                <LiveEditable path={`about.team.members.${idx}.name`} tagName="h3" style={{ fontSize: '1.25rem', color: '#FFF', marginBottom: '4px' }}>
-                  {get(`about.team.members.${idx}.name`, member.defaultName)}
-                </LiveEditable>
-                <LiveEditable path={`about.team.members.${idx}.role`} tagName="div" style={{ color: 'var(--color-secondary)', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', marginBottom: 'var(--space-sm)' }}>
-                  {get(`about.team.members.${idx}.role`, member.defaultRole)}
-                </LiveEditable>
-                <LiveEditable path={`about.team.members.${idx}.desc`} tagName="p" className="text-muted" style={{ fontSize: '0.85rem' }}>
-                  {get(`about.team.members.${idx}.desc`, member.defaultDesc)}
-                </LiveEditable>
+                <h3 style={{ fontSize: '1.25rem', color: '#FFF', marginBottom: '4px' }}>
+                  {member.name}
+                </h3>
+                <div style={{ color: 'var(--color-secondary)', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', marginBottom: 'var(--space-sm)' }}>
+                  {member.role}
+                </div>
+                <p className="text-muted" style={{ fontSize: '0.85rem' }}>
+                  {member.desc}
+                </p>
               </div>
             ))}
           </div>

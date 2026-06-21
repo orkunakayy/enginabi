@@ -2078,8 +2078,48 @@ const DEFAULT_SEED = {
         title: "Servis Galerisi & Atölye",
         desc: "Atölyemizde gerçekleştirdiğimiz Vespa varyatör temizlikleri, Honda statör değişimleri ve ağır motor revizyonlarından enstantaneler."
       }
+    },
+    about: {
+      team: {
+        title: "Uzman Kadromuz",
+        desc: "Motosikletinizi güvenle teslim edebileceğiniz, her biri kendi alanında uzman ustalarımız.",
+        members: [
+          {
+            id: "1",
+            name: "Engin Usta",
+            role: "Kurucu & Baş Mekanisyen",
+            desc: "15 yılı aşkın süredir motor sektöründe. Özellikle Honda, Yamaha ve İtalyan Vespa modellerinin mekanik motor revizyonlarında uzmandır.",
+            img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300"
+          },
+          {
+            id: "2",
+            name: "Yusuf Usta",
+            role: "Elektrik & Diagnostik Uzmanı",
+            desc: "Çözülemeyen elektrik tesisat arızaları, beyin (ECU) okuma ve statör/konjektör ölçümlerinde dükkanımızın dijital teşhis uzmanıdır.",
+            img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300"
+          },
+          {
+            id: "3",
+            name: "Sinan Usta",
+            role: "Şasi & Metal Kaynak Uzmanı",
+            desc: "Argon (TIG) alüminyum kaynağı, gazaltı şasi düzeltmeleri, koruma/çanta demiri güçlendirme ve hidrolik pres jant doğrultma ustasıdır.",
+            img: "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=300"
+          }
+        ]
+      }
     }
-  }
+  },
+  integrations: {
+    googleAnalyticsId: "",
+    googleSearchConsoleId: "",
+    bingWebmasterId: "",
+    clarityId: "",
+    facebookPixelId: "",
+    customHeaderScripts: "",
+    customFooterScripts: ""
+  },
+  blogCategories: ["Periyodik Bakım", "Vespa Bakımı", "Honda Arızaları", "Yamaha Bakımı", "Genel Tavsiyeler"],
+  blogBrands: ["Genel", "Vespa", "Honda", "Yamaha", "SYM"]
 };
 
 function mergeDeep(target, source) {
@@ -2132,6 +2172,30 @@ export function readDB() {
     } else {
       updated = mergeDeep(db.content, DEFAULT_SEED.content);
     }
+
+    if (!db.integrations) {
+      db.integrations = { ...DEFAULT_SEED.integrations };
+      updated = true;
+    } else {
+      // merge integrations properties to make sure all keys exist
+      for (const k of Object.keys(DEFAULT_SEED.integrations)) {
+        if (db.integrations[k] === undefined) {
+          db.integrations[k] = DEFAULT_SEED.integrations[k];
+          updated = true;
+        }
+      }
+    }
+
+    if (!db.blogCategories) {
+      db.blogCategories = [...DEFAULT_SEED.blogCategories];
+      updated = true;
+    }
+
+    if (!db.blogBrands) {
+      db.blogBrands = [...DEFAULT_SEED.blogBrands];
+      updated = true;
+    }
+
     if (updated) {
       fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');
     }
