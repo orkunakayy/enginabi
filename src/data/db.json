@@ -1,0 +1,2205 @@
+{
+  "admin": {
+    "username": "admin",
+    "passwordHash": "$2b$12$3fTiNuL.PIs7xGQ3GZot.eonJ//NILEr6YxITGOAGXcpRHaEO2pO2",
+    "mustChangePassword": false,
+    "sessions": {
+      "a83306dd7bcc8d02336dd2496d261d473308a7d525fbbf10c72147b152c27fce": {
+        "expiresAt": "2026-06-20T20:44:53.422Z"
+      },
+      "152dbf250902766ea36d5072ea1a8cf8113f331764c4d6a99166f505e7709246": {
+        "expiresAt": "2026-06-20T21:16:56.181Z"
+      },
+      "2d2da6bdad701507031dfb20fafb6a8554b31ab919575dd86d9d68fde28257d1": {
+        "expiresAt": "2026-06-21T09:50:16.735Z"
+      },
+      "69607064b19a956d99daca787bfc7c51a68c8a7125cc5697b455449ab094cafd": {
+        "expiresAt": "2026-06-21T21:14:09.737Z"
+      }
+    }
+  },
+  "appointments": [],
+  "blog": {
+    "posts": [
+      {
+        "slug": "vespa-varyator-temizligi",
+        "title": "Vespa Varyatör Temizliği Neden Hayati Önem Taşır?",
+        "desc": "Vespa ve diğer otomatik vites scooter modellerinde kalkıştaki titreme ve performans düşüşünün ana sebebi varyatör içi tozlanmadır.",
+        "date": "18 Haziran 2026",
+        "category": "Vespa Bakımı",
+        "brand": "Vespa",
+        "readTime": "4 dk okuma",
+        "image": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=600",
+        "youtubeId": "dQw4w9WgXcQ",
+        "contentHtml": "<p class=\"text-muted mb-md\">Vespa GTS, Primavera, Sprint ve diğer scooter modelleri tamamen otomatik varyatör aktarım sistemine sahiptir. Debriyaj balatası ve kayışın dönmesiyle hareket eden bu sistemde, metal parçaların sürtünmesi ve balatanın aşınması sonucunda yüksek miktarda toz birikir.</p>\n<p class=\"text-muted mb-md\">Bu toz varyatör içindeki bagaların (silindir misketlerin) serbest hareketini engelleyerek zamanla aşınmasına yol açar. Sonuç olarak kalkışta titreme, hızlanırken yığılma ve kayışta ses problemleri meydana gelir.</p>\n<h2 style=\"font-size: 1.5rem; color: #FFF; margin: var(--space-lg) 0 var(--space-sm)\">Vespa Varyatör Bakımında Hangi İşlemleri Yapıyoruz?</h2>\n<ul style=\"display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-md); list-style: disc; padding-left: 20px; color: var(--text-secondary)\">\n  <li>Varyatör kapağı sökülerek ön ve arka varyatör blokları dağıtılır.</li>\n  <li>Biriken balata tozu ve metal kırıntıları özel temizleme kimyasallarıyla yıkanır.</li>\n  <li>Baga (misket) ağırlıklarının aşınma seviyeleri kumpasla ölçülür.</li>\n  <li>Arka debriyaj sacları ve balata yüzeyi zımparalanarak sürtünme katsayısı artırılır.</li>\n  <li>Varyatör burcu temizlenerek yüksek ısıya dayanıklı özel gresle hafifçe yağlanır.</li>\n</ul>\n<p class=\"text-muted\">Scooter model motorlarda varyatör temizliğini her 5.000 kilometrede bir yaptırmanız hem kayış ömrünü uzatır hem de debriyaj tasının eğrilip büyük maliyetler açmasını engeller.</p>"
+      },
+      {
+        "slug": "honda-activa-marj-sorunu",
+        "title": "Honda Activa 125 Marş Basmama Sorunu ve Çözümü",
+        "desc": "Özellikle kurye motorlarında kronikleşen sabahları zor marş alma veya marş almama sorunlarının statör kaynaklı elektrik arıza çözümleri.",
+        "date": "14 Haziran 2026",
+        "category": "Honda Arızaları",
+        "brand": "Honda",
+        "readTime": "5 dk okuma",
+        "image": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=600",
+        "youtubeId": "dQw4w9WgXcQ",
+        "contentHtml": "<p class=\"text-muted mb-md\">Honda Activa 125 modellerinde sıkça karşılaşılan sabahları zor marş alma, soğuk havalarda stop etme ve marş motorunun dönmemesi arızaları genellikle elektriksel veya statör kaynaklıdır.</p>\n<p class=\"text-muted mb-md\">Motosikletin marş düğmesine basıldığında enjeksiyon lambasının sönmesi ancak motorun ateşleme yapmaması, şarj sisteminin aküyü yeterli beslememesinden kaynaklanır. Bu durumlarda akü değişimi yapılsa bile kısa süre sonra arıza tekrarlar.</p>\n<h2 style=\"font-size: 1.5rem; color: #FFF; margin: var(--space-lg) 0 var(--space-sm)\">Kronik Marş Probleminin Çözüm Adımları</h2>\n<ul style=\"display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-md); list-style: disc; padding-left: 20px; color: var(--text-secondary)\">\n  <li>Akü voltajı ve alternatörün şarj akımı (konjektör) avometre ile ölçülür.</li>\n  <li>Marş rölesi ve sigorta kutusundaki korozyonlar temizlenir.</li>\n  <li>Statör sargısı sökülerek bobin direnç değerleri kontrol edilir, gerekiyorsa orijinal parça ile değiştirilir.</li>\n  <li>Şasi kablo bağlantıları kontrol edilerek oksitlenme giderilir.</li>\n</ul>\n<p class=\"text-muted\">Honda Activa motorunuzda sabahları marş problemi yaşıyorsanız, aküyü tamamen bitirmeden servisimizi ziyaret ederek statör şarj testini ücretsiz yaptırabilirsiniz.</p>"
+      },
+      {
+        "slug": "motosiklet-rodaji-nasil-yapilir",
+        "title": "Yeni Alınan Motosiklette Doğru Rodaj Nasıl Yapılır?",
+        "desc": "Sıfır km veya motor revizyonu yapılmış motosikletlerde piston, segman ve silindir uyumunu sağlamak için doğru rodaj rehberi.",
+        "date": "10 Haziran 2026",
+        "category": "Genel Tavsiyeler",
+        "brand": "Genel",
+        "readTime": "6 dk okuma",
+        "image": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=600",
+        "youtubeId": "dQw4w9WgXcQ",
+        "contentHtml": "<p class=\"text-muted mb-md\">Sıfır km alınan veya motor revizyonu (rektefiye) yapılmış motosikletlerde, yeni parçaların birbiriyle pürüzsüzce çalışabilmesi için rodaj süreci kritik öneme sahiptir.</p>\n<p class=\"text-muted mb-md\">İlk 1.000 km boyunca motoru aşırı yüksek devirlere çıkmaya zorlamamak, aynı zamanda motoru sürekli sabit bir hızda da sürmemek gerekir. Devir aralığını değişken tutarak piston segmanlarının silindir duvarlarına düzgünce oturması sağlanır.</p>\n<h2 style=\"font-size: 1.5rem; color: #FFF; margin: var(--space-lg) 0 var(--space-sm)\">Doğru Rodaj İçin Usta Tavsiyeleri</h2>\n<ul style=\"display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-md); list-style: disc; padding-left: 20px; color: var(--text-secondary)\">\n  <li>İlk 500 km boyunca tam gaz açmaktan kaçının, gaz kolunu en fazla yarım pozisyonda kullanın.</li>\n  <li>Motoru çalıştırmadan önce 1-2 dakika rölantide çalıştırarak yağın tüm silindir bloğuna yayılmasını bekleyin.</li>\n  <li>Motosiklete artçı almayarak motora binen yükü hafif tutun.</li>\n  <li>İlk 1.000 km dolduğunda mutlaka motor yağını ve yağ filtresini değiştirin.</li>\n</ul>\n<p class=\"text-muted\">Rodaj süresince mineral veya yarı sentetik rodaj yağları kullanılması sekmanların silindire daha kolay alışmasını sağlar. Tam sentetik yağa 1.000 km bakımından sonra geçiş yapıyoruz.</p>"
+      },
+      {
+        "slug": "yamaha-nmax-varyator-bagalari",
+        "title": "Yamaha NMAX Varyatör Bagaları Ne Zaman Değişmeli?",
+        "desc": "Yamaha NMAX ve XMAX serilerinde kalkıştaki hantallığı, devir dalgalanmasını ve kayış gürültüsünü önlemek için baga değişim periyotları.",
+        "date": "06 Haziran 2026",
+        "category": "Yamaha Bakımı",
+        "brand": "Yamaha",
+        "readTime": "5 dk okuma",
+        "image": "https://images.unsplash.com/photo-1615887023516-9b6bcd559e87?auto=format&fit=crop&q=80&w=600",
+        "youtubeId": "dQw4w9WgXcQ",
+        "contentHtml": "<p class=\"text-muted mb-md\">Yamaha NMAX ve XMAX serisi scooter motosikletlerde varyatör bagaları (misketleri), motor gücünü tekerleğe aktaran otomatik şanzıman sisteminin ağırlık sensörleridir. Bagaların aşınması kalkışta hantallığa ve hızlanmada yığılmalara sebep olur.</p>\n<p class=\"text-muted mb-md\">Misketlerin yüzeyinde oluşan düzleşmeler, kayışın kasnaklar arasında pürüzsüz yükselmesini engeller. Bu da yakıt tüketimini artırır ve yüksek hızlarda vibrasyona yol açar.</p>\n<h2 style=\"font-size: 1.5rem; color: #FFF; margin: var(--space-lg) 0 var(--space-sm)\">Baga Aşınması Belirtileri ve Değişimi</h2>\n<ul style=\"display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-md); list-style: disc; padding-left: 20px; color: var(--text-secondary)\">\n  <li>Motor kalkış yaparken aşırı sarsıntı ve debriyaj tıkırtısı yapıyorsa,</li>\n  <li>Yüksek devir çevrilmesine rağmen motor hızlanmıyorsa bagalar aşınmıştır.</li>\n  <li>Varyatör temizliği esnasında bagalar orijinal Yamaha gramaj değerinde olanlar ile yenilenmelidir.</li>\n  <li>Sürüş tarzınıza göre bagaların 10.000 km ile 15.000 km arasında değişmesi tavsiye edilir.</li>\n</ul>\n<p class=\"text-muted\">Aşınmış bagaları değiştirmemek varyatör kasnağının yuvalarını bozarak komple ön varyatör bloğunun değişmesini gerektirecek daha büyük masraflara sebep olur.</p>"
+      },
+      {
+        "slug": "vespa-gts-sogutma-sivisi",
+        "title": "Vespa GTS 300 Hararet Sorunu ve Soğutma Sıvısı Değişimi",
+        "desc": "GTS 300 modellerinde hararet göstergesinin yükselmesi durumunda yapılması gereken radyatör temizliği ve doğru antifriz dolum detayları.",
+        "date": "02 Haziran 2026",
+        "category": "Vespa Bakımı",
+        "brand": "Vespa",
+        "readTime": "7 dk okuma",
+        "image": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=600",
+        "youtubeId": "dQw4w9WgXcQ",
+        "contentHtml": "<p class=\"text-muted mb-md\">Vespa GTS 300 Quasar motor blokları, yüksek performanslı sıvı soğutmalı bir sisteme sahiptir. Yaz aylarında sıkışık trafikte hararet göstergesinin kırmızı çizgiye yaklaşması veya fanın sürekli açık kalması soğutma sistemi arızasına işarettir.</p>\n<p class=\"text-muted mb-md\">Soğutma sıvısının (antifriz) zamanla özelliğini yitirmesi radyatör peteklerinde kireçlenmeye ve tıkanmaya yol açar. Bu durum motorun soğumasına engel olarak conta yakma riskini ortaya çıkarır.</p>\n<h2 style=\"font-size: 1.5rem; color: #FFF; margin: var(--space-lg) 0 var(--space-sm)\">Hararet Arızası Çözüm Adımları</h2>\n<ul style=\"display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-md); list-style: disc; padding-left: 20px; color: var(--text-secondary)\">\n  <li>Termostatın açma derecesi test edilir, bozuksa orijinal Piaggio parça ile yenilenir.</li>\n  <li>Radyatör peteklerindeki tıkanıklıklar temizleme solventleri ile basınçlı yıkanır.</li>\n  <li>Soğutma suyu tamamen tahliye edilerek Vespa'lar için özel formüle edilmiş organik kırmızı antifriz ile doldurulur.</li>\n  <li>Sistemdeki hava alma tapası yardımıyla hava boşluğu alınarak devirdaim testi yapılır.</li>\n</ul>\n<p class=\"text-muted\">Vespa GTS motorlarda soğutma sıvısının her 2 yılda bir veya 20.000 kilometrede bir tamamen yenilenmesi motor ömrünü güvenceye alır.</p>"
+      },
+      {
+        "slug": "motosiklet-zincir-bakimi",
+        "title": "Motosiklet Zincir Temizliği ve Doğru Yağlama Adımları",
+        "desc": "Zincirli motosikletlerde aşınmayı azaltarak aktarım ömrünü 2 katına çıkaran doğru temizleme sıvıları ve zincir yağlama periyotları.",
+        "date": "28 Mayıs 2026",
+        "category": "Genel Tavsiyeler",
+        "brand": "Genel",
+        "readTime": "4 dk okuma",
+        "image": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=600",
+        "youtubeId": "dQw4w9WgXcQ",
+        "contentHtml": "<p class=\"text-muted mb-md\">Vitesli motosikletlerde gücü arka tekerleğe ileten zincir ve dişli seti, sürüş güvenliğini ve motor performansını doğrudan etkiler. Kirli, kuru veya gevşek zincirler yakıt tüketimini artırdığı gibi koparak kaza riskine yol açabilir.</p>\n<p class=\"text-muted mb-md\">Özellikle yağışlı havalarda ve tozlu yollarda sürüş sonrası zincir aralarındaki O-Ring / X-Ring contaları kurur. Zincirin sertleşmesi arka tekerleğin rahat dönmesini engelleyerek çekişi düşürür.</p>\n<h2 style=\"font-size: 1.5rem; color: #FFF; margin: var(--space-lg) 0 var(--space-sm)\">Zincir Bakımı Nasıl Yapılmalı?</h2>\n<ul style=\"display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-md); list-style: disc; padding-left: 20px; color: var(--text-secondary)\">\n  <li>Zincir temizliğinde contalara zarar vermeyen özel zincir temizleme spreyleri kullanılmalıdır.</li>\n  <li>Özel fırça ile tüm zincir halkaları kirden arındırıldıktan sonra temiz bir bezle kurulanmalıdır.</li>\n  <li>Yağlama işleminde O-Ring uyumlu kaliteli zincir yağı (Chain Lube) iç kısımdaki baklalara sıkılmalıdır.</li>\n  <li>Zincir payı (gerginliği) sürücü ağırlığına göre 2-3 cm salınım yapacak şekilde ayarlanmalıdır.</li>\n</ul>\n<p class=\"text-muted\">Motosikletinizin zincirini her 300-500 km aralığında yağlamanız, her 1000 km'de bir ise temizlemeniz zincir setinizin ömrünü 2 katından fazla uzatacaktır.</p>"
+      }
+    ]
+  },
+  "reels": [
+    {
+      "title": "Vu tu tu tu serisi 3 aman elinizi gazdan çekmeyin",
+      "youtubeId": "RUIl0ZKkJ9g",
+      "duration": "2:32",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/RUIl0ZKkJ9g/mqdefault.jpg",
+      "id": 1
+    },
+    {
+      "title": "yine bir kesici mağduru",
+      "youtubeId": "Bl1BVwB6WB4",
+      "duration": "1:52",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Bl1BVwB6WB4/mqdefault.jpg",
+      "id": 2
+    },
+    {
+      "title": "Maşa geldide bizmi oynamadık",
+      "youtubeId": "w9fH-p_JN5U",
+      "duration": "0:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/w9fH-p_JN5U/mqdefault.jpg",
+      "id": 3
+    },
+    {
+      "title": "Çok para istemiyoruz sadece 1500 dolar 😂",
+      "youtubeId": "FXzzK9u8FME",
+      "duration": "0:20",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/FXzzK9u8FME/mqdefault.jpg",
+      "id": 4
+    },
+    {
+      "title": "Yine bir tutanak mağduru kurye kardeşimiz",
+      "youtubeId": "_i5ZfDK7XBw",
+      "duration": "2:54",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/_i5ZfDK7XBw/mqdefault.jpg",
+      "id": 5
+    },
+    {
+      "title": "Müşterilerimiz yolda kalmasın gerekirse biz uykumuzu böleriz",
+      "youtubeId": "YEP8chIjCjQ",
+      "duration": "0:32",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/YEP8chIjCjQ/mqdefault.jpg",
+      "id": 6
+    },
+    {
+      "title": "Parça kalitesi git gide düşüyor",
+      "youtubeId": "iMKEzA3AdN8",
+      "duration": "0:51",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/iMKEzA3AdN8/mqdefault.jpg",
+      "id": 7
+    },
+    {
+      "title": "Hava filtresi kutusunun önemi",
+      "youtubeId": "oN50MntyVbo",
+      "duration": "1:22",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/oN50MntyVbo/mqdefault.jpg",
+      "id": 8
+    },
+    {
+      "title": "Rks wildcat 125 çanta demiri montajı",
+      "youtubeId": "cxWkFQdZINA",
+      "duration": "1:45",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/cxWkFQdZINA/mqdefault.jpg",
+      "id": 9
+    },
+    {
+      "title": "Çin malı motorların eksoz problemi",
+      "youtubeId": "CAExc79OmUw",
+      "duration": "2:09",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/CAExc79OmUw/mqdefault.jpg",
+      "id": 10
+    },
+    {
+      "title": "Motorların altında kesinlikle muz unutmayın 😂",
+      "youtubeId": "e8L9mpJGlfY",
+      "duration": "0:47",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/e8L9mpJGlfY/mqdefault.jpg",
+      "id": 11
+    },
+    {
+      "title": "Önden kazalı activa s yeniden yollarda",
+      "youtubeId": "ODkMXoj59ro",
+      "duration": "0:37",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/ODkMXoj59ro/mqdefault.jpg",
+      "id": 12
+    },
+    {
+      "title": "Kazalı activa s topluyoruz",
+      "youtubeId": "xhkO4-_99DM",
+      "duration": "0:25",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/xhkO4-_99DM/mqdefault.jpg",
+      "id": 13
+    },
+    {
+      "title": "Gürpınar sahilde motor arızası yaşayan arkadaşları limana kadar çektik geçmiş olsun diliyoruz",
+      "youtubeId": "1y2Wg0Brgng",
+      "duration": "0:34",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/1y2Wg0Brgng/mqdefault.jpg",
+      "id": 14
+    },
+    {
+      "title": "Sabah saatinde müşterimiz tarafından çekilen emin ustanın aşkla çalışması. Videodan haberi yok",
+      "youtubeId": "tDB9UyhTlI0",
+      "duration": "0:39",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/tDB9UyhTlI0/mqdefault.jpg",
+      "id": 15
+    },
+    {
+      "title": "15binde sert kullanılan motorun hali",
+      "youtubeId": "-prT3tP4g2g",
+      "duration": "0:55",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/-prT3tP4g2g/mqdefault.jpg",
+      "id": 16
+    },
+    {
+      "title": "Sym adx çok güzel tasarımı var",
+      "youtubeId": "HwijzuyFgGo",
+      "duration": "1:01",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/HwijzuyFgGo/mqdefault.jpg",
+      "id": 17
+    },
+    {
+      "title": "Activa 125 far muhafaza",
+      "youtubeId": "7XmHLPPWnAw",
+      "duration": "0:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/7XmHLPPWnAw/mqdefault.jpg",
+      "id": 18
+    },
+    {
+      "title": "Yeni Activa 125 elcik ısıtma montajı.",
+      "youtubeId": "RbbAv81eCe0",
+      "duration": "0:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/RbbAv81eCe0/mqdefault.jpg",
+      "id": 19
+    },
+    {
+      "title": "Cana geleceğine mala gelsin 😂",
+      "youtubeId": "DtpEnGK3zLI",
+      "duration": "0:10",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/DtpEnGK3zLI/mqdefault.jpg",
+      "id": 20
+    },
+    {
+      "title": "Mustafa ustanın dehşeti :) emin gerçekten emin mi ?",
+      "youtubeId": "2eolOesbKMs",
+      "duration": "1:01",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/2eolOesbKMs/mqdefault.jpg",
+      "id": 21
+    },
+    {
+      "title": "Ağır hasarlı dio onarıyoruz",
+      "youtubeId": "xNgGtNpwjys",
+      "duration": "0:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/xNgGtNpwjys/mqdefault.jpg",
+      "id": 22
+    },
+    {
+      "title": "Hava filitre kutusunun önemi.",
+      "youtubeId": "zu1H1VUYRq4",
+      "duration": "1:01",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/zu1H1VUYRq4/mqdefault.jpg",
+      "id": 23
+    },
+    {
+      "title": "İşler güçler🔧⚒️",
+      "youtubeId": "hrGP0MIaWX8",
+      "duration": "0:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/hrGP0MIaWX8/mqdefault.jpg",
+      "id": 24
+    },
+    {
+      "title": "Ekip çalışması",
+      "youtubeId": "KaQdq5aVxeY",
+      "duration": "0:32",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/KaQdq5aVxeY/mqdefault.jpg",
+      "id": 25
+    },
+    {
+      "title": "Hatalı Sente Başınızı Ağrıtabilir",
+      "youtubeId": "DEAmlT7LF_E",
+      "duration": "0:55",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/DEAmlT7LF_E/mqdefault.jpg",
+      "id": 26
+    },
+    {
+      "title": "2019 model 33binde satılık 0212 879 07 55 yeni muaneli",
+      "youtubeId": "Bphlwm0P0e4",
+      "duration": "0:53",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Bphlwm0P0e4/mqdefault.jpg",
+      "id": 27
+    },
+    {
+      "title": "Honda Spacy Tesisatta oluşan oksitlenmeler.",
+      "youtubeId": "3MxrYKwIwTU",
+      "duration": "1:01",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/3MxrYKwIwTU/mqdefault.jpg",
+      "id": 28
+    },
+    {
+      "title": "Bence hala devam değil #shorts",
+      "youtubeId": "vGySsG9x2iA",
+      "duration": "0:09",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/vGySsG9x2iA/mqdefault.jpg",
+      "id": 29
+    },
+    {
+      "title": "Pcx arıza lambası yanmıyor",
+      "youtubeId": "RPHKLcMc01A",
+      "duration": "0:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/RPHKLcMc01A/mqdefault.jpg",
+      "id": 30
+    },
+    {
+      "title": "Sevimli dostlarımızda var",
+      "youtubeId": "yj3deiql_3c",
+      "duration": "0:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/yj3deiql_3c/mqdefault.jpg",
+      "id": 31
+    },
+    {
+      "title": "Jawa geldi de biz mi coşmadık 😂",
+      "youtubeId": "-aceS1AcELA",
+      "duration": "0:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/-aceS1AcELA/mqdefault.jpg",
+      "id": 32
+    },
+    {
+      "title": "motorunuz enin ellerde 😂",
+      "youtubeId": "o6TTsGGjVkw",
+      "duration": "0:22",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/o6TTsGGjVkw/mqdefault.jpg",
+      "id": 33
+    },
+    {
+      "title": "Tekrardan taşınıyoruz 😊",
+      "youtubeId": "VOVQV2zwXMg",
+      "duration": "3:01",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/VOVQV2zwXMg/mqdefault.jpg",
+      "id": 34
+    }
+  ],
+  "calculator": {
+    "brands": {
+      "Honda": {
+        "models": [
+          "Activa 125",
+          "Spacy Alpha",
+          "PCX 125/150",
+          "Forza 250/350",
+          "NC750 / Integra"
+        ],
+        "basePriceCoeff": 1
+      },
+      "Yamaha": {
+        "models": [
+          "Delight 125",
+          "NMAX 125/155",
+          "XMAX 250/400",
+          "TMAX 530/560"
+        ],
+        "basePriceCoeff": 1.15
+      },
+      "Vespa": {
+        "models": [
+          "Primavera 150",
+          "Sprint 150",
+          "GTS 150",
+          "GTS 300 Quasar"
+        ],
+        "basePriceCoeff": 1.4
+      },
+      "SYM": {
+        "models": [
+          "Orbit II/III",
+          "Fiddle II/III/IV",
+          "Jet14"
+        ],
+        "basePriceCoeff": 0.95
+      }
+    },
+    "levels": [
+      {
+        "key": "rodaj",
+        "label": "1.000 - 5.000 km (İlk Rodaj / Ara Bakım)",
+        "priceBase": 900,
+        "items": [
+          "Motor yağı değişimi (Motosiklete özel tam sentetik yağ)",
+          "Şanzıman yağı seviye kontrolü",
+          "Hava filtresi temizliği / kontrolü",
+          "Fren balataları ve disklerin aşınma kontrolü",
+          "Lastik hava basınçları kontrolü ve ayarı",
+          "Akü voltaj testi ve şarj durum ölçümü",
+          "21 Nokta genel cıvata ve sıvı sızdırmazlık kontrolü"
+        ]
+      },
+      {
+        "key": "hafif",
+        "label": "5.000 - 10.000 km (Hafif Periyodik Bakım)",
+        "priceBase": 1300,
+        "items": [
+          "Motor yağı değişimi (Motosiklete özel tam sentetik yağ)",
+          "Hava filtresi değişimi (Orijinal)",
+          "Şanzıman yağı kontrolü ve tamamlanması",
+          "Buji temizliği ve elektrot aralık kontrolü",
+          "Fren hidrolik seviyeleri ve kaliper piston temizliği",
+          "Varyatör filtresi temizliği (Scooter modelleri için)",
+          "Lastik durum kontrolü ve 21 nokta güvenlik kontrolü"
+        ]
+      },
+      {
+        "key": "orta",
+        "label": "10.000 - 20.000 km (Orta Seviye Bakım)",
+        "priceBase": 2200,
+        "items": [
+          "Motor yağı ve Yağ filtresi değişimi (Orijinal)",
+          "Hava filtresi ve Varyatör filtresi değişimi",
+          "Şanzıman yağı değişimi (Orijinal dişli yağı)",
+          "Buji değişimi (NGK Lazer İridyum veya standart)",
+          "Ön/arka varyatör temizliği ve debriyaj balata kontrolü",
+          "Fren hidrolik sıvılarının DOT4 ile vakumlu değişimi",
+          "Sübap ayarı kontrolü (Gerekirse ayarlanması)"
+        ]
+      },
+      {
+        "key": "agir",
+        "label": "20.000+ km (Ağır Mekanik Bakım & Varyatör/Kayış)",
+        "priceBase": 4200,
+        "items": [
+          "Varyatör kayışı değişimi (Bando / Orijinal)",
+          "Varyatör bagaları ve kaydırıcı plastiklerin değişimi",
+          "Arka debriyaj balatası ve yay takımları değişimi",
+          "Motor yağı, Yağ filtresi ve Şanzıman yağı değişimi",
+          "Hava filtresi, Varyatör filtresi and Buji değişimi",
+          "Ön amortisör keçe ve amortisör yağ değişimi (Motul)",
+          "Zincir-dişli set değişimi ve torklu sıkma (Vitesli motorlar için)",
+          "Soğutma sıvısı (Antifriz) yenileme ve 21 nokta tam kontrol"
+        ]
+      }
+    ]
+  },
+  "content": {
+    "homepage": {
+      "hero": {
+        "slides": [
+          {
+            "image": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=1400",
+            "badgeText": "Engin Usta Güvencesi",
+            "title": "Motosikletiniz İçin Profesyonel Bakım & Onarım",
+            "desc": "Honda, Yamaha, Vespa ve tüm markalarda 15 yılı aşkın uzmanlık. Dükkanımızda kaliteli yedek parça ve garantili işçilikle hizmetinizdeyiz.",
+            "cta1Text": "Hizmetleri İncele",
+            "cta1Href": "/hizmetler",
+            "cta2Text": "Randevu Al",
+            "cta2Href": "/iletisim"
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1615887023516-9b6bcd559e87?auto=format&fit=crop&q=80&w=1400",
+            "badgeText": "%100 Güvenli Süreç",
+            "title": "Sigorta ve Kasko Kapsamında Hasar Onarımı",
+            "desc": "Ekspertiz sürecinden teslimata kadar tüm hasar onarım işlemlerinizi koordine ediyoruz. Onay sonrasında cebinizden hiçbir ek ücret çıkmaz.",
+            "cta1Text": "Hasar Sürecini Gör",
+            "cta1Href": "/sigorta-hasar",
+            "cta2Text": "Biz Sizi Arayalım",
+            "cta2Href": "/iletisim"
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=1400",
+            "badgeText": "B2B Kurumsal Çözümler",
+            "title": "Kurye ve Motosiklet Filoları İçin Hızlı Çözümler",
+            "desc": "İşinizin durmaması için öncelikli hızlı servis, toplu periyodik bakım anlaşmaları ve CRM km takip sistemleriyle iş ortağınız oluyoruz.",
+            "cta1Text": "Kurumsal Filo Çözümleri",
+            "cta1Href": "/kurumsal-filo",
+            "cta2Text": "Teklif Al",
+            "cta2Href": "/kurumsal-filo#B2Bform"
+          }
+        ]
+      },
+      "calculator_banner": {
+        "title": "Online Fiyat Hesaplayıcı ile Bütçeni Planla",
+        "desc": "Motosikletinin marka, model ve kilometresini seç, yapılacak işlemleri gör ve tahmini maliyet aralığını şeffaf bir şekilde öğren.",
+        "btnText": "Hemen Fiyat Hesapla",
+        "btnHref": "/bakim-hesaplayici"
+      },
+      "insurance_brands": [
+        "Allianz",
+        "Axa Sigorta",
+        "Anadolu Sig.",
+        "Sompo Sig.",
+        "Mapfre",
+        "Quick Sig."
+      ]
+    },
+    "about": {
+      "banner": {
+        "badgeText": "Hakkımızda",
+        "title": "Engin Usta ve Emira Motors",
+        "desc": "15 yılı aşkın birikimimiz, modern donanımlı dükkanımız ve ödün vermediğimiz şeffaflık ilkemizle motosikletleriniz emin ellerde."
+      },
+      "story": {
+        "badgeText": "15+ Yıllık Tecrübe",
+        "title": "Dükkanımızın Hikayesi",
+        "p1": "Emira Motors, kurucumuz Engin Usta'nın motosiklet mekaniği alanındaki çekirdekten yetişme tecrübesiyle kurulmuştur. İlk yıllarda yoğun çalışma temposuna sahip kuryeler ve motorcular için yerinde servis modeli ile yola çıkmış olsak da, günümüz ihtiyaçları doğrultusunda hizmet kalitemizi artırmak için tam donanımlı dükkan modelimize geçiş yaptık.",
+        "p2": "Artık Beylikdüzü'ndeki atölyemizde, en karmaşık elektrik arıza teşhis cihazlarından hassas jant pres makinelerine kadar tüm teknik ekipmanı barındırarak, motosikletinizi fabrika standartlarında onarıyoruz. Getirdiğiniz her motorun bakım geçmişini dijital CRM panelimizde saklayarak size kurumsal bir güvence sunuyoruz.",
+        "f1": "Şeffaf Hizmet Anlayışı",
+        "f2": "Orijinal Yedek Parça",
+        "f3": "Garantili İşçilik",
+        "f4": "CRM Raporlama",
+        "imgQuote": "Önce Güven ve Şeffaflık",
+        "imgAuthor": "- Engin Usta, Kurucu"
+      },
+      "team": {
+        "title": "Uzman Kadromuz",
+        "desc": "Motosikletinizi güvenle teslim edebileceğiniz, her biri kendi alanında uzman ustalarımız.",
+        "members": [
+          {
+            "name": "Engin Usta",
+            "role": "Kurucu & Baş Mekanisyen",
+            "desc": "15 yılı aşkın süredir motor sektöründe. Özellikle Honda, Yamaha ve TR Vespa modellerinin mekanik motor revizyonlarında uzmandır."
+          },
+          {
+            "name": "Yusuf Usta",
+            "role": "Elektrik & Diagnostik Uzmanı",
+            "desc": "Çözülemeyen elektrik tesisat arızaları, beyin (ECU) okuma ve statör/konjektör ölçümlerinde dükkanımızın dijital teşhis uzmanıdır."
+          },
+          {
+            "name": "Sinan Usta",
+            "role": "Şasi & Metal Kaynak Uzmanı",
+            "desc": "Argon (TIG) alüminyum kaynağı, gazaltı şasi düzeltmeleri, koruma/çanta demiri güçlendirme ve hidrolik pres jant doğrultma ustasıdır."
+          }
+        ]
+      }
+    },
+    "blog_page": {
+      "banner": {
+        "badgeText": "Usta Tavsiyeleri",
+        "title": "Blog & Vlog Köşemiz",
+        "desc": "Engin Usta'nın 15 yılı aşkın tecrübesiyle hazırladığı bakım rehberleri, kronik arıza teşhisleri ve video anlatımları."
+      }
+    },
+    "contact": {
+      "banner": {
+        "badgeText": "Bize Ulaşın",
+        "title": "İletişim & Randevu",
+        "desc": "Motosikletinizi dükkanımıza getirmek veya hasar onarım kaydı oluşturmak için bizimle irtibata geçin."
+      },
+      "info": {
+        "title": "İletişim Bilgileri",
+        "addressLabel": "Dükkan Adresi",
+        "addressVal": "Yakuplu, Mohaç Cd No 1 34000 Beylikdüzü/İstanbul",
+        "phoneLabel": "Gsm (Telefon)",
+        "phoneVal": "(0212) 879 07 55",
+        "emailLabel": "E-posta",
+        "emailVal": "servis@emiramotors.com",
+        "hoursLabel": "Çalışma Saatleri",
+        "hoursVal": "Pazartesi - Cuma: 09:00 - 19:00, Cumartesi: 10:00 - 15:00 (Pazar Günü Kapalıdır)"
+      },
+      "form": {
+        "title": "Dükkan Randevu & Hasar Formu",
+        "desc": "Formu doldurun, talebinize en geç 30 dakika içerisinde telefonla dönüş sağlayalım."
+      }
+    },
+    "services": {
+      "banner": {
+        "badgeText": "Hizmetlerimiz",
+        "title": "Profesyonel Servis Hizmetleri",
+        "desc": "Motosikletinizin performansı ve güvenliği için geniş servis ağımızla Beylikdüzü'nde hizmetinizdeyiz."
+      },
+      "brands": [
+        "Abush",
+        "Altai",
+        "Apachi",
+        "Apec",
+        "Aprilia",
+        "Arora",
+        "Asya",
+        "Bajaj",
+        "Barossa",
+        "Belderia",
+        "Benda Motor",
+        "Benelli",
+        "Beta",
+        "Bisan",
+        "BMW",
+        "Brixton",
+        "Jinling",
+        "Can-Am",
+        "CFmoto",
+        "CSN Motor",
+        "Çelik Motor",
+        "Daelim",
+        "Dofern",
+        "Doohan",
+        "Dorado",
+        "Ducati",
+        "Enbest",
+        "Falcon",
+        "Fantic",
+        "FCM",
+        "GasGas",
+        "Gilera",
+        "Haojin",
+        "Haojue",
+        "Harley-Davidson",
+        "Hero",
+        "Honda",
+        "Husqvarna",
+        "Hyosung",
+        "Indian",
+        "Italjet",
+        "IZH",
+        "Jawa",
+        "Jinlun",
+        "JPN Motor",
+        "Kadırga",
+        "Kamax",
+        "Kanuni",
+        "Kawasaki",
+        "Kayo Moto",
+        "Keeway",
+        "Kimmi",
+        "Kove",
+        "Kral Motor",
+        "KTM",
+        "Kuba",
+        "Kymco",
+        "Lambretta",
+        "Leksas",
+        "Lifan",
+        "Malaguti",
+        "Meka Motor",
+        "Mobylette",
+        "Modenas",
+        "Mondial",
+        "Moto Guzzi",
+        "Motolux",
+        "Moto Morini",
+        "Motoran",
+        "Motozeus",
+        "Musatti",
+        "Mutt",
+        "MV Agusta",
+        "MZ",
+        "Nanok",
+        "Peugeot",
+        "Piaggio",
+        "QJ",
+        "Qooder",
+        "Ramzey",
+        "Rebat",
+        "Regal Raptor",
+        "Revolt",
+        "Rieju",
+        "RKN",
+        "RKS",
+        "RMG Moto Gusto",
+        "Royal Alloy",
+        "Royal Enfield",
+        "Rutec",
+        "Salcano",
+        "Seger",
+        "SFM",
+        "Sherco",
+        "Shinari",
+        "Skygo",
+        "Skyjet",
+        "Skyteam",
+        "Spada",
+        "Stmax",
+        "Suzuki",
+        "SWM",
+        "SYM",
+        "Taktas Motor",
+        "Togo",
+        "Triumph",
+        "TVS",
+        "UğurSam",
+        "UM",
+        "Vespa",
+        "Victory",
+        "Vitello",
+        "Voge",
+        "Volta",
+        "Yamaha",
+        "Yiben",
+        "Yuki",
+        "Zealsun",
+        "Zelsun",
+        "Zongshen",
+        "Zontes"
+      ],
+      "items": [
+        {
+          "slug": "periyodik-bakim",
+          "icon": "maintenance",
+          "title": "Periyodik Bakım",
+          "desc": "Yağ değişimi, filtrelerin kontrolü ve sürüş performansı için gerekli 21 nokta kontrol ve ayarları içeren periyodik motor bakımı.",
+          "detailTitle": "Motosiklet Periyodik Bakımı",
+          "detailDesc": "Motosikletinizin motor ömrünü, sürüş güvenliğini ve yakıt tasarrufunu en üst düzeyde tutmak için kilometre bazlı periyodik bakımları zamanında yapıyoruz.",
+          "leftTitle": "Periyodik Bakımda Neler Yapılıyor?",
+          "leftDesc": "Dükkanımıza getirdiğiniz her motosiklet için üretici standartlarına uygun bakım protokolü uyguluyoruz. Bakım esnasında aşağıdaki işlemler kontrol edilir ve yapılır:",
+          "items": [
+            {
+              "title": "Motor Yağ & Yağ Filtresi Değişimi",
+              "desc": "Motosikletinize uygun viskozitede (10W-40, 10W-30 vb.) yüksek kaliteli sentetik motor yağı ve orijinal filtre montajı yapıyoruz."
+            },
+            {
+              "title": "Hava & Varyatör Filtre Kontrolleri",
+              "desc": "Tıkanmış filtreleri temizliyor veya ömrünü tamamlamış filtreleri yenisiyle değiştirerek motorun hava akışını optimize ediyoruz."
+            },
+            {
+              "title": "Buji & Ateşleme Elemanları",
+              "desc": "Ateşleme performansının düşmemesi ve yakıt israfının önlenmesi için bujilerin temizliğini, elektrot aralığı kontrolünü yapıyor veya değiştiriyoruz."
+            },
+            {
+              "title": "21 Nokta Güvenlik Kontrolü",
+              "desc": "Lastik hava basınçları, fren hidrolikleri, zincir gerginliği, balata durumları, aydınlatma ve akü voltaj kontrollerini ücretsiz gerçekleştiriyoruz."
+            }
+          ],
+          "rightTitle": "Uzmanı Olduğumuz Markalar",
+          "rightDesc": "Honda, Yamaha, Vespa, Suzuki, SYM, KYMCO scooter ve vitesli modellerinde üst seviye periyodik bakım tecrübesine sahibiz.",
+          "badges": [
+            "Honda Activa / Spacy",
+            "Yamaha NMAX / XMAX",
+            "Vespa GTS / Primavera",
+            "SYM Fiddle / Orbit"
+          ],
+          "cta1Text": "Bakım Randevusu Al",
+          "cta1Href": "/iletisim",
+          "cta2Text": "Engin Usta'ya Sor",
+          "cta2Href": "https://wa.me/905510418338",
+          "ctaStyleReverse": false
+        },
+        {
+          "slug": "agir-bakim",
+          "icon": "gear",
+          "title": "Ağır Bakım",
+          "desc": "Şanzıman, debriyaj seti, varyatör, zincir-dişli set değişimi ve diğer ağır mekanik aksam bakımlarının güvenli işçilikle onarımı.",
+          "detailTitle": "Motosiklet Ağır Bakımı",
+          "detailDesc": "Motosikletinizin performans ve yürür aksam sağlığını korumak için zincir-dişli, debriyaj, varyatör grubu gibi ağır mekanik aksamların bakımını titizlikle yapıyoruz.",
+          "leftTitle": "Ağır Bakım Hangi İşlemleri Kapsar?",
+          "leftDesc": "Motosikletlerin marka ve modellerine göre genellikle 15.000 - 20.000 km aralıklarında yapılması gereken ağır mekanik bakımları dükkanımızda şu adımlarla gerçekleştirilir:",
+          "items": [
+            {
+              "title": "Varyatör & Kayış Grubu Onarımı (Scooter)",
+              "desc": "Ön/arka varyatör bagaları, varyatör burcu, arka debriyaj tırnakları kontrol edilir, varyatör temizlenir ve aşınmış kayışlar orijinal Bando veya fabrika kayışıyla değiştirilir."
+            },
+            {
+              "title": "Zincir & Dişli Set Değişimi (Vitesli)",
+              "desc": "Aşınmış, uzamış zincir ve sivrilmiş dişli setleri sökülerek DID, RK gibi kaliteli markaların zincir-dişli set montajları tork değerlerinde sıkılarak gerçekleştirilir."
+            },
+            {
+              "title": "Debriyaj Balatası & Sac Değişimi",
+              "desc": "Debriyaj kaçırma, kalkışta titreme veya vites geçiş sertliği problemlerinde debriyaj balataları, sacları ve debriyaj tas yuvası kontrol edilerek yenilenir."
+            },
+            {
+              "title": "Sübap Ayarı & Senkronizasyon",
+              "desc": "Zamanla sıkışan veya gevşeyen sübapların ayarları fabrika değerlerinde kumpas ile ayarlanır, çift silindirli motorlarda karbüratör/enjektör senkronizasyonu yapılır."
+            }
+          ],
+          "rightTitle": "Uzman Markalar",
+          "rightDesc": "Honda (NC750, Forza), Yamaha (TMAX, XMAX), Vespa GTS, Suzuki Burgman gibi yüksek ve orta segment motorların ağır mekanik süreçlerinde 15+ yıllık tecrübe.",
+          "badges": [
+            "Yamaha XMAX 250 / 400",
+            "Honda Forza 250 / 350",
+            "Honda NC750 / Integra",
+            "Suzuki Burgman 400 / 650"
+          ],
+          "cta1Text": "Ağır Bakım Randevusu Al",
+          "cta1Href": "/iletisim",
+          "cta2Text": "WhatsApp'tan Bilgi Al",
+          "cta2Href": "https://wa.me/905510418338",
+          "ctaStyleReverse": false
+        },
+        {
+          "slug": "motor-revizyonu",
+          "icon": "engine",
+          "title": "Motor Revizyonu",
+          "desc": "Kompresyon kaybı, yağ yakma gibi durumlarda motor bloğunun rektifiye edilmesi, silindir piston set değişimi ve anahtar teslim rekorlu motor onarımı.",
+          "detailTitle": "Motosiklet Motor Revizyonu",
+          "detailDesc": "Yağ yakan, kompresyonu düşmüş veya yatak sarmış motosiklet motorlarını dükkanımızda sıfırdan rektifiye ediyor ve anahtar teslim garantili onarıyoruz.",
+          "leftTitle": "Motor Yenileme Sürecimiz",
+          "leftDesc": "Motor bloğunun komple sökülerek en ufak cıvatasına kadar incelendiği revizyon hizmetimizde şu işlemleri uyguluyoruz:",
+          "items": [
+            {
+              "title": "Silindir, Piston & Krank Mili Yenileme",
+              "desc": "Aşınan silindir rektifiye edilir veya sıfır silindir gömleği çakılır. Segmanlar, piston pimleri ve biyel kolu ile krank rulmanları orijinal parçalarıyla değiştirilir."
+            },
+            {
+              "title": "Sübap & Silindir Kapağı Revizyonu",
+              "desc": "Sübap gaytları, sübap keçeleri yenilenir; sübap yuvaları taşlanarak sızdırmazlık testi yapılır. Eksantrik mili ve zinciri kontrol edilerek aşınmışsa yenilenir."
+            },
+            {
+              "title": "Conta Seti & Sıvı Keçelerin Değişimi",
+              "desc": "Motor bloğunun tekrar birleştirilmesinde yüksek ısıya dayanıklı orijinal conta takımları ve sızdırmaz sıvı contalar kullanılarak yağ/su kaçakları engellenir."
+            },
+            {
+              "title": "Rodaj & Kompresyon Testi",
+              "desc": "Toplanan motor test tezgahında çalıştırılarak ilk kompresyon değerleri ölçülür. Teslim öncesinde gerekli rodaj yağı konularak son kontrolleri tamamlanır."
+            }
+          ],
+          "rightTitle": "Garantili İşçilik",
+          "rightDesc": "Dükkanımızda yapılan komple motor revizyonları (kullanıcı kaynaklı yağsız bırakma vb. durumlar hariç) Emira Motors garanti kapsamındadır.",
+          "badges": [
+            "Honda PCX / Spacy / Alpha",
+            "Yamaha NMAX / Deligt / XMAX",
+            "Vespa PX / GTS 300",
+            "Çin Grubu Scooter Blokları"
+          ],
+          "cta1Text": "Motorunuza Teşhis Koyalım",
+          "cta1Href": "/iletisim",
+          "cta2Text": "Usta ile Görüş",
+          "cta2Href": "https://wa.me/905510418338",
+          "ctaStyleReverse": true
+        },
+        {
+          "slug": "kaynak-isciligi",
+          "icon": "welding",
+          "title": "Kaynak İşçiliği",
+          "desc": "Kırık ayaklıklar, şasi çatlakları, egzoz bağlantı kaynakları ve demir/alüminyum aksamların gazaltı kaynak işçiliği ile sağlamlaştırılması.",
+          "detailTitle": "Motosiklet Kaynak İşçiliği",
+          "detailDesc": "Motosikletinizin kırık şasi kulakları, çanta demiri çatlakları, egzoz bağlantı yerleri ve metal/alüminyum aksamlarını gazaltı ve argon kaynak teknikleriyle sağlamlaştırıyoruz.",
+          "leftTitle": "Kaynak ve Metal Onarım Hizmetlerimiz",
+          "leftDesc": "Motosiklet metal aksamlarında güvenlikten ödün vermeden uyguladığımız profesyonel kaynak teknikleri:",
+          "items": [
+            {
+              "title": "Gazaltı (MIG/MAG) Şasi Kaynağı",
+              "desc": "Motosiklet şasisi üzerinde çatlayan veya kopan motor kulakları, orta sehpa bağlantıları ve ayaklık demirleri gazaltı kaynağıyla orijinal mukavemetinde kaynatılır."
+            },
+            {
+              "title": "TIG (Argon) Alüminyum Kaynağı",
+              "desc": "Hafif alaşımlı alüminyum manet bağlantıları, koruma demirleri, alüminyum çanta taşıyıcı tablalar ve blok üstündeki kırık vida kulakları argon kaynağıyla hassas olarak birleştirilir."
+            },
+            {
+              "title": "Egzoz Borusu & Susturucu Kaynak Tamiri",
+              "desc": "Titreşimden kaynaklanan egzoz manifoldu çatlakları veya susturucu bağlantı kopuklukları sızdırmaz kaynak işçiliği ile onarılır."
+            },
+            {
+              "title": "Çanta Demiri Güçlendirme & Özel İmalat",
+              "desc": "Özellikle kurye motorlarında kronik olarak kırılan arka çanta demirleri ve sepet bağlantı aparatları ekstra lama demir takviyeleri yapılarak kaynakla güçlendirilir."
+            }
+          ],
+          "rightTitle": "Güvenli İşçilik Garantisi",
+          "rightDesc": "Şasi kaynaklarında mukavemet hesabı yapılarak kaynak dikişleri profesyonelce atılır. İşlem sonrası paslanmaya karşı astar ve siyah/şasi renginde boya uygulaması standarttır.",
+          "badges": [
+            "Kurye Çanta Demirleri",
+            "Şasi Koruma Kulakları",
+            "Egzoz Manifold Kaynağı",
+            "Alüminyum Blok Kulakları"
+          ],
+          "cta1Text": "WhatsApp'tan Fotoğraf Gönder",
+          "cta1Href": "https://wa.me/905510418338",
+          "cta2Text": "Randevu Planla",
+          "cta2Href": "/iletisim",
+          "ctaStyleReverse": true
+        },
+        {
+          "slug": "fren-suspansiyon",
+          "icon": "brake",
+          "title": "Fren & Süspansiyon",
+          "desc": "Ön amortisör keçe değişimi, hidrolik yağ yenileme, fren balatası ve disk değişimi ile sürüş konforu ve fren güvenliğiniz en üst düzeye çıkarılır.",
+          "detailTitle": "Fren & Süspansiyon Servisi",
+          "detailDesc": "Sürüş güvenliğinizi ve konforunuzu belirleyen amortisör keçeleri, fren diskleri, balatalar ve hidrolik sistemlerinin bakımını hassas ölçümlerle yapıyoruz.",
+          "leftTitle": "Fren & Süspansiyon Onarım Detayları",
+          "leftDesc": "Dükkanımızda fren mesafenizi kısaltmak ve viraj kararlılığınızı artırmak için gerçekleştirdiğimiz işlemler:",
+          "items": [
+            {
+              "title": "Ön Amortisör Keçe & Yağ Değişimi",
+              "desc": "Yağ sızdıran amortisörler tamamen sökülür, iç borular temizlenir. Orijinal Athena keçe takımları monte edilerek Motul amortisör yağı ile doldurulur."
+            },
+            {
+              "title": "Fren Balatası & Disk Değişimi",
+              "desc": "Aşınan fren balataları Brenta, EBC gibi kaliteli markalarla değiştirilir. Eğrilmiş veya limit altına inmiş diskler sıfırlarıyla yenilenir."
+            },
+            {
+              "title": "Fren Kaliper Temizliği & Piston Bakımı",
+              "desc": "Zamanla tozlanan fren kaliperleri özel kimyasallarla temizlenir, kaliper pistonları yağlanarak frenin sıkışması veya tutukluk yapması önlenir."
+            },
+            {
+              "title": "Hidrolik Yağ Yenileme (Vakumla)",
+              "desc": "Nem çeken fren hidrolik yağı vakum makinesiyle tamamen tahliye edilerek DOT4 fren sıvısı ile yenilenir ve sistemin havası alınır."
+            }
+          ],
+          "rightTitle": "Neden Hayati Önem Taşır?",
+          "rightDesc": "Fren hidrolik sıvısı nem çektikçe kaynama noktası düşer ve frenlerde ani boşalma yaşanabilir. Amortisör yağ kaçakları ise ön lastiğinize akarak kaza riski oluşturur. Bakımlarınızı aksatmayın.",
+          "badges": [
+            "DOT 4 Hidrolik Değişimi",
+            "Ön Amortisör Keçeleri",
+            "EBC Sinterli Balata",
+            "Kaliper Temizliği"
+          ],
+          "cta1Text": "Hemen Randevu Alın",
+          "cta1Href": "/iletisim",
+          "cta2Text": "Fren / Amortisör Sorusu Sor",
+          "cta2Href": "https://wa.me/905510418338",
+          "ctaStyleReverse": false
+        },
+        {
+          "slug": "elektrik-arizalari",
+          "icon": "wire",
+          "title": "Elektrik Arızaları",
+          "desc": "Çözülemeyen karmaşık tesisat arızaları, konjektör, statör, akü, şarj problemleri ve Honda Alpha elektrik arızalarında uzman teşhis.",
+          "detailTitle": "Motosiklet Elektrik Arızaları",
+          "detailDesc": "Motosikletinizde meydana gelen şarj sorunları, sigorta atmaları, akü bitmesi ve çözülemeyen karmaşık tesisat arızalarını profesyonel ölçüm cihazlarıyla çözüyoruz.",
+          "leftTitle": "Elektrik Tesisat & Teşhis Hizmetlerimiz",
+          "leftDesc": "Motosikletinizin elektrik ve elektronik aksamında karşılaşılan kronik veya anlık arızalarda uyguladığımız arama adımları:",
+          "items": [
+            {
+              "title": "Şarj Sistemi Kontrolü (Statör & Konjektör)",
+              "desc": "Multimetre ve osiloskop ile statörün ürettiği alternatif akım and konjektörün (regülatör) aküye gönderdiği voltaj ölçülerek arızalı parça saptanır."
+            },
+            {
+              "title": "Kısa Devre & Tesisat Kaçak Araması",
+              "desc": "Akü çabuk biten veya sürekli sigorta attıran motorlarda tesisat kabloları tek tek incelenerek şasiye kaçak yapan noktalar bulunur ve izole edilir."
+            },
+            {
+              "title": "Aydınlatma & Aksesuar Montaj Hataları",
+              "desc": "Sonradan yapılan hatalı çakar lamba, USB soketi veya alarm montajlarının orijinal tesisata verdiği hasarlar düzeltilerek röleli güvenli bağlantılar yapılır."
+            },
+            {
+              "title": "Sensör & Beyin (ECU) Arıza Okuma",
+              "desc": "Enjeksiyonlu modellerde diagnostik cihazımız motora bağlanarak hata kodları okunur; TPS, oksijen sensörü arızaları nokta atışı tespit edilir."
+            }
+          ],
+          "rightTitle": "Teşhis Odaklı Çalışma",
+          "rightDesc": "Statör ve konjektör değişimlerinde mutlaka kaliteli bakır sargılı statörler ve yüksek akıma dayanıklı regülatörler kullanarak arızanın tekrarlamasını engelliyoruz.",
+          "badges": [
+            "Honda Alpha Enjeksiyon",
+            "Statör Değişimi",
+            "Konjektör Voltaj Ayarı",
+            "Tesisat Yenileme"
+          ],
+          "cta1Text": "Hemen Randevu Alın",
+          "cta1Href": "/iletisim",
+          "cta2Text": "Elektrik Arızası Sor",
+          "cta2Href": "https://wa.me/905510418338",
+          "ctaStyleReverse": false
+        },
+        {
+          "slug": "lastik-jant",
+          "icon": "wheel",
+          "title": "Lastik & Jant",
+          "desc": "Motosiklet lastik değişimi, jant düzeltme, balans ayarı ve yanak/tubeless sızdırmazlık onarımları.",
+          "detailTitle": "Lastik & Jant Servisi",
+          "detailDesc": "Motosikletiniz için profesyonel lastik değişimi, tubeless sızdırmazlık onarımları ve eğilen jantların pres makinesiyle milimetrik düzeltme işlemlerini yapıyoruz.",
+          "leftTitle": "Lastik & Jant Hizmet Detayları",
+          "leftDesc": "Motosikletin yolla temas eden tek noktası olan lastiklerin ve jantların sağlığı için sunduğumuz hizmetler:",
+          "items": [
+            {
+              "title": "Profesyonel Lastik Değişimi",
+              "desc": "Jantlarınızı çizmeden, motosiklet lastik sökme makinesiyle Anlas, Michelin, Pirelli veya Metzeler lastiklerinizin montajını yapıyoruz."
+            },
+            {
+              "title": "Jant Düzeltme & Pres İşlemleri",
+              "desc": "Çukura düşme sonucu eğilen veya balans tutmayan alüminyum döküm jantları, hidrolik pres aparatıyla ısıtılarak milimetrik olarak düzeltiyoruz."
+            },
+            {
+              "title": "Hassas Balans Ayarı",
+              "desc": "Yüksek hızlarda gidon titremesini engellemek için tekerleklerin statik ve dinamik balans ayarlarını kurşun ağırlıklarla yapıyoruz."
+            },
+            {
+              "title": "Tubeless Supap & Hava Kaçak Onarımı",
+              "desc": "Zamanla eskiyen supapları metal supaplarla değiştiriyoruz. Yanaklardan kaçıran lastiklerde jant temizliği ve özel sızdırmazlık solüsyonu uyguluyoruz."
+            }
+          ],
+          "rightTitle": "Balans Neden Gereklidir?",
+          "rightDesc": "Motosikletlerde balanssızlık gidonda sallanmaya (wobble) ve düzensiz lastik aşınmasına yol açar. Yüksek süratlerde güvenli yol tutuşu için balans ayarı zorunludur.",
+          "badges": [
+            "Anlas Tournee / Wintergrip",
+            "Michelin City Grip 2",
+            "Statik Balans Sıfırlama",
+            "Jant Hidrolik Pres"
+          ],
+          "cta1Text": "Hemen Lastik Değişimi Yapın",
+          "cta1Href": "/iletisim",
+          "cta2Text": "Lastik Fiyatı Al",
+          "cta2Href": "https://wa.me/905510418338",
+          "ctaStyleReverse": false
+        }
+      ]
+    },
+    "calculator": {
+      "banner": {
+        "badgeText": "Online Fiyat Hesaplayıcı",
+        "title": "Motosiklet Periyodik Bakım Fiyat Hesaplama",
+        "desc": "Motosikletinizin marka, model ve kilometre bilgisini girerek yapılacak işlemleri ve parça/işçilik dahil fiyat aralığını öğrenin."
+      }
+    },
+    "insurance": {
+      "banner": {
+        "badgeText": "Anlaşmalı Servis",
+        "title": "Sigorta ve Hasar Onarımı",
+        "desc": "Kazaya karışan motosikletlerinizin hasar dosyası açılışından eksper koordinasyonuna ve orijinal parçalarla anahtar teslim onarımına kadar tüm süreçleri yönetiyoruz."
+      },
+      "alert": {
+        "title": "Sigorta Onayı Sonrası Sürpriz Ücret Yok!",
+        "desc": "İlgili sigorta veya kasko firması hasar onarım dosyanızı onayladıktan sonra cebinizden hiçbir ek ücret çıkmadan motorunuzu teslim alırsınız. Süreç tamamen yasal ve faturalıdır."
+      },
+      "process": {
+        "title": "Hasar Onarım Süreci Nasıl İşler?",
+        "desc": "Kazadan motorunuzu teslim alana kadar geçen 4 temel adım.",
+        "steps": [
+          {
+            "title": "Kaza & Hasar Bildirimi",
+            "desc": "Kazadan sonra tutulan tutanak, ruhsat ve ehliyet fotoğraflarıyla dükkanımızla iletişime geçersiniz. Motorunuzu çekici ile dükkanımıza getiririz."
+          },
+          {
+            "title": "Ekspertiz Değerlendirmesi",
+            "desc": "Sigorta firması tarafından atanan bağımsız eksper dükkanımıza gelerek motosikleti inceler. Hasarlı parçaları tespit edip onarım listesini onaylar."
+          },
+          {
+            "title": "Garantili Onarım",
+            "desc": "Onaylanan hasar listesine istinaden orijinal yedek parçalar tedarik edilir. Engin Usta güvencesiyle mekanik ve kaporta onarımları titizlikle yapılır."
+          },
+          {
+            "title": "Test Sürüşü & Teslimat",
+            "desc": "Onarımı biten motosikletin sürüş testleri yapılır. Tam güvenlik onayından geçtikten sonra temizlenmiş olarak sahibine anahtar teslim edilir."
+          }
+        ]
+      },
+      "faqs": {
+        "title": "Sıkça Sorulan Sorular",
+        "desc": "Motosiklet hasar ve sigorta onarımı süreçleri hakkında merak edilenler.",
+        "items": [
+          {
+            "question": "Hasar onarımı kaskodan mı ödenir trafik sigortasından mı?",
+            "answer": "Kaza durumunda eğer haklı taraf sizseniz, karşı tarafın Trafik Sigortası sizin masraflarınızı karşılar. Eğer kazada kusurluysanız veya tek taraflı bir kaza yaptıysanız, kendi Kaskonuz hasarı karşılar. Her iki durumda da dükkanımızda dosya açarak süreci yönetebiliriz."
+          },
+          {
+            "question": "Ekspertiz süreci ne kadar sürer?",
+            "answer": "Motosikletinizi dükkanımıza çektikten ve sigorta ihbarı yapıldıktan sonra sigorta şirketi 24-48 saat içerisinde bağımsız bir eksper atar. Eksper dükkanımıza gelip inceleme yaptıktan sonra genellikle 2-3 iş günü içerisinde onarım listesini onaylar."
+          },
+          {
+            "question": "Motosiklet hasarındayken yedek araç (ikame motor) veriliyor mu?",
+            "answer": "İkame araç temini kasko poliçenizin detaylarına bağlıdır. Kasko poliçenizde \"motosiklet ikame teminatı\" varsa, sigorta şirketi size geçici motor temin eder. Emira Motors olarak biz dosya onay sürecini hızlandırarak motorunuzu en kısa sürede teslim etmeye odaklanıyoruz."
+          },
+          {
+            "question": "Tüm yedek parçalar orijinal mi takılıyor?",
+            "answer": "Evet, sigorta ve kasko onay listesine bağlı kalarak Honda, Yamaha, Vespa veya diğer markaların yetkili bayilerinden temin edilen orijinal ve faturalı yedek parçaları kullanmaktayız. Şeffaflık ilkemiz gereği değişen parçaları size teslimat sırasında gösteriyoruz."
+          }
+        ]
+      }
+    },
+    "fleet": {
+      "banner": {
+        "badgeText": "Filo & Kurye Çözümleri",
+        "title": "Kurumsal Motosiklet Filo Çözümleri",
+        "desc": "Kurye şirketleri, dağıtım ağları ve kurumsal filolar için operasyonel duraksamaları sıfıra indiren, şeffaf maliyetli profesyonel bakım ve onarım desteği."
+      },
+      "benefits": {
+        "title": "Neden Emira Motors Filo Yönetimi?",
+        "desc": "İş ortaklarımıza sunduğumuz avantajlarla operasyonel süreçlerinizi hızlandırıyoruz.",
+        "items": [
+          {
+            "title": "Öncelikli Servis & Hızlı Dönüş",
+            "desc": "Filonuzdaki motorlar boşta kalmasın diye kurumsal müşterilerimize öncelikli tamir sırası sağlıyor, en hızlı sürede iş teslimi taahhüt ediyoruz."
+          },
+          {
+            "title": "CRM & Kilometre Raporlama",
+            "desc": "Motosikletlerinize yapılan tüm masraf ve km kayıtları veritabanımızda tutulur. Hangi motora ne kadar harcama yaptığınızı şeffafça görebilirsiniz."
+          },
+          {
+            "title": "Faturalı Kurumsal Ödeme",
+            "desc": "Toplu kurye filolarına özel anlaşmalı fiyatlar, aylık toplu faturalandırma ve resmi ödeme kanalları ile muhasebeniz kolaylaşır."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "banner": {
+        "badgeText": "Yapılan İşler",
+        "title": "Servis Galerisi & Atölye",
+        "desc": "Atölyemizde gerçekleştirdiğimiz Vespa varyatör temizlikleri, Honda statör değişimleri ve ağır motor revizyonlarından enstantaneler."
+      }
+    },
+    "global": {
+      "header": {
+        "logoText1": "EMİRA",
+        "logoText2": "MOTORS",
+        "menu": {
+          "home": "Anasayfa",
+          "corporate": "Kurumsal",
+          "about": "Hakkımızda",
+          "team": "Ekibimiz",
+          "blog": "Usta Tavsiyeleri",
+          "contact": "İletişim",
+          "services": "Hizmetler",
+          "calculator": "Fiyat Hesaplayıcı",
+          "insurance": "Sigorta Hasar",
+          "fleet": "Filo Çözümleri",
+          "gallery": "Yapılan İşler",
+          "appointmentBtn": "Randevu Al"
+        },
+        "logoImg": "/logo.png",
+        "menuUrls": {
+          "home": "/",
+          "corporate": "#",
+          "about": "/hakkimizda",
+          "team": "/hakkimizda#ekibimiz",
+          "blog": "/blog",
+          "contact": "/iletisim",
+          "services": "/hizmetler",
+          "calculator": "/bakim-hesaplayici",
+          "insurance": "/sigorta-hasar",
+          "fleet": "/kurumsal-filo",
+          "gallery": "/galeri",
+          "appointmentBtn": "/iletisim"
+        }
+      },
+      "footer": {
+        "brandTitle": "EMİRA MOTORS",
+        "brandDesc": "15 yılı aşkın süredir motor sektöründe biriktirdiğimiz tecrübemiz ve şeffaf çalışma prensiplerimizle tüm motosikletlerinize dükkanımızda servis hizmeti sunmaktayız.",
+        "pagesTitle": "Sayfalar",
+        "contactTitle": "İletişim",
+        "telLabel": "Tel:",
+        "telVal": "(0212) 879 07 55",
+        "emailLabel": "E-posta:",
+        "emailVal": "servis@emiramotors.com",
+        "addressLabel": "Adres:",
+        "addressVal": "Yakuplu, Mohaç Cd No 1 34000 Beylikdüzü/İstanbul",
+        "hoursLabel": "Çalışma Saatleri:",
+        "hoursVal": "Pzt - Cum: 09:00 - 19:00, Cmt: 10:00 - 15:00",
+        "copyright": "Emira Motors. Tüm Hakları Saklıdır.",
+        "author": "Engin Usta Güvencesiyle",
+        "socialFacebook": "#",
+        "socialInstagram": "#",
+        "socialYoutube": "#",
+        "pagesUrls": {
+          "home": "/",
+          "services": "/hizmetler",
+          "insurance": "/sigorta-hasar",
+          "fleet": "/kurumsal-filo",
+          "gallery": "/galeri",
+          "about": "/hakkimizda",
+          "contact": "/iletisim"
+        }
+      }
+    },
+    "undefined": "✏️ Görseli Değiştir"
+  },
+  "horizontal_videos": [
+    {
+      "title": "Yamaha Mt25 Arka Fren Neden Tutmaz ?",
+      "youtubeId": "oApsd9FvxhQ",
+      "duration": "2:38",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/oApsd9FvxhQ/mqdefault.jpg",
+      "id": 1
+    },
+    {
+      "title": "Yeni motosikletlerde parça kalitesi üzücü nerede o eski sağlam makineler",
+      "youtubeId": "-oJ7SiMfKIM",
+      "duration": "4:35",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/-oJ7SiMfKIM/mqdefault.jpg",
+      "id": 2
+    },
+    {
+      "title": "Honda Activa 125 delux  Sıkıştırmaya Gelmiyor",
+      "youtubeId": "vYJUs2Waa8I",
+      "duration": "4:21",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/vYJUs2Waa8I/mqdefault.jpg",
+      "id": 3
+    },
+    {
+      "title": "Sizlerden gelen geri dönüşler üzerine sohbet vari ",
+      "youtubeId": "e28KGJGchsM",
+      "duration": "21:28",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/e28KGJGchsM/mqdefault.jpg",
+      "id": 4
+    },
+    {
+      "title": "Honda Activa 125 Tasarımsal Sıkıntılar",
+      "youtubeId": "SSD4ifWhjRg",
+      "duration": "2:45",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/SSD4ifWhjRg/mqdefault.jpg",
+      "id": 5
+    },
+    {
+      "title": "Kesicide Motor Kullanmanın Hazin Sonu",
+      "youtubeId": "BGWXDWIz_eQ",
+      "duration": "3:07",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/BGWXDWIz_eQ/mqdefault.jpg",
+      "id": 6
+    },
+    {
+      "title": "2012 Model Pcx 125 Motor Revizyonu Nelere Dikkat Etmeliyiz !!!",
+      "youtubeId": "Oso_gS7F9Do",
+      "duration": "19:36",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Oso_gS7F9Do/mqdefault.jpg",
+      "id": 7
+    },
+    {
+      "title": "Yüksek Devir ve Hasarlı Krank Sonuç Kırılan Sağ Sol Blok",
+      "youtubeId": "Zdsfl-HFMm4",
+      "duration": "7:22",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Zdsfl-HFMm4/mqdefault.jpg",
+      "id": 8
+    },
+    {
+      "title": "Subap ayarı oyunlarna gelmeyin. İş bilmez ustalara dikkat edin",
+      "youtubeId": "ILLimtyMMHw",
+      "duration": "4:53",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/ILLimtyMMHw/mqdefault.jpg",
+      "id": 9
+    },
+    {
+      "title": "Honda Dio Hava Filtresine Yağ Atıyor ÜST Motor Revizyonu",
+      "youtubeId": "HyzmuJVITDE",
+      "duration": "3:15",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/HyzmuJVITDE/mqdefault.jpg",
+      "id": 10
+    },
+    {
+      "title": "Motosikletle Kazaya Karıştığınızda Yapılan Hatalar, Çift taraflı tutanak tutulması",
+      "youtubeId": "psomv9350xA",
+      "duration": "18:44",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/psomv9350xA/mqdefault.jpg",
+      "id": 11
+    },
+    {
+      "title": "Bajaj Dominar 250 Marş Basıyor Çalışmıyor",
+      "youtubeId": "AOUymF52Yxk",
+      "duration": "3:58",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/AOUymF52Yxk/mqdefault.jpg",
+      "id": 12
+    },
+    {
+      "title": "Bajaj Pulsar NS200 AĞIR baKIM",
+      "youtubeId": "tsbWt59coWw",
+      "duration": "31:06",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/tsbWt59coWw/mqdefault.jpg",
+      "id": 13
+    },
+    {
+      "title": "Kazalı Honda Dio Onarımı",
+      "youtubeId": "yjCnco0PqkU",
+      "duration": "10:03",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/yjCnco0PqkU/mqdefault.jpg",
+      "id": 14
+    },
+    {
+      "title": "Yine Bir Şasi Kırma Vakası",
+      "youtubeId": "eY4IaWnPEos",
+      "duration": "3:10",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/eY4IaWnPEos/mqdefault.jpg",
+      "id": 15
+    },
+    {
+      "title": "Yeni Activa Kayıştaki Erken Çatlamalar Kafa Karıştırıyor",
+      "youtubeId": "Cpv_uFRGU3c",
+      "duration": "4:02",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Cpv_uFRGU3c/mqdefault.jpg",
+      "id": 16
+    },
+    {
+      "title": "Benzin Yerine Su koyarsak Ne Olur ?",
+      "youtubeId": "jrtFNnqorhk",
+      "duration": "5:59",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/jrtFNnqorhk/mqdefault.jpg",
+      "id": 17
+    },
+    {
+      "title": "Yedek Parçanızı İyi Seçin Bir Buji Canınızı Sıkabilir.",
+      "youtubeId": "djabN-IZhb4",
+      "duration": "4:04",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/djabN-IZhb4/mqdefault.jpg",
+      "id": 18
+    },
+    {
+      "title": "Honda Spacy Alpha Marş Basmıyor",
+      "youtubeId": "s3DrXEtdBt8",
+      "duration": "4:02",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/s3DrXEtdBt8/mqdefault.jpg",
+      "id": 19
+    },
+    {
+      "title": "Motorum sürekli Akü bitiriyor Şarj Etmiyor. Vicdansız Ustalara Dikkat edin",
+      "youtubeId": "IYAnEe90OAE",
+      "duration": "13:35",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/IYAnEe90OAE/mqdefault.jpg",
+      "id": 20
+    },
+    {
+      "title": "Motosikletimin  olduğu yerde tekeri dönüyor.Honda Activa s",
+      "youtubeId": "uBcGIASxpGk",
+      "duration": "3:46",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/uBcGIASxpGk/mqdefault.jpg",
+      "id": 21
+    },
+    {
+      "title": "Yeni Activa 125 Hava Filtresi Ve Varyatör Bakımı",
+      "youtubeId": "knYsMPptSQI",
+      "duration": "7:15",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/knYsMPptSQI/mqdefault.jpg",
+      "id": 22
+    },
+    {
+      "title": "Tohatsu 60HP Dıştan Takma Deniz Motoru 20 Saat bakımı",
+      "youtubeId": "ADHj9GGMrJo",
+      "duration": "20:33",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/ADHj9GGMrJo/mqdefault.jpg",
+      "id": 23
+    },
+    {
+      "title": "Yeni Activa 125 Koruma Demiri Ve Kızak Montajı",
+      "youtubeId": "S_dB3vMSyo0",
+      "duration": "13:52",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/S_dB3vMSyo0/mqdefault.jpg",
+      "id": 24
+    },
+    {
+      "title": "ZARA MARİNE 4.60  SWİFT CABİN İNCELEME VE TECRÜBELER",
+      "youtubeId": "szMqsoZ7-W8",
+      "duration": "29:46",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/szMqsoZ7-W8/mqdefault.jpg",
+      "id": 25
+    },
+    {
+      "title": "HONDA SPACY KORUMA DEMİRİ VE ÖN AMORTİSÖR DEĞİŞİMİ MUSTAFA USTA ANLATIYOR",
+      "youtubeId": "V0djS1Uw-Lw",
+      "duration": "21:05",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/V0djS1Uw-Lw/mqdefault.jpg",
+      "id": 26
+    },
+    {
+      "title": "Rks Spontini 125 15000 km'de Krank Rulmanı Bozmuş",
+      "youtubeId": "n6rF47TahhU",
+      "duration": "10:15",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/n6rF47TahhU/mqdefault.jpg",
+      "id": 27
+    },
+    {
+      "title": "Rks Spontini Motor Revizyonu Hangi Parçalar Kullanılıyor ? Neden Şase Kırıyor ?",
+      "youtubeId": "eE2bWgAKvCI",
+      "duration": "7:57",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/eE2bWgAKvCI/mqdefault.jpg",
+      "id": 28
+    },
+    {
+      "title": "Honda Cbf 150 yenileme",
+      "youtubeId": "XcmZEZaNnd0",
+      "duration": "11:53",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/XcmZEZaNnd0/mqdefault.jpg",
+      "id": 29
+    },
+    {
+      "title": "2011 Model Honda Spacy'ye Estetik Operasyonu Bölüm 1 :)",
+      "youtubeId": "vaemCvphb9Y",
+      "duration": "9:10",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/vaemCvphb9Y/mqdefault.jpg",
+      "id": 30
+    },
+    {
+      "title": "Yeni Honda Activa 125 i İnceledik Harika Bir Scooter Olmuş",
+      "youtubeId": "NKUSaVEh68I",
+      "duration": "11:34",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/NKUSaVEh68I/mqdefault.jpg",
+      "id": 31
+    },
+    {
+      "title": "Havalar Isındı Kazalar Artıyor Amman Dikkat Arkadaşlar Kazalı CBF 150",
+      "youtubeId": "GPjxLHZuuTM",
+      "duration": "7:42",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/GPjxLHZuuTM/mqdefault.jpg",
+      "id": 32
+    },
+    {
+      "title": "Emira Motors Sohbet Vari",
+      "youtubeId": "I19AUCOy2o4",
+      "duration": "12:22",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/I19AUCOy2o4/mqdefault.jpg",
+      "id": 33
+    },
+    {
+      "title": "Honda Cbf150 Zincir Dişli Seti Değişimi",
+      "youtubeId": "_rxt_QbzQrQ",
+      "duration": "19:39",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/_rxt_QbzQrQ/mqdefault.jpg",
+      "id": 34
+    },
+    {
+      "title": "Honda Spacy Alpha Blok Kırmış İhmal Yine Yüksek Maliyetle Bitti",
+      "youtubeId": "VXbPcxvEr2c",
+      "duration": "15:06",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/VXbPcxvEr2c/mqdefault.jpg",
+      "id": 35
+    },
+    {
+      "title": "Honda Dio İncelemesi Arka Planda Kalanlar",
+      "youtubeId": "X9OftfKaSCY",
+      "duration": "9:36",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/X9OftfKaSCY/mqdefault.jpg",
+      "id": 36
+    },
+    {
+      "title": "Usta Benim Motorum 100'ü Geçmiyor Geçince Neler Oluyor Buyrun İzleyin Honda Activa S Paramparça",
+      "youtubeId": "2u_tRYU3y4E",
+      "duration": "10:50",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/2u_tRYU3y4E/mqdefault.jpg",
+      "id": 37
+    },
+    {
+      "title": "Hava Filtre Kutusu Su Alırsa Motor Çöp Olur Aman Dikkat !!!",
+      "youtubeId": "nEFzmYu463c",
+      "duration": "5:19",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/nEFzmYu463c/mqdefault.jpg",
+      "id": 38
+    },
+    {
+      "title": "Hatalı İşçilikmi Yoksa Sabotaj Mı? Honda Spacy Alpha Yağ Kanalı Tıkanmış",
+      "youtubeId": "99SI6tMg9AM",
+      "duration": "12:38",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/99SI6tMg9AM/mqdefault.jpg",
+      "id": 39
+    },
+    {
+      "title": "Honda Cbf 150 Motordan Gelen Mekanik Sesler Marş Basıyorum Çalışmıyor.",
+      "youtubeId": "0YYgQhaEozM",
+      "duration": "12:24",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/0YYgQhaEozM/mqdefault.jpg",
+      "id": 40
+    },
+    {
+      "title": "Hatalı ve Ucuz işçilik İki Kere Para Harcatır!!! Honda Spacy",
+      "youtubeId": "Phal5L3DbQQ",
+      "duration": "4:35",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Phal5L3DbQQ/mqdefault.jpg",
+      "id": 41
+    },
+    {
+      "title": "Sigortadan Hasarlı Motosiklet Tamiri Anlaşmalı TTutanak",
+      "youtubeId": "NhK3VF7jdnU",
+      "duration": "13:45",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/NhK3VF7jdnU/mqdefault.jpg",
+      "id": 42
+    },
+    {
+      "title": "Hatalı İşçilik 2020 Model Activa S'i Perişan Etmiş",
+      "youtubeId": "cI5LP-piigA",
+      "duration": "6:09",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/cI5LP-piigA/mqdefault.jpg",
+      "id": 43
+    },
+    {
+      "title": "Honda Spacy alpha Sert Çukurda Şanzıman Dağıtmış",
+      "youtubeId": "bQqjjFHWiUo",
+      "duration": "13:31",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/bQqjjFHWiUo/mqdefault.jpg",
+      "id": 44
+    },
+    {
+      "title": "Son devirde Motosiklet kullanırsak Ne Olur ?",
+      "youtubeId": "EacTa8YkkbQ",
+      "duration": "13:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/EacTa8YkkbQ/mqdefault.jpg",
+      "id": 45
+    },
+    {
+      "title": "Honda Activa S Motordaki Yağ Kaçakları Ve Sebebi",
+      "youtubeId": "CJJtzz-pMeI",
+      "duration": "9:14",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/CJJtzz-pMeI/mqdefault.jpg",
+      "id": 46
+    },
+    {
+      "title": "Yeni Motor Almak mı ? Daha Mantıklı Yoksa Elde Olanı Yenilemek mi ? Activa S Yenileme",
+      "youtubeId": "oWp8RwNkB8s",
+      "duration": "22:34",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/oWp8RwNkB8s/mqdefault.jpg",
+      "id": 47
+    },
+    {
+      "title": "2.El Motosiklet Alırken Nelere Dikkat Etmeliyiz!",
+      "youtubeId": "_KRYfs6BOyo",
+      "duration": "24:02",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/_KRYfs6BOyo/mqdefault.jpg",
+      "id": 48
+    },
+    {
+      "title": "19 Sene Hiç Çalışmamış Honda CGL 125'e Marş Yapıypruz / Honda CGL125 Cold Start",
+      "youtubeId": "9J76dGgq-08",
+      "duration": "13:56",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/9J76dGgq-08/mqdefault.jpg",
+      "id": 49
+    },
+    {
+      "title": "Honda spacy 110 Yenileme Restorasyon Elimizden geldiğince :)",
+      "youtubeId": "A8Dq6_4abbI",
+      "duration": "24:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/A8Dq6_4abbI/mqdefault.jpg",
+      "id": 50
+    },
+    {
+      "title": "Honda Spacy Alpha Yanlış Varyatör Kullanımı Çekiş Problemi Hatalı Üst Kapak",
+      "youtubeId": "6pESyUqcfKE",
+      "duration": "8:14",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/6pESyUqcfKE/mqdefault.jpg",
+      "id": 51
+    },
+    {
+      "title": "Motosikletinizi Ucuz İşçiliğe Kurban Etmeyin !",
+      "youtubeId": "ZmlrdkZyFjo",
+      "duration": "6:43",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/ZmlrdkZyFjo/mqdefault.jpg",
+      "id": 52
+    },
+    {
+      "title": "Kalitesiz Yakıt Motorunuza ZararVerebilir.",
+      "youtubeId": "dW424f-G6UA",
+      "duration": "7:44",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/dW424f-G6UA/mqdefault.jpg",
+      "id": 53
+    },
+    {
+      "title": "Honda Spacy Benzin Deposu Delinmiş.Yapılan Hatalı İşlemler",
+      "youtubeId": "vKtZ4UX1HC0",
+      "duration": "2:51",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/vKtZ4UX1HC0/mqdefault.jpg",
+      "id": 54
+    },
+    {
+      "title": "Honda Activa s Ağır Bakımda Neler Yapıyoruz ?",
+      "youtubeId": "mmNYCQSKu4E",
+      "duration": "11:59",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/mmNYCQSKu4E/mqdefault.jpg",
+      "id": 55
+    },
+    {
+      "title": "Honda Activa S Birtakım Problemler (Ağır Bakım)",
+      "youtubeId": "Ljb-kvP4Da8",
+      "duration": "6:59",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Ljb-kvP4Da8/mqdefault.jpg",
+      "id": 56
+    },
+    {
+      "title": "EMİRA MOTORS Canlı Yayını",
+      "youtubeId": "rwh3wlduSEE",
+      "duration": "10:00",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/rwh3wlduSEE/mqdefault.jpg",
+      "id": 57
+    },
+    {
+      "title": "Honda Activa S Arıza Işığı Sabit Yanıyor. Arıza Kodları. Birtakım Arızalar.",
+      "youtubeId": "sFBHZLnZGBI",
+      "duration": "23:41",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/sFBHZLnZGBI/mqdefault.jpg",
+      "id": 58
+    },
+    {
+      "title": "Honda Activa S Arka Teker Yamuk / Honda Activa S Ön Fren Neden Tutmuyor ?",
+      "youtubeId": "gGo67wJWpMQ",
+      "duration": "6:13",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/gGo67wJWpMQ/mqdefault.jpg",
+      "id": 59
+    },
+    {
+      "title": "Honda Spacy Alpha neden beyin yakar?",
+      "youtubeId": "X0VGsdfmySY",
+      "duration": "11:25",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/X0VGsdfmySY/mqdefault.jpg",
+      "id": 60
+    },
+    {
+      "title": "Honda Activa S Detaylı Ön düzen (Mesnet,Çatal, Furç Takımı) Değişimi",
+      "youtubeId": "CVEPqO3xzlQ",
+      "duration": "13:50",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/CVEPqO3xzlQ/mqdefault.jpg",
+      "id": 61
+    },
+    {
+      "title": "Ağır Kazalı Honda Spacy Topluyoruz !",
+      "youtubeId": "6dGJUC7CLfI",
+      "duration": "14:35",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/6dGJUC7CLfI/mqdefault.jpg",
+      "id": 62
+    },
+    {
+      "title": "Honda Spacy Alpha & Spacy Elektrik Sıkıntıları",
+      "youtubeId": "L8Qx-UKTEcE",
+      "duration": "10:31",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/L8Qx-UKTEcE/mqdefault.jpg",
+      "id": 63
+    },
+    {
+      "title": "Kazalı Honda Spacy Alpha Topluyoruz (Arkadaşın Sağlık Durumu İyi)",
+      "youtubeId": "BZbRS_6Ps1Q",
+      "duration": "15:07",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/BZbRS_6Ps1Q/mqdefault.jpg",
+      "id": 64
+    },
+    {
+      "title": "Honda Activa S yenileme",
+      "youtubeId": "ip5Wc7ifLgs",
+      "duration": "11:11",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/ip5Wc7ifLgs/mqdefault.jpg",
+      "id": 65
+    },
+    {
+      "title": "Sahte yağdan Dolayı Motor Kitlermi ?",
+      "youtubeId": "Kh5wDEsXUJg",
+      "duration": "23:05",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Kh5wDEsXUJg/mqdefault.jpg",
+      "id": 66
+    },
+    {
+      "title": "Honda Activa S Detaylı Üst Motor Revizyonu",
+      "youtubeId": "Jqct06UO6co",
+      "duration": "49:18",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Jqct06UO6co/mqdefault.jpg",
+      "id": 67
+    },
+    {
+      "title": "125cc Alpha'yı Orjinal Haline Çeviriyoruz",
+      "youtubeId": "Gs72RFAKMx4",
+      "duration": "25:08",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Gs72RFAKMx4/mqdefault.jpg",
+      "id": 68
+    },
+    {
+      "title": "Honda Spacy Alpha'yı 125cc yapmışlar. Sizce değer miydi ?",
+      "youtubeId": "Fr_HZEkSVIc",
+      "duration": "32:56",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Fr_HZEkSVIc/mqdefault.jpg",
+      "id": 69
+    },
+    {
+      "title": "Motosikleti Fare Gibi Kemirmişler",
+      "youtubeId": "ZWhzaotMoY4",
+      "duration": "9:37",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/ZWhzaotMoY4/mqdefault.jpg",
+      "id": 70
+    },
+    {
+      "title": "Honda Spacy Activa S Yapılan Hatalı işlemler",
+      "youtubeId": "pyA4GbYcw_A",
+      "duration": "17:54",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/pyA4GbYcw_A/mqdefault.jpg",
+      "id": 71
+    },
+    {
+      "title": "Yağsızlıktan Kitleyen Motoru Aynı Pistonla Toplamışlar.",
+      "youtubeId": "hJoJb0HZMRI",
+      "duration": "3:17",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/hJoJb0HZMRI/mqdefault.jpg",
+      "id": 72
+    },
+    {
+      "title": "Motosikletin Kayışı Kopmuşmu Yoksa Patlamışmı ? Aşırı Zorlamanın Zararları",
+      "youtubeId": "VTyVfqAYaCw",
+      "duration": "1:26",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/VTyVfqAYaCw/mqdefault.jpg",
+      "id": 73
+    },
+    {
+      "title": "Motosikletin Arka Freni Tutmuyor. Doğru Tehşis Paranazı Kurtarır",
+      "youtubeId": "N4qcjJxWN7I",
+      "duration": "4:16",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/N4qcjJxWN7I/mqdefault.jpg",
+      "id": 74
+    },
+    {
+      "title": "Honda Spacy Motordan Gelen Sesler Ve Yağ Kaçakları",
+      "youtubeId": "OOW5qM-5spk",
+      "duration": "16:03",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/OOW5qM-5spk/mqdefault.jpg",
+      "id": 75
+    },
+    {
+      "title": "Kazalı Apache RTR 160'ı Topluyoruz !",
+      "youtubeId": "OnFZYNQF9J0",
+      "duration": "22:03",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/OnFZYNQF9J0/mqdefault.jpg",
+      "id": 76
+    },
+    {
+      "title": "150 cc Atv'nin Mükemmel Dönüşümü",
+      "youtubeId": "b8xsA93bwZg",
+      "duration": "54:30",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/b8xsA93bwZg/mqdefault.jpg",
+      "id": 77
+    },
+    {
+      "title": "Honda Spacy Yapılan Hatalı İşlemler !",
+      "youtubeId": "QHnf3dxvz7U",
+      "duration": "9:52",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/QHnf3dxvz7U/mqdefault.jpg",
+      "id": 78
+    },
+    {
+      "title": "Honda Activa S Yapılan Hatalı İşlemler",
+      "youtubeId": "k34YnotPTJw",
+      "duration": "15:57",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/k34YnotPTJw/mqdefault.jpg",
+      "id": 79
+    },
+    {
+      "title": "Honda Spacy Yolda Giderken Titriyor. Salıncak Değişimi Ve Genel Bakım !!!",
+      "youtubeId": "O_6REnCCM_Q",
+      "duration": "15:56",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/O_6REnCCM_Q/mqdefault.jpg",
+      "id": 80
+    },
+    {
+      "title": "Honda Spacy Alpha Yapılan Hatalı İşlemler",
+      "youtubeId": "U0p_H9ta2kY",
+      "duration": "21:35",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/U0p_H9ta2kY/mqdefault.jpg",
+      "id": 81
+    },
+    {
+      "title": "Atv Topluyoruz",
+      "youtubeId": "-sVWBuG7COE",
+      "duration": "14:40",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/-sVWBuG7COE/mqdefault.jpg",
+      "id": 82
+    },
+    {
+      "title": "Honda Spacy Hatalı Revizyon / Kalitesiz Varyatör / Orjinal Pinyon Dişli",
+      "youtubeId": "H8R6g_z2cN8",
+      "duration": "7:05",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/H8R6g_z2cN8/mqdefault.jpg",
+      "id": 83
+    },
+    {
+      "title": "Honda Spacy Haftalik Sıradışı Problemler.",
+      "youtubeId": "31gS59FknpQ",
+      "duration": "8:42",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/31gS59FknpQ/mqdefault.jpg",
+      "id": 84
+    },
+    {
+      "title": "Küçük hatalar Büyük sorunlar yaratabilir. Honda Activa S Krank Yalama Olmuş",
+      "youtubeId": "-FiEcHXZ0ns",
+      "duration": "16:55",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/-FiEcHXZ0ns/mqdefault.jpg",
+      "id": 85
+    },
+    {
+      "title": "Neden Sadece Honda Bakıyoruz ? Tatlı Bir Sohbet",
+      "youtubeId": "awWfpdTkOBs",
+      "duration": "27:12",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/awWfpdTkOBs/mqdefault.jpg",
+      "id": 86
+    },
+    {
+      "title": "Honda Activa s & Alpha kombine fren neden bozuluyor ? İptal etmek mantıklı mı?",
+      "youtubeId": "uX6apnl2haE",
+      "duration": "8:45",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/uX6apnl2haE/mqdefault.jpg",
+      "id": 87
+    },
+    {
+      "title": "Motosiklet Muayene'ye Nasıl Hazırlanır ? Araç Muayenesinde Dikkat Edilmesi Gerekenler !!!",
+      "youtubeId": "ZVHzPCFtbFc",
+      "duration": "11:57",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/ZVHzPCFtbFc/mqdefault.jpg",
+      "id": 88
+    },
+    {
+      "title": "Activa S Kronik Problemler",
+      "youtubeId": "XdXZTsehJKk",
+      "duration": "11:20",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/XdXZTsehJKk/mqdefault.jpg",
+      "id": 89
+    },
+    {
+      "title": "Honda Spacy Alpha Karmaşık Elektrik Problemleri",
+      "youtubeId": "KNWvJ64H4eg",
+      "duration": "12:54",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/KNWvJ64H4eg/mqdefault.jpg",
+      "id": 90
+    },
+    {
+      "title": "Spacy 110 Marş Basmıyor. Arıza Nerede ? Sorun Nasıl Tesbit Edilir ?",
+      "youtubeId": "xRJHqh2qWjA",
+      "duration": "8:38",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/xRJHqh2qWjA/mqdefault.jpg",
+      "id": 91
+    },
+    {
+      "title": "Honda Spacy 110 Yeniliyoruz  Kelle Motor Alınırmı ?",
+      "youtubeId": "jATPcBrHktA",
+      "duration": "10:30",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/jATPcBrHktA/mqdefault.jpg",
+      "id": 92
+    },
+    {
+      "title": "Sahte Yağ Kurbanı Olmayın !!!",
+      "youtubeId": "T5-E1KEaBEo",
+      "duration": "19:09",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/T5-E1KEaBEo/mqdefault.jpg",
+      "id": 93
+    },
+    {
+      "title": "Honda Activa S Marş Basıyor Çalışmıyor. 26000kmde Neden Motor Biter?",
+      "youtubeId": "8JO5zNoWx10",
+      "duration": "4:50",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/8JO5zNoWx10/mqdefault.jpg",
+      "id": 94
+    },
+    {
+      "title": "MASRAFI BİTMEYEN HONDA SPACY'E KELLE MOTOR ATIYORUZ !!!",
+      "youtubeId": "5RrrVocjeKk",
+      "duration": "18:12",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/5RrrVocjeKk/mqdefault.jpg",
+      "id": 95
+    },
+    {
+      "title": "Honda Spacy Arka Tarafı Neden Yalpalar ? Salıncağın Önemi",
+      "youtubeId": "mcJVrfgIYKc",
+      "duration": "5:22",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/mcJVrfgIYKc/mqdefault.jpg",
+      "id": 96
+    },
+    {
+      "title": "Uzun Zamandir Video Yukleyemedik.Ev Hali kucuk bir sohbet yapalim dedik mira hanimla.",
+      "youtubeId": "LxYqsKozs20",
+      "duration": "5:33",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/LxYqsKozs20/mqdefault.jpg",
+      "id": 97
+    },
+    {
+      "title": "Yeni Dükkanımızı Tuttuk Hayırlısı İle.",
+      "youtubeId": "3D6T_o-foUw",
+      "duration": "3:29",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/3D6T_o-foUw/mqdefault.jpg",
+      "id": 98
+    },
+    {
+      "title": "Ankaradan Gelen Takipçimizle Keyifli Bir Revizyon Yaptık. Honda Spacy",
+      "youtubeId": "3QQdqt5jf98",
+      "duration": "18:17",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/3QQdqt5jf98/mqdefault.jpg",
+      "id": 99
+    },
+    {
+      "title": "Emira Motors Günlük vlog_1",
+      "youtubeId": "h8jOfzXpXjo",
+      "duration": "22:01",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/h8jOfzXpXjo/mqdefault.jpg",
+      "id": 100
+    },
+    {
+      "title": "Honda Spacy Hava Filtre Kutusunun Önemi. Motorum Yağ Yakıyor.",
+      "youtubeId": "VicjHmR8nqg",
+      "duration": "15:02",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/VicjHmR8nqg/mqdefault.jpg",
+      "id": 101
+    },
+    {
+      "title": "Honda Spacy Alpha Activa s  Arka Fren Neden Tutmaz ?",
+      "youtubeId": "b13wKLJRltM",
+      "duration": "10:38",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/b13wKLJRltM/mqdefault.jpg",
+      "id": 102
+    },
+    {
+      "title": "Dostumuz Bizi Youtubeden Bulmuş Keyifle Tüm Sorunlarına Derman Olduk",
+      "youtubeId": "gMyt0mTNAqM",
+      "duration": "4:10",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/gMyt0mTNAqM/mqdefault.jpg",
+      "id": 103
+    },
+    {
+      "title": "Varyatör Nasıl Çalışır ? Motorum Rampa da Çekmiyor - Kalkışta Titriyor",
+      "youtubeId": "9Vbuy6AvkGo",
+      "duration": "8:25",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/9Vbuy6AvkGo/mqdefault.jpg",
+      "id": 104
+    },
+    {
+      "title": "Chevrolet Captiva Periyodik Bakım -Yağ Ve Filtrelerin Değişimi. Triger kontrol",
+      "youtubeId": "Q1-dRyJP3YM",
+      "duration": "6:14",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Q1-dRyJP3YM/mqdefault.jpg",
+      "id": 105
+    },
+    {
+      "title": "Krank Rulmanı Cebinizi Yakabilir Honda Spacy Motosikletinizden Gelen sesleri Dikkate Alın",
+      "youtubeId": "220z_1cDnLc",
+      "duration": "5:47",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/220z_1cDnLc/mqdefault.jpg",
+      "id": 106
+    },
+    {
+      "title": "Yağmurda Motosikletim Neden Stop Ediyor ?",
+      "youtubeId": "uJIoUxCI5ro",
+      "duration": "2:13",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/uJIoUxCI5ro/mqdefault.jpg",
+      "id": 107
+    },
+    {
+      "title": "Bölüm 2 Spacy Toplama Kaporta",
+      "youtubeId": "IDJDeJdimiM",
+      "duration": "13:51",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/IDJDeJdimiM/mqdefault.jpg",
+      "id": 108
+    },
+    {
+      "title": "Bölüm 1 Honda Spacy Yenileme Motor Revizyonu",
+      "youtubeId": "hXMZ8XFm2Q4",
+      "duration": "7:36",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/hXMZ8XFm2Q4/mqdefault.jpg",
+      "id": 109
+    },
+    {
+      "title": "Takipçimiz Uzaklardan Gelmiş  Keyifli Bir Sohbetle Tüm Sorunlarını Çözdük",
+      "youtubeId": "dEr0Gf2h1oU",
+      "duration": "2:36",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/dEr0Gf2h1oU/mqdefault.jpg",
+      "id": 110
+    },
+    {
+      "title": "Honda Spacy Yeniden Hayat Buluyor  Başlangıç Videosu",
+      "youtubeId": "JAooS2iK6EQ",
+      "duration": "5:56",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/JAooS2iK6EQ/mqdefault.jpg",
+      "id": 111
+    },
+    {
+      "title": "Egzantirik Gergisi Kabusunuz Olmasın. Motordan Gelen Sesleri İhmal Etmeyin",
+      "youtubeId": "WixLRONI-go",
+      "duration": "3:38",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/WixLRONI-go/mqdefault.jpg",
+      "id": 112
+    },
+    {
+      "title": "Honda Spacy Alpha Ön Fren Balatası Değişimi Önemli Bilgiler",
+      "youtubeId": "ie1s5oxIHKY",
+      "duration": "6:50",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/ie1s5oxIHKY/mqdefault.jpg",
+      "id": 113
+    },
+    {
+      "title": "Honda Spacy Şanzıman Onarımın da Dikkat Edilmesi Gerekenler !!!",
+      "youtubeId": "qpCzlpGx6nY",
+      "duration": "11:53",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/qpCzlpGx6nY/mqdefault.jpg",
+      "id": 114
+    },
+    {
+      "title": "Honda Spacy Marş Basıyor Ama Çalışmıyor",
+      "youtubeId": "tdE_6BieLQ0",
+      "duration": "20:24",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/tdE_6BieLQ0/mqdefault.jpg",
+      "id": 115
+    },
+    {
+      "title": "Kaldırıma Çarpan Honda Spacy Alpha'ya Acil Müdahale Yapıyoruz. Mesnet Onarımı",
+      "youtubeId": "SuEAsmNld0M",
+      "duration": "5:02",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/SuEAsmNld0M/mqdefault.jpg",
+      "id": 116
+    },
+    {
+      "title": "Honda Spacy Alpha Tam Motor Revizyonu- Yağ eksiltmesi var diye aldığımız motorun pistonu kırık çıktı",
+      "youtubeId": "9g1WRHZzUc4",
+      "duration": "22:01",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/9g1WRHZzUc4/mqdefault.jpg",
+      "id": 117
+    },
+    {
+      "title": "Honda Spacy Tam Varyatör Bakımı",
+      "youtubeId": "Igwjs2God2Q",
+      "duration": "11:38",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Igwjs2God2Q/mqdefault.jpg",
+      "id": 118
+    },
+    {
+      "title": "Yanlış Ellerde Harap olan Activa 125  S’i Eski sağlığına kavuşturduk",
+      "youtubeId": "MLsfnZSXskw",
+      "duration": "6:06",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/MLsfnZSXskw/mqdefault.jpg",
+      "id": 119
+    },
+    {
+      "title": "2.5 Mercury deniz motoru marş problemi",
+      "youtubeId": "Y_JXy11R7ig",
+      "duration": "3:09",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/Y_JXy11R7ig/mqdefault.jpg",
+      "id": 120
+    },
+    {
+      "title": "vespa lx 150 ile uzun yol istanbul- çanakkale anzak koyu",
+      "youtubeId": "YSZVGvzSchc",
+      "duration": "31:42",
+      "likes": "150",
+      "thumbnail": "https://img.youtube.com/vi/YSZVGvzSchc/mqdefault.jpg",
+      "id": 121
+    }
+  ],
+  "before_after": [
+    {
+      "id": 1,
+      "title": "Ağır Bakım (Varyatör Temizliği)",
+      "beforeImage": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=700",
+      "afterImage": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=700",
+      "beforeLabel": "Kirli & Aşınmış",
+      "afterLabel": "Sıfırlanmış & Temiz"
+    },
+    {
+      "id": 2,
+      "title": "Şasi Koruma Demiri Tamiri (Kaynak)",
+      "beforeImage": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&q=80&w=700",
+      "afterImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=700",
+      "beforeLabel": "Kırık Şasi Kulaklığı",
+      "afterLabel": "Gazaltı Kaynak & Boyalı"
+    },
+    {
+      "id": 3,
+      "title": "Kaza Sonrası Ön Amortisör Düzeltme",
+      "beforeImage": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=700",
+      "afterImage": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=700",
+      "beforeLabel": "Eğrilmiş Ön Takım",
+      "afterLabel": "Preslenmiş & Hizalanmış"
+    },
+    {
+      "id": 4,
+      "title": "Egzoz Koruma Sacı Kaynak & Restorasyon",
+      "beforeImage": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&q=80&w=700",
+      "afterImage": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=700",
+      "beforeLabel": "Paslı & Çatlak Kulaklar",
+      "afterLabel": "Argon Kaynak & Siyah Fırın Boya"
+    }
+  ],
+  "workshop_images": [
+    {
+      "id": 1,
+      "title": "Yamaha XMAX Varyatör Onarımı",
+      "image": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      "id": 2,
+      "title": "Honda Forza 250 Lastik Değişimi & Balans",
+      "image": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      "id": 3,
+      "title": "Vespa GTS Kablo Tesisatı Arıza Teşhisi",
+      "image": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      "id": 4,
+      "title": "Argon Alüminyum Kaynak Uygulaması",
+      "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      "id": 5,
+      "title": "Honda Activa Sıfır Motor Rekor Revizyonu",
+      "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      "id": 6,
+      "title": "Ön Çatal Keçe & Amortisör Yağ Yenilemesi",
+      "image": "https://images.unsplash.com/photo-1615887023516-9b6bcd559e87?auto=format&fit=crop&q=80&w=800"
+    }
+  ]
+}
