@@ -194,6 +194,33 @@ export default function Home() {
     }));
   };
 
+  // Touch Swipe Support for Mobile
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      handleNextSlide();
+    } else if (isRightSwipe) {
+      handlePrevSlide();
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -225,7 +252,12 @@ export default function Home() {
       </Suspense>
 
       {/* HERO SLIDER SECTION */}
-      <section className="hero-slider-container">
+      <section 
+        className="hero-slider-container"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         <div 
           className="hero-slider" 
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
