@@ -63,7 +63,7 @@ export default function Header() {
             <span className="logo-text" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               {logoImg ? (
                 <LiveEditable path="global.header.logoImg" type="image" tagName="span" className="logo-image-container" style={{ display: 'inline-flex', alignItems: 'center' }}>
-                  <img src={logoImg} alt="Logo" style={{ maxHeight: '36px', width: 'auto', objectFit: 'contain' }} />
+                  <img src={logoImg} alt="Logo" className="logo-image" />
                 </LiveEditable>
               ) : (
                 <LiveEditable path="global.header.logoImg" type="image" tagName="span" className="logo-svg-container" style={{ display: 'inline-flex', alignItems: 'center' }}>
