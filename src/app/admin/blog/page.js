@@ -212,7 +212,8 @@ function BlogAdminContent() {
     try {
       document.execCommand(command, false, value);
       if (editorRef.current) {
-        setFormData(prev => ({ ...prev, contentHtml: editorRef.current.innerHTML }));
+        const html = editorRef.current.innerHTML;
+        setFormData(prev => ({ ...prev, contentHtml: html }));
       }
     } catch (err) {
       console.error("Editor command failed:", err);
@@ -231,7 +232,8 @@ function BlogAdminContent() {
   const handleTabChange = (tab) => {
     if (tab === activeTab) return;
     if (activeTab === 'visual' && editorRef.current) {
-      setFormData(prev => ({ ...prev, contentHtml: editorRef.current.innerHTML }));
+      const html = editorRef.current.innerHTML;
+      setFormData(prev => ({ ...prev, contentHtml: html }));
     }
     setActiveTab(tab);
   };
@@ -242,7 +244,8 @@ function BlogAdminContent() {
         if (editorRef.current) {
           editorRef.current.focus();
           document.execCommand('insertHTML', false, html);
-          setFormData(prev => ({ ...prev, contentHtml: editorRef.current.innerHTML }));
+          const currentHtml = editorRef.current.innerHTML;
+          setFormData(prev => ({ ...prev, contentHtml: currentHtml }));
         }
       } else {
         setFormData(prev => ({ ...prev, contentHtml: prev.contentHtml + '\n' + html }));
@@ -477,7 +480,8 @@ function BlogAdminContent() {
                     contentEditable
                     className="wysiwyg-editor"
                     onInput={(e) => {
-                      setFormData(prev => ({ ...prev, contentHtml: e.currentTarget.innerHTML }));
+                      const html = e.currentTarget.innerHTML;
+                      setFormData(prev => ({ ...prev, contentHtml: html }));
                     }}
                     placeholder="Yazı içeriğinizi görsel olarak oluşturun veya şablon butonlarını kullanın..."
                   />
