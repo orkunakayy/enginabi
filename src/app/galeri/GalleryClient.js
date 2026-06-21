@@ -162,7 +162,7 @@ export default function GalleryClient() {
             <p className="text-muted mt-sm">Atölyemizde devam eden tamirleri ve usta işçiliğini kısa dikey videolarla izleyin.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 'var(--space-lg)', justifyItems: 'center', width: '100%' }}>
+          <div className="reels-grid-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 'var(--space-lg)', justifyItems: 'center', width: '100%' }}>
             {loading ? (
               <div style={{ color: 'var(--text-secondary)', padding: '2rem 0', gridColumn: '1 / -1', textAlign: 'center' }}>Videolar yükleniyor...</div>
             ) : galleryData.reels.length === 0 ? (

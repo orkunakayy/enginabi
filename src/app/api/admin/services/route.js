@@ -63,7 +63,7 @@ export async function POST(request) {
       cta1Text: sanitizeInput(service.cta1Text || 'Randevu Al'),
       cta1Href: sanitizeInput(service.cta1Href || '/iletisim'),
       cta2Text: sanitizeInput(service.cta2Text || 'WhatsApp Bilgi'),
-      cta2Href: sanitizeInput(service.cta2Href || 'https://wa.me/902128790755'),
+      cta2Href: sanitizeInput(service.cta2Href || 'https://wa.me/905331301448'),
       ctaStyleReverse: !!service.ctaStyleReverse
     };
 

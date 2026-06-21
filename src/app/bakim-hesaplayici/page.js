@@ -75,7 +75,7 @@ export default function CalculatorPage() {
 
   // Generate WhatsApp message template
   const waText = `Merhaba Engin Usta, web sitenizdeki Bakım Hesaplayıcı üzerinden bilgi aldım. ${selectedBrand} ${selectedModel} motorumun (${selectedMileageData.label}) periyodik bakımı için randevu almak istiyorum. Tahmini fiyat aralığı: ${minPrice} TL - ${maxPrice} TL. Uygun zamanları görüşebilir miyiz?`;
-  const waUrl = `https://wa.me/902128790755?text=${encodeURIComponent(waText)}`;
+  const waUrl = `https://wa.me/905331301448?text=${encodeURIComponent(waText)}`;
 
   return (
     <>

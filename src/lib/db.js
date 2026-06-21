@@ -1764,7 +1764,7 @@ const DEFAULT_SEED = {
           cta1Text: "Bakım Randevusu Al",
           cta1Href: "/iletisim",
           cta2Text: "Engin Usta'ya Sor",
-          cta2Href: "https://wa.me/902128790755",
+          cta2Href: "https://wa.me/905331301448",
           ctaStyleReverse: false
         },
         {
@@ -1800,7 +1800,7 @@ const DEFAULT_SEED = {
           cta1Text: "Ağır Bakım Randevusu Al",
           cta1Href: "/iletisim",
           cta2Text: "WhatsApp'tan Bilgi Al",
-          cta2Href: "https://wa.me/902128790755",
+          cta2Href: "https://wa.me/905331301448",
           ctaStyleReverse: false
         },
         {
@@ -1836,7 +1836,7 @@ const DEFAULT_SEED = {
           cta1Text: "Motorunuza Teşhis Koyalım",
           cta1Href: "/iletisim",
           cta2Text: "Usta ile Görüş",
-          cta2Href: "https://wa.me/902128790755",
+          cta2Href: "https://wa.me/905331301448",
           ctaStyleReverse: true
         },
         {
@@ -1870,7 +1870,7 @@ const DEFAULT_SEED = {
           rightDesc: "Şasi kaynaklarında mukavemet hesabı yapılarak kaynak dikişleri profesyonelce atılır. İşlem sonrası paslanmaya karşı astar ve siyah/şasi renginde boya uygulaması standarttır.",
           badges: ["Kurye Çanta Demirleri", "Şasi Koruma Kulakları", "Egzoz Manifold Kaynağı", "Alüminyum Blok Kulakları"],
           cta1Text: "WhatsApp'tan Fotoğraf Gönder",
-          cta1Href: "https://wa.me/902128790755",
+          cta1Href: "https://wa.me/905331301448",
           cta2Text: "Randevu Planla",
           cta2Href: "/iletisim",
           ctaStyleReverse: true
@@ -1908,7 +1908,7 @@ const DEFAULT_SEED = {
           cta1Text: "Hemen Randevu Alın",
           cta1Href: "/iletisim",
           cta2Text: "Fren / Amortisör Sorusu Sor",
-          cta2Href: "https://wa.me/902128790755",
+          cta2Href: "https://wa.me/905331301448",
           ctaStyleReverse: false
         },
         {
@@ -1944,7 +1944,7 @@ const DEFAULT_SEED = {
           cta1Text: "Hemen Randevu Alın",
           cta1Href: "/iletisim",
           cta2Text: "Elektrik Arızası Sor",
-          cta2Href: "https://wa.me/902128790755",
+          cta2Href: "https://wa.me/905331301448",
           ctaStyleReverse: false
         },
         {
@@ -1980,7 +1980,7 @@ const DEFAULT_SEED = {
           cta1Text: "Hemen Lastik Değişimi Yapın",
           cta1Href: "/iletisim",
           cta2Text: "Lastik Fiyatı Al",
-          cta2Href: "https://wa.me/902128790755",
+          cta2Href: "https://wa.me/905331301448",
           ctaStyleReverse: false
         }
       ]

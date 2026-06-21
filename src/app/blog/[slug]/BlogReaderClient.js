@@ -86,7 +86,7 @@ export default function BlogReaderClient({ currentSlug, post, otherPosts = [] })
               </p>
               <div style={{ display: 'flex', gap: 'var(--space-sm)', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link href="/iletisim" className="btn btn-primary">Randevu Al</Link>
-                <a href="https://wa.me/902128790755" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">WhatsApp Soru Sor</a>
+                <a href="https://wa.me/905331301448" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">WhatsApp Soru Sor</a>
               </div>
             </div>
           </div>

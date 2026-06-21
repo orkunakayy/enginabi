@@ -70,7 +70,7 @@ export default function ServicesPageClient() {
       cta1Text: "Hemen Randevu Alın",
       cta1Href: "/iletisim",
       cta2Text: "WhatsApp'tan Bilgi Al",
-      cta2Href: "https://wa.me/902128790755",
+      cta2Href: "https://wa.me/905331301448",
       ctaStyleReverse: false
     };
 

@@ -29,7 +29,7 @@ export default function AdminDashboardPage() {
   const [cta1Text, setCta1Text] = useState('Randevu Al');
   const [cta1Href, setCta1Href] = useState('/iletisim');
   const [cta2Text, setCta2Text] = useState('WhatsApp Bilgi');
-  const [cta2Href, setCta2Href] = useState('https://wa.me/902128790755');
+  const [cta2Href, setCta2Href] = useState('https://wa.me/905331301448');
   const [ctaStyleReverse, setCtaStyleReverse] = useState(false);
   const [serviceItems, setServiceItems] = useState([{ title: '', desc: '' }]);
 
@@ -83,7 +83,7 @@ export default function AdminDashboardPage() {
     setCta1Text('Randevu Al');
     setCta1Href('/iletisim');
     setCta2Text('WhatsApp Bilgi');
-    setCta2Href('https://wa.me/902128790755');
+    setCta2Href('https://wa.me/905331301448');
     setCtaStyleReverse(false);
     setServiceItems([{ title: '', desc: '' }]);
     setFormError('');
@@ -106,7 +106,7 @@ export default function AdminDashboardPage() {
     setCta1Text(service.cta1Text || 'Randevu Al');
     setCta1Href(service.cta1Href || '/iletisim');
     setCta2Text(service.cta2Text || 'WhatsApp Bilgi');
-    setCta2Href(service.cta2Href || 'https://wa.me/902128790755');
+    setCta2Href(service.cta2Href || 'https://wa.me/905331301448');
     setCtaStyleReverse(!!service.ctaStyleReverse);
     setServiceItems(service.items && service.items.length > 0 ? service.items : [{ title: '', desc: '' }]);
     setFormError('');

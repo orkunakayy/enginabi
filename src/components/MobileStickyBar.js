@@ -40,7 +40,7 @@ export default function MobileStickyBar() {
         </svg>
         Arayın
       </a>
-      <a href="https://wa.me/902128790755" target="_blank" rel="noopener noreferrer" className="sticky-bar-btn sticky-bar-whatsapp">
+      <a href="https://wa.me/905331301448" target="_blank" rel="noopener noreferrer" className="sticky-bar-btn sticky-bar-whatsapp">
         <svg viewBox="0 0 24 24" style={{ width: '20px', height: '20px', fill: 'currentColor' }}>
           <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.12 8.12 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.45 0-2.86-.38-4.12-1.11l-.3-.18-3.07.81.82-3.01-.2-.31a8.188 8.188 0 0 1-1.25-4.34c0-4.54 3.7-8.24 8.24-8.24h-.11z"/>
         </svg>

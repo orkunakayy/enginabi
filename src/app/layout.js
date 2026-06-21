@@ -23,7 +23,7 @@ const JSON_LD = {
   "logo": "https://emiramotors.com/images/logo.png",
   "@id": "https://emiramotors.com",
   "url": "https://emiramotors.com",
-  "telephone": "+902128790755",
+  "telephone": "+905331301448",
   "priceRange": "$$",
   "hasMap": "https://maps.google.com/?q=Emira+Motors+Beylikduzu",
   "contactPoint": {
